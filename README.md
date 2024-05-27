@@ -17,7 +17,7 @@ O **QuestForge** é uma plataforma abrangente para jogar RPG de mesa online, uti
 
 A plataforma **QuestForge** é estruturada utilizando Domain-Driven Design (DDD) e a arquitetura Onion para garantir uma separação clara das preocupações e alta manutenibilidade.
 
-#### Camadas do CharacterCreationService
+#### Camadas do CharacterService
 
 - **Application:** Contém os comandos e consultas (CQRS) que manipulam as ações de criação, atualização e consulta de personagens.
 - **Core:** Define as entidades de domínio, agregados, enums, serviços e interfaces dos repositórios.
