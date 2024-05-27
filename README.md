@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O **QuestForge** é uma plataforma abrangente para jogar RPG de mesa online, utilizando as regras de Dungeons & Dragons 5ª Edição (D&D 5e). A plataforma é composta por múltiplos microserviços, cada um responsável por diferentes aspectos da experiência de jogo. Até agora, temos o `CharacterCreationService`, responsável pela criação, gestão e exportação de personagens.
+O **QuestForge** é uma plataforma abrangente para jogar RPG de mesa online, utilizando as regras de Dungeons & Dragons 5ª Edição (D&D 5e). A plataforma é composta por múltiplos microserviços, cada um responsável por diferentes aspectos da experiência de jogo. Até agora, temos o `CharacterService`, responsável pela criação, gestão e exportação de personagens.
 
 ## Microserviços
 
