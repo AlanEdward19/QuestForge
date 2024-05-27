@@ -1,0 +1,6 @@
+@QuestForge.CharacterService_HostAddress = http://localhost:5265
+
+GET {{QuestForge.CharacterService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
