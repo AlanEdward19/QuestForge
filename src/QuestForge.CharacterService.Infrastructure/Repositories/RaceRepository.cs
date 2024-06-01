@@ -1,12 +1,26 @@
-﻿namespace QuestForge.CharacterService.Infrastructure.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using QuestForge.CharacterService.Application.Races.Create;
+using QuestForge.CharacterService.Application.Races.Delete;
+using QuestForge.CharacterService.Application.Races.Get;
+using QuestForge.CharacterService.Application.Races.Update;
+using QuestForge.CharacterService.Core.Common.Abstracts;
+using QuestForge.CharacterService.Core.Common.Contracts.Database;
+using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Common.ValueObjects;
+using QuestForge.CharacterService.Core.Races.Entities;
 
-public class RaceRepository(IUnitOfWork unitOfWork) : IRepository<RaceDataModel>
+namespace QuestForge.CharacterService.Infrastructure.Repositories;
+
+public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IRepository<RaceDataModel>
 {
     public IUnitOfWork UnitOfWork { get; } = unitOfWork;
 
-    public Task<RaceDataModel> GetByIdAsync(Query query, CancellationToken cancellationToken)
+    public async Task<RaceDataModel> GetByIdAsync(Query query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedQuery = query as GetRaceQuery;
+
+        return await dbContext.Races
+            .FirstAsync(x => x.Id.Equals(parsedQuery!.Id), cancellationToken);
     }
 
     public Task<IEnumerable<RaceDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
@@ -14,18 +28,41 @@ public class RaceRepository(IUnitOfWork unitOfWork) : IRepository<RaceDataModel>
         throw new NotImplementedException();
     }
 
-    public Task<bool> AddAsync(Command command, CancellationToken cancellationToken)
+    public async Task AddAsync(Command command, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedCommand = command as CreateRaceCommand;
+        Guid raceId = Guid.NewGuid();
+
+        RaceDataModel race = new(raceId, parsedCommand!.Name!, parsedCommand!.Description!,
+            AbilityScoreValueObject.BuildFromDictionary(parsedCommand.AbilityScoreIncrease!));
+
+        await dbContext.Races.AddAsync(race, cancellationToken);
     }
 
-    public Task<bool> UpdateAsync(Command command, CancellationToken cancellationToken)
+    public async Task UpdateAsync(Command command, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedCommand = command as UpdateRaceCommand;
+
+        RaceDataModel raceDataModel =
+            await dbContext.Races.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
+
+        Race race = new(raceDataModel);
+        
+        race.UpdateName(parsedCommand!.Name);
+        race.UpdateDescription(parsedCommand.Description);
+        race.UpdateAbilityScoreIncrease(parsedCommand.AbilityScoreIncrease);
+        
+        raceDataModel.UpdateBasedOnValueObject(race);
+
+        dbContext.Races.Update(raceDataModel);
     }
 
-    public Task<bool> DeleteAsync(Command command, CancellationToken cancellationToken)
+    public async Task DeleteAsync(Command command, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedCommand = command as DeleteRaceCommand;
+
+        RaceDataModel race = await dbContext.Races.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
+
+        dbContext.Races.Remove(race);
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace QuestForge.CharacterService.Infrastructure;
+﻿using QuestForge.CharacterService.Core.Common.Contracts.Database;
+
+namespace QuestForge.CharacterService.Infrastructure;
 
 public class UnitOfWork(AppDbContext databaseDbContext) : IUnitOfWork
 {

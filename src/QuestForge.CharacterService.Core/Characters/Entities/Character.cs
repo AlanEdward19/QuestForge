@@ -1,8 +1,51 @@
-﻿namespace QuestForge.CharacterService.Core.Characters.Entities;
+﻿using System.Text.Json.Serialization;
+using QuestForge.CharacterService.Core.Characters.Enums;
+using QuestForge.CharacterService.Core.Common.Abstracts;
+using QuestForge.CharacterService.Core.Common.Abstracts.Base;
+using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Common.ValueObjects;
 
-public class Character(Guid id, string name, string description)
+namespace QuestForge.CharacterService.Core.Characters.Entities;
+
+public class Character : ValueObject
 {
-    public Guid Id { get; private set; } = id;
-    public string Name { get; private set; } = name;
-    public string Description { get; private set; } = description;
+    [JsonIgnore]
+    public Guid Id { get; private set; }
+    public string Name { get; private set; }
+    public double Height { get; private set; }
+    public double Weight { get; private set; }
+    public int Age { get; private set; }
+    public string AppearanceDescription { get; private set; }
+    public string BackgroundDescription { get; private set; }
+    public Dictionary<EAbilityScore, int> AbilityScores { get; private set; }
+
+    public Character(Guid id, string name, double height, double weight, int age, string appearanceDescription,
+        string backgroundDescription, Dictionary<EAbilityScore, int> abilityScores)
+    {
+        Id = id;
+        Name = name;
+        Height = height;
+        Weight = weight;
+        Age = age;
+        AppearanceDescription = appearanceDescription;
+        BackgroundDescription = backgroundDescription;
+        AbilityScores = abilityScores;
+    }
+
+    public Character(BaseDataModel dataModel) : base(dataModel)
+    {
+        var parsedDataModel = dataModel as CharacterDataModel;
+
+        Id = parsedDataModel!.Id;
+        Name = parsedDataModel.Name;
+        Height = parsedDataModel.Height;
+        Weight = parsedDataModel.Weight;
+        Age = parsedDataModel.Age;
+        AppearanceDescription = parsedDataModel.AppearanceDescription;
+        BackgroundDescription = parsedDataModel.BackgroundDescription;
+        AbilityScores = AbilityScoreValueObject
+                .BuildFromValueObjects(parsedDataModel.AbilityScores
+                .Select(x => x.AbilityScore)
+                .ToList());
+    }
 }

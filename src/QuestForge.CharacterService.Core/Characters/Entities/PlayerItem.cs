@@ -1,4 +1,4 @@
-﻿using QuestForge.CharacterService.Core.Commons.Entities;
+﻿using QuestForge.CharacterService.Core.Common.Entities;
 
 namespace QuestForge.CharacterService.Core.Characters.Entities;
 
