@@ -1,6 +1,8 @@
-﻿namespace QuestForge.CharacterService.Application.Characters.Get;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts;
 
-public class GetCharacterQuery
+namespace QuestForge.CharacterService.Application.Characters.Get;
+
+public class GetCharacterQuery : Query
 {
-    
+    public Guid Id { get; set; }
 }

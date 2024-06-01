@@ -1,6 +1,5 @@
-﻿namespace QuestForge.CharacterService.Application.Classes.Delete;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 
-public class DeleteClassCommand
-{
-    
-}
+namespace QuestForge.CharacterService.Application.Classes.Delete;
+
+public class DeleteClassCommand : DeleteEntityBaseCommand;

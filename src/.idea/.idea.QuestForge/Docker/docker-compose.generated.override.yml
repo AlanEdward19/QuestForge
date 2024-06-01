@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.4"
+services:
+  questforge.characterservice:
+    build:
+      context: "C:\\Users\\Alan-\\source\\repos\\QuestForge\\src"
+      dockerfile: "QuestForge.CharacterService\\Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/QuestForge.CharacterService.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "questforgecharacterservice:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Alan-\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\Alan-\\source\\repos\\QuestForge\\src\\QuestForge.CharacterService:/app:rw"
+    - "C:\\Users\\Alan-\\source\\repos\\QuestForge\\src:/src:rw"
+    working_dir: "/app"
