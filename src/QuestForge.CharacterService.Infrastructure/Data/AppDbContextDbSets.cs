@@ -11,4 +11,6 @@ public partial class AppDbContext
     public DbSet<ClassDataModel> Classes { get; set; }
     public DbSet<RaceDataModel> Races { get; set; }
     public DbSet<ItemDataModel> Items { get; set; }
+    public DbSet<WeaponDataModel> Weapons { get; set; }
+    public DbSet<PotionDataModel> Potions { get; set; }
 }
