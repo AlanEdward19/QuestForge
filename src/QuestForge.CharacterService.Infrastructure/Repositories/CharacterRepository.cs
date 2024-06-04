@@ -29,6 +29,8 @@ public class CharacterRepository(IUnitOfWork unitOfWork, AppDbContext dbContext)
             .Include(x => x.Race)
             .ThenInclude(x => x.AbilityScoreIncrease)
             .ThenInclude(x => x.AbilityScore)
+            .Include(x => x.Race)
+            .ThenInclude(x => x.Features)
             .Include(x => x.Level)
             .Include(x => x.AbilityScores)
             .ThenInclude(x => x.AbilityScore)
@@ -51,6 +53,7 @@ public class CharacterRepository(IUnitOfWork unitOfWork, AppDbContext dbContext)
                 .AsNoTracking()
                 .Include(x => x.AbilityScoreIncrease)
                 .ThenInclude(x => x.AbilityScore)
+                .Include(x => x.Features)
                 .FirstAsync(x => x.Id.Equals(parsedCommand!.RaceId), cancellationToken);
 
         ClassDataModel @class =
