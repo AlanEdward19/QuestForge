@@ -1,5 +1,4 @@
-﻿using QuestForge.CharacterService.Core.Characters.Enums;
-using QuestForge.CharacterService.Core.Common.Abstracts;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 using QuestForge.CharacterService.Core.Races.Entities;
@@ -10,11 +9,12 @@ public class RaceDataModel : BaseDataModel
 {
     public string Name { get; private set; }
     public string Description { get; private set; }
+    public double Movement { get; private set; }
     public virtual List<RaceAbilityScoreDataModel> AbilityScoreIncrease { get; private set; }
 
     public RaceDataModel() { }
 
-    public RaceDataModel(Guid id, string name, string description,
+    public RaceDataModel(Guid id, string name, string description, double movement,
         List<AbilityScoreValueObject> abilityScoreIncrease) : base(id)
     {
         Name = name;
@@ -22,6 +22,7 @@ public class RaceDataModel : BaseDataModel
         AbilityScoreIncrease = abilityScoreIncrease
             .Select(x => new RaceAbilityScoreDataModel(Id, x))
             .ToList();
+        Movement = movement;
     }
 
     public override void UpdateBasedOnValueObject(ValueObject valueObject)
@@ -34,6 +35,7 @@ public class RaceDataModel : BaseDataModel
                 .BuildFromDictionary(parsedValueObject.AbilityScoreIncrease)
                 .Select(x => new RaceAbilityScoreDataModel(Id, x))
                 .ToList();
+        Movement = parsedValueObject.Movement;
 
         base.UpdateBasedOnValueObject(valueObject);
     }

@@ -33,7 +33,7 @@ public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
         var parsedCommand = command as CreateRaceCommand;
         Guid raceId = Guid.NewGuid();
 
-        RaceDataModel race = new(raceId, parsedCommand!.Name!, parsedCommand!.Description!,
+        RaceDataModel race = new(raceId, parsedCommand!.Name!, parsedCommand!.Description!, parsedCommand.Movement!.Value,
             AbilityScoreValueObject.BuildFromDictionary(parsedCommand.AbilityScoreIncrease!));
 
         await dbContext.Races.AddAsync(race, cancellationToken);

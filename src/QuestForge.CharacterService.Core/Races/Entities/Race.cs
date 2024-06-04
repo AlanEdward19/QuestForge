@@ -13,6 +13,7 @@ public class Race : ValueObject
     public Guid Id { get; private set; }
     public string Name { get; private set; }
     public string Description { get; private set; }
+    public double Movement { get; private set; }
     public Dictionary<EAbilityScore, int> AbilityScoreIncrease { get; private set; }
 
     public Race(BaseDataModel dataModel) : base(dataModel)
@@ -25,6 +26,7 @@ public class Race : ValueObject
         AbilityScoreIncrease =
             AbilityScoreValueObject.BuildFromValueObjects(parsedDataModel.AbilityScoreIncrease
                 .Select(x => x.AbilityScore).ToList());
+        Movement = parsedDataModel.Movement;
     }
 
     public void UpdateName(string? name)
@@ -43,5 +45,11 @@ public class Race : ValueObject
     {
         if (abilityScoreIncrease != null && abilityScoreIncrease.Count != 0 && !AbilityScoreIncrease.Equals(abilityScoreIncrease))
             AbilityScoreIncrease = abilityScoreIncrease;
+    }
+
+    public void UpdateMovement(double? movement)
+    {
+        if (movement != null && !Movement.Equals(movement))
+            Movement = movement.Value;
     }
 }

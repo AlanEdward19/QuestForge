@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuestForge.CharacterService.Core.Characters.Enums;
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
@@ -564,6 +565,12 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
         );
 
         #endregion
+
+        #endregion
+
+        #region Classes
+
+
 
         #endregion
     }
