@@ -51,6 +51,7 @@ public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
         race.UpdateName(parsedCommand!.Name);
         race.UpdateDescription(parsedCommand.Description);
         race.UpdateAbilityScoreIncrease(parsedCommand.AbilityScoreIncrease);
+        race.UpdateMovement(parsedCommand.Movement);
         
         raceDataModel.UpdateBasedOnValueObject(race);
 
