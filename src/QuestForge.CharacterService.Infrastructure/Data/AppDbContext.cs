@@ -570,6 +570,176 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
 
         #region Classes
 
+        modelBuilder.Entity<FeatureDataModel>().HasData(
+            new FeatureDataModel("Visão no Escuro", """
+                                                    Acostumado à vida subterrânea, 
+                                                    você tem uma visão superior no escuro e na penumbra. 
+                                                    Você enxerga na penumbra a até 18 metros como se fosse 
+                                                    luz plena, e no escuro como se fosse na penumbra. Você 
+                                                    não pode discernir cores no escuro, apenas tons de cinza.
+                                                    """),
+            new FeatureDataModel("Resiliência Anã", """
+                                                     Você possui vantagem em testes de 
+                                                    resistência contra venenos e resistência contra dano de 
+                                                    veneno.
+                                                    """),
+            new FeatureDataModel("Especialização em Rochas", """
+                                                    Sempre que você 
+                                                    realizar um teste de Inteligência (História) relacionado à 
+                                                    origem de um trabalho em pedra, você é considerado 
+                                                    proficiente na perícia História e adiciona o dobro do seu 
+                                                    bônus de proficiência ao teste, ao invés do seu bônus de 
+                                                    proficiência normal.
+                                                    """),
+            new FeatureDataModel("Sentidos Aguçados", """
+                                                    Você tem proficiência na perícia 
+                                                    Percepção.
+                                                    """),
+            new FeatureDataModel("Ancestral Feérico", """
+                                                      Você tem vantagem nos testes de 
+                                                      resistência para resistir a ser enfeitiçado e magias não 
+                                                      podem colocá-lo para dormir.
+                                                      """),
+            new FeatureDataModel("Transe", """
+                                                      Elfos não precisam dormir. Ao invés disso, 
+                                                      eles meditam profundamente, permanecendo 
+                                                      semiconscientes, durante 4 horas por dia. (A palavra em 
+                                                      idioma comum para tal meditação é "transe".) Enquanto 
+                                                      medita, um elfo é capaz de sonhar de certo modo. Esses 
+                                                      sonhos na verdade são exercícios mentais que se tornam 
+                                                      reflexos através de anos de prática. Depois de descansar 
+                                                      dessa forma, você ganha os mesmos benefícios que um 
+                                                      humano depois de 8 horas de sono. 
+                                                      """),
+            new FeatureDataModel("Máscara da Natureza", """
+                                                      Você pode tentar se esconder 
+                                                      mesmo quando você está apenas levemente obscurecido  
+                                                      por folhagem, chuva forte, neve caindo, névoa ou outro 
+                                                      fenômeno natural.
+                                                      """),
+            new FeatureDataModel("Sensibilidade à Luz Solar", """
+                                                        Você possui 
+                                                        desvantagem nas jogadas de ataque e testes de Sabedoria 
+                                                        (Percepção) relacionados a visão quando você, o alvo do 
+                                                        seu ataque, ou qualquer coisa que você está tentando 
+                                                        perceber, esteja sob luz solar direta.
+                                                        """),
+            new FeatureDataModel("Magia Drow", """
+                                                        Você possui o truque globos de luz. 
+                                                        Quando você alcança o 3° nível, você pode conjurar a 
+                                                        magia fogo das fadas. Quando você alcança o 5° nível, 
+                                                        você pode conjurar escuridão. Você precisa terminar um 
+                                                        descanso longo para poder conjurar as magias desse traço 
+                                                        novamente. Carisma é sua habilidade chave para 
+                                                        conjurar essas magias.
+                                                        """),
+            new FeatureDataModel("Sortudo", """
+                                                              Quando você obtiver um 1 natural em uma 
+                                                              jogada de ataque, teste de habilidade ou teste de 
+                                                              resistência, você pode jogar de novo o dado e deve utilizar 
+                                                              o novo resultado.
+                                                              """),
+            new FeatureDataModel("Bravura", """
+                                                              Você tem vantagem em testes de resistência 
+                                                              contra ficar amedrontado. 
+                                                              """),
+            new FeatureDataModel("Agilidade Halfling", """
+                                                              Você pode mover-se através do 
+                                                              espaço de qualquer criatura que for de um tamanho maior 
+                                                              que o seu.
+                                                              """),
+            new FeatureDataModel("Arma de Sopro", """
+                                                       Você pode usar uma ação para 
+                                                       exalar energia destrutiva. Seu ancestral dracônico 
+                                                       determina o tamanho, formado e tipo de dano que você 
+                                                       expele. 
+                                                       Quando você usa sua arma de sopro, cada criatura na 
+                                                       área exalada deve realizar um teste de resistência, o tipo 
+                                                       do teste é determinado pelo seu ancestral dracônico. A CD 
+                                                       do teste de resistência é 8 + seu modificador de 
+                                                       Constituição + seu bônus de proficiência. Uma criatura 
+                                                       sofre 2d6 de dano num fracasso e metade desse dano num 
+                                                       sucesso. O dano aumenta para 3d6 no 6° nível, 4d6 no 11° 
+                                                       nível e 5d6 no 16° nível. 
+                                                       Depois de usar sua arma de sopro, você não poderá 
+                                                       utilizá-la novamente até completar um descanso curto ou 
+                                                       longo.
+                                                       """),
+            new FeatureDataModel("Resistência a Dano", """
+                                                       Você possui resistência ao tipo 
+                                                       de dano associado ao seu ancestral dracônico.
+                                                       """),
+            new FeatureDataModel("Esperteza Gnômica", """
+                                                       Você possui vantagem em todos 
+                                                       os testes de resistência de Inteligência, Sabedoria e 
+                                                       Carisma contra magia.
+                                                       """),
+            new FeatureDataModel("Ilusionista Nato", """
+                                                       Você conhece o truque ilusão 
+                                                       menor. Inteligência é a sua habilidade usada para 
+                                                       conjurá-la.
+                                                       """),
+            new FeatureDataModel("Falar com Bestas Pequenas", """
+                                                       Através de sons e 
+                                                       gestos, você pode comunicar ideias simples para Bestas 
+                                                       pequenas ou menores. Gnomos da floresta amam os 
+                                                       animais e normalmente possuem esquilos, doninhas, 
+                                                       coelhos, toupeiras, pica-paus e outras criaturas como 
+                                                       amados animais de estimação.
+                                                       """),
+            new FeatureDataModel("Conhecimento de Artífice", """
+                                                       Toda vez que você fizer 
+                                                       um teste de Inteligência (História) relacionado a itens 
+                                                       mágicos, objetos alquímicos ou mecanismos tecnológicos, 
+                                                       você pode adicionar o dobro do seu bônus de proficiência, 
+                                                       ao invés de qualquer bônus de proficiência que você 
+                                                       normalmente use.
+                                                       """),
+            new FeatureDataModel("Engenhoqueiro", """
+                                                       Você possui proficiência com 
+                                                       ferramentas de artesão (ferramentas de engenhoqueiro). 
+                                                       Usando essas ferramentas, você pode gastar 1 hora e 10 
+                                                       po em materiais para construir um mecanismo Miúdo (CA 
+                                                       5, 1 pv). O mecanismo para de funcionar após 24 horas (a 
+                                                       não ser que você gaste 1 hora reparando-o para manter o 
+                                                       mecanismo funcionando), ou quando você usa sua ação 
+                                                       para desmantelá-lo; nesse momento, você pode recuperar 
+                                                       o material usado para criá-lo. Você pode ter até três
+                                                        desses mecanismos ativos ao mesmo tempo.
+                                                       """),
+            new FeatureDataModel("Resistência Implacável", """
+                                                       Quando você é reduzido a 
+                                                       0 pontos de vida mas não é completamente morto, você 
+                                                       pode voltar para 1 ponto de vida. Você não pode usar essa 
+                                                       característica novamente até completar um descanso 
+                                                       longo.
+                                                       """),
+            new FeatureDataModel("Ataques Selvagens", """
+                                                       Quando você atinge um ataque 
+                                                       crítico com uma arma corpo-a-corpo, você pode rolar um 
+                                                       dos dados de dano da arma mais uma vez e adicioná-lo ao 
+                                                       dano extra causado pelo acerto crítico.
+                                                       """),
+            new FeatureDataModel("Resistência Infernal", """
+                                                       Você possui resistência a dano 
+                                                       de fogo.
+                                                       """),
+            new FeatureDataModel("Legado Infernal", """
+                                                       Você conhece o truque 
+                                                       taumaturgia. Quando você atingir o 3° nível, você poderá 
+                                                       conjurar a magia repreensão infernal como uma magia de 
+                                                       2° nível. Quando você atingir o 5° nível, você também 
+                                                       poderá conjurar a magia escuridão. Você precisa terminar 
+                                                       um descanso longo para poder usar as magias desse traço 
+                                                       novamente. Sua habilidade de conjuração para essas 
+                                                       magias é Carisma.
+                                                       """)
+            );
+
+        #endregion
+
+        #region Features
+
 
 
         #endregion

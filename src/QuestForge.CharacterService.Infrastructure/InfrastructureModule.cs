@@ -35,7 +35,8 @@ public static class InfrastructureModule
             .AddScoped<IRepository<CharacterDataModel>, CharacterRepository>()
             .AddScoped<IRepository<ClassDataModel>, ClassRepository>()
             .AddScoped<IRepository<ItemDataModel>, ItemRepository>()
-            .AddScoped<IRepository<RaceDataModel>, RaceRepository>();
+            .AddScoped<IRepository<RaceDataModel>, RaceRepository>()
+            .AddScoped<IRepository<FeatureDataModel>, FeatureRepository>();
 
         return services;
     }

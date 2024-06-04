@@ -6,6 +6,7 @@ using QuestForge.CharacterService.Application.Races.Update;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 using QuestForge.CharacterService.Core.Races.Entities;
 
@@ -33,8 +34,12 @@ public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
         var parsedCommand = command as CreateRaceCommand;
         Guid raceId = Guid.NewGuid();
 
+        List<FeatureDataModel> featuresDataModel = await dbContext.Features
+            .Where(x => parsedCommand.FeatureIds.Contains(x.Id))
+            .ToListAsync(cancellationToken);
+
         RaceDataModel race = new(raceId, parsedCommand!.Name!, parsedCommand!.Description!, parsedCommand.Movement!.Value,
-            AbilityScoreValueObject.BuildFromDictionary(parsedCommand.AbilityScoreIncrease!));
+            AbilityScoreValueObject.BuildFromDictionary(parsedCommand.AbilityScoreIncrease!), featuresDataModel);
 
         await dbContext.Races.AddAsync(race, cancellationToken);
     }
@@ -47,11 +52,19 @@ public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
             await dbContext.Races.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
 
         Race race = new(raceDataModel);
-        
+
+        // validar caso lista venha vazia
+        List<FeatureDataModel> featuresDataModel = await dbContext.Features
+            .Where(x => parsedCommand.FeatureIds.Contains(x.Id))
+            .ToListAsync(cancellationToken);
+
+        List<Feature> features = featuresDataModel.Select(x => new Feature(x)).ToList();
+
         race.UpdateName(parsedCommand!.Name);
         race.UpdateDescription(parsedCommand.Description);
         race.UpdateAbilityScoreIncrease(parsedCommand.AbilityScoreIncrease);
         race.UpdateMovement(parsedCommand.Movement);
+        race.UpdateFeatures(features);
         
         raceDataModel.UpdateBasedOnValueObject(race);
 

@@ -13,6 +13,8 @@
     <ItemGroup>
       <Folder Include="Characters\Validators\" />
       <Folder Include="Classes\Validators\" />
+      <Folder Include="Common\Features\Get\" />
+      <Folder Include="Common\Features\Update\" />
       <Folder Include="Items\Get\" />
       <Folder Include="Items\Update\" />
       <Folder Include="Races\Validators\" />

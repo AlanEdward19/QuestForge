@@ -3,6 +3,7 @@ using QuestForge.CharacterService.Core.Characters.Enums;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 
 namespace QuestForge.CharacterService.Core.Races.Entities;
@@ -15,6 +16,7 @@ public class Race : ValueObject
     public string Description { get; private set; }
     public double Movement { get; private set; }
     public Dictionary<EAbilityScore, int> AbilityScoreIncrease { get; private set; }
+    public List<Feature> Features { get; private set;}
 
     public Race(BaseDataModel dataModel) : base(dataModel)
     {
@@ -27,6 +29,7 @@ public class Race : ValueObject
             AbilityScoreValueObject.BuildFromValueObjects(parsedDataModel.AbilityScoreIncrease
                 .Select(x => x.AbilityScore).ToList());
         Movement = parsedDataModel.Movement;
+        Features = parsedDataModel.Features.Select(x => new Feature(x)).ToList();
     }
 
     public void UpdateName(string? name)
@@ -51,5 +54,11 @@ public class Race : ValueObject
     {
         if (movement != null && !Movement.Equals(movement))
             Movement = movement.Value;
+    }
+
+    public void UpdateFeatures(List<Feature> features)
+    {
+        if (features != null && features.Count != 0 && !Features.SequenceEqual(features))
+            Features = features;
     }
 }

@@ -13,4 +13,5 @@ public partial class AppDbContext
     public DbSet<ItemDataModel> Items { get; set; }
     public DbSet<WeaponDataModel> Weapons { get; set; }
     public DbSet<PotionDataModel> Potions { get; set; }
+    public DbSet<FeatureDataModel> Features { get; set; }
 }

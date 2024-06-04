@@ -4,6 +4,10 @@ using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
 using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
+using QuestForge.CharacterService.Application.Common.Features.Create;
+using QuestForge.CharacterService.Application.Common.Features.Delete;
+using QuestForge.CharacterService.Application.Common.Features.Get;
+using QuestForge.CharacterService.Application.Common.Features.Update;
 using QuestForge.CharacterService.Application.Common.Models;
 using QuestForge.CharacterService.Application.Items.Create;
 using QuestForge.CharacterService.Application.Items.Delete;
@@ -11,6 +15,7 @@ using QuestForge.CharacterService.Application.Races.Create;
 using QuestForge.CharacterService.Application.Races.Delete;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
+using QuestForge.CharacterService.Core.Common.Entities;
 
 namespace QuestForge.CharacterService.Application;
 
@@ -39,7 +44,12 @@ public static class ApplicationModule
             .AddScoped<IHandler<DeleteRaceCommand, DatabaseOperationViewModel>, DeleteRaceCommandHandler>()
             
             .AddScoped<IHandler<CreateItemCommand, DatabaseOperationViewModel>, CreateItemCommandHandler>()
-            .AddScoped<IHandler<DeleteItemCommand, DatabaseOperationViewModel>, DeleteItemCommandHandler>();
+            .AddScoped<IHandler<DeleteItemCommand, DatabaseOperationViewModel>, DeleteItemCommandHandler>()
+            
+            .AddScoped<IHandler<CreateFeatureCommand, DatabaseOperationViewModel>, CreateFeatureCommandHandler>()
+            .AddScoped<IHandler<GetFeatureQuery, Feature>, GetFeatureQueryHandler>()
+            .AddScoped<IHandler<UpdateFeatureCommand, DatabaseOperationViewModel>, UpdateFeatureCommandHandler>()
+            .AddScoped<IHandler<DeleteFeatureCommand, DatabaseOperationViewModel>, DeleteFeatureCommandHandler>();
         
         return services;
     }

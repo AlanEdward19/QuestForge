@@ -11,11 +11,12 @@ public class RaceDataModel : BaseDataModel
     public string Description { get; private set; }
     public double Movement { get; private set; }
     public virtual List<RaceAbilityScoreDataModel> AbilityScoreIncrease { get; private set; }
+    public virtual List<FeatureDataModel> Features { get; private set; }
 
     public RaceDataModel() { }
 
     public RaceDataModel(Guid id, string name, string description, double movement,
-        List<AbilityScoreValueObject> abilityScoreIncrease) : base(id)
+        List<AbilityScoreValueObject> abilityScoreIncrease, List<FeatureDataModel> features) : base(id)
     {
         Name = name;
         Description = description;
@@ -23,6 +24,7 @@ public class RaceDataModel : BaseDataModel
             .Select(x => new RaceAbilityScoreDataModel(Id, x))
             .ToList();
         Movement = movement;
+        Features = features;
     }
 
     public override void UpdateBasedOnValueObject(ValueObject valueObject)
