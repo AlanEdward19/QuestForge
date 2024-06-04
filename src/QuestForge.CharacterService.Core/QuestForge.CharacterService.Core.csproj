@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Characters\Enums\" />
     <Folder Include="Classes\Aggregates\" />
     <Folder Include="Classes\Services\" />
     <Folder Include="Races\Aggregates\" />

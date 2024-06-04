@@ -1,9 +1,9 @@
 ﻿using System.Text.Json.Serialization;
-using QuestForge.CharacterService.Core.Characters.Enums;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 
 namespace QuestForge.CharacterService.Core.Races.Entities;
@@ -15,7 +15,7 @@ public class Race : ValueObject
     public string Name { get; private set; }
     public string Description { get; private set; }
     public double Movement { get; private set; }
-    public Dictionary<EAbilityScore, int> AbilityScoreIncrease { get; private set; }
+    public Dictionary<EAbility, int> AbilityScoreIncrease { get; private set; }
     public List<Feature> Features { get; private set;}
 
     public Race(BaseDataModel dataModel) : base(dataModel)
@@ -44,7 +44,7 @@ public class Race : ValueObject
             Description = description;
     }
     
-    public void UpdateAbilityScoreIncrease(Dictionary<EAbilityScore, int>? abilityScoreIncrease)
+    public void UpdateAbilityScoreIncrease(Dictionary<EAbility, int>? abilityScoreIncrease)
     {
         if (abilityScoreIncrease != null && abilityScoreIncrease.Count != 0 && !AbilityScoreIncrease.Equals(abilityScoreIncrease))
             AbilityScoreIncrease = abilityScoreIncrease;

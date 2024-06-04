@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 using QuestForge.CharacterService.Core.Characters.Entities;
-using QuestForge.CharacterService.Core.Characters.Enums;
 using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;

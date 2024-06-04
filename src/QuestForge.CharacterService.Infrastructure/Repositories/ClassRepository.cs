@@ -32,7 +32,8 @@ public class ClassRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : I
         var parsedCommand = command as CreateClassCommand;
 
         ClassDataModel @class = new(parsedCommand!.Name!, parsedCommand!.Description!,
-            parsedCommand.HitDie!);
+            parsedCommand.HitDie!, parsedCommand.ArmorProficiencies, parsedCommand.WeaponProficiencies, parsedCommand.ToolProficiencies,
+            parsedCommand.SavingThrows, parsedCommand.SkillsProficiencies);
 
         await dbContext.Classes.AddAsync(@class, cancellationToken);
     }
@@ -43,15 +44,20 @@ public class ClassRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : I
 
         ClassDataModel classDataModel =
             await dbContext.Classes.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
-        
+
         Class @class = new(classDataModel);
-        
+
         @class.UpdateName(parsedCommand!.Name);
         @class.UpdateDescription(parsedCommand.Description);
         @class.UpdateHitDie(parsedCommand.HitDie);
-        
+        @class.UpdateWeaponProficiencies(parsedCommand.WeaponProficiencies);
+        @class.UpdateArmorProficiencies(parsedCommand.ArmorProficiencies);
+        @class.UpdateToolProficiencies(parsedCommand.ToolProficiencies);
+        @class.UpdateSavingThrows(parsedCommand.SavingThrows);
+        @class.UpdateSkillsProficiencies(parsedCommand.SkillsProficiencies);
+
         classDataModel.UpdateBasedOnValueObject(@class);
-        
+
         dbContext.Classes.Update(classDataModel);
     }
 
@@ -61,7 +67,7 @@ public class ClassRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : I
 
         ClassDataModel @class =
             await dbContext.Classes.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
-        
+
         dbContext.Classes.Remove(@class);
     }
 }

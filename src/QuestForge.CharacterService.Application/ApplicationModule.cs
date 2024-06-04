@@ -4,6 +4,7 @@ using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
 using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
+using QuestForge.CharacterService.Application.Classes.Get;
 using QuestForge.CharacterService.Application.Common.Features.Create;
 using QuestForge.CharacterService.Application.Common.Features.Delete;
 using QuestForge.CharacterService.Application.Common.Features.Get;
@@ -14,6 +15,7 @@ using QuestForge.CharacterService.Application.Items.Delete;
 using QuestForge.CharacterService.Application.Races.Create;
 using QuestForge.CharacterService.Application.Races.Delete;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
+using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
 using QuestForge.CharacterService.Core.Common.Entities;
 
@@ -38,6 +40,7 @@ public static class ApplicationModule
             .AddScoped<IHandler<DeleteCharacterCommand, DatabaseOperationViewModel>, DeleteCharacterCommandHandler>()
             
             .AddScoped<IHandler<CreateClassCommand, DatabaseOperationViewModel>, CreateClassCommandHandler>()
+            .AddScoped<IHandler<GetClassQuery, Class>, GetClassQueryHandler>()
             .AddScoped<IHandler<DeleteClassCommand, DatabaseOperationViewModel>, DeleteClassCommandHandler>()
             
             .AddScoped<IHandler<CreateRaceCommand, DatabaseOperationViewModel>, CreateRaceCommandHandler>()

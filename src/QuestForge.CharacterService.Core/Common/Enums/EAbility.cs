@@ -1,6 +1,6 @@
-﻿namespace QuestForge.CharacterService.Core.Characters.Enums;
+﻿namespace QuestForge.CharacterService.Core.Common.Enums;
 
-public enum EAbilityScore
+public enum EAbility
 {
     Strength,
     Dexterity,

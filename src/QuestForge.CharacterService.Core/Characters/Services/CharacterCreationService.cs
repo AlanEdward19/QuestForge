@@ -1,9 +1,9 @@
 ﻿using QuestForge.CharacterService.Core.Characters.Aggregates;
 using QuestForge.CharacterService.Core.Characters.Entities;
-using QuestForge.CharacterService.Core.Characters.Enums;
 using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 using QuestForge.CharacterService.Core.Races.Entities;
 
@@ -44,7 +44,7 @@ public static class CharacterCreationService
         string appearanceDescription, string backgroundDescription,
         IEnumerable<AbilityScoreValueObject> raceAbilityScoreIncrease)
     {
-        Dictionary<EAbilityScore, int> abilityScores = CreateDefaultAbilityScores();
+        Dictionary<EAbility, int> abilityScores = CreateDefaultAbilityScores();
 
         foreach (var abilityScore in raceAbilityScoreIncrease)
             abilityScores[abilityScore.AbilityScore] += abilityScore.Value;
@@ -52,16 +52,16 @@ public static class CharacterCreationService
         return new(id, name, height, weight, age, appearanceDescription, backgroundDescription, abilityScores);
     }
 
-    private static Dictionary<EAbilityScore, int> CreateDefaultAbilityScores()
+    private static Dictionary<EAbility, int> CreateDefaultAbilityScores()
     {
         return new()
         {
-            { EAbilityScore.Strength, 8 },
-            { EAbilityScore.Dexterity, 8 },
-            { EAbilityScore.Constitution, 8 },
-            { EAbilityScore.Intelligence, 8 },
-            { EAbilityScore.Wisdom, 8 },
-            { EAbilityScore.Charisma, 8 }
+            { EAbility.Strength, 8 },
+            { EAbility.Dexterity, 8 },
+            { EAbility.Constitution, 8 },
+            { EAbility.Intelligence, 8 },
+            { EAbility.Wisdom, 8 },
+            { EAbility.Charisma, 8 }
         };
     }
 }
