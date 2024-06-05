@@ -65,7 +65,7 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
         new ArmorDataModel(EArmorProficiency.HeavyArmor, 18, null,
                 0, 15, true, "Placas", "Consiste em placas de metal moldadas para cobrir todo o corpo. Inclui luvas, botas de couro pesadas, um capacete com viseira e espessas camadas de enchimento por baixo da armadura. Fivelas e tiras de couro distribuem o peso ao longo do corpo.", 1500,
                 ECurrencyType.Gold, 32.5),
-        
+
         new ArmorDataModel(EArmorProficiency.Shield, 0, null,
                 2, 0, true, "Escudo", "Feito de madeira ou metal e é usado com uma mão. Empunhar um escudo aumenta sua Classe de Armadura em 2. Você só pode se beneficiar de um escudo por vez.", 10,
                 ECurrencyType.Gold, 3)
@@ -159,8 +159,16 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
         #region Miscellaneous
 
         modelBuilder.Entity<ItemDataModel>().HasData(
-            new ItemDataModel("Ábaco", "", EItemType.Miscellaneous, 2, ECurrencyType.Gold, 1.0),
-            new ItemDataModel("Ácido (vidro)", "", EItemType.Miscellaneous, 25, ECurrencyType.Gold, 0.5),
+            new ItemDataModel("Ábaco", "Instrumento de cálculo, formado por uma moldura com bastões ou arames paralelos, dispostos no sentido vertical, correspondentes cada um a uma posição digital (unidades, dezenas, etc.) e nos quais estão os elementos de contagem (fichas, bolas ou contas) que podem fazer-se deslizar livremente.", EItemType.Miscellaneous, 2, ECurrencyType.Gold, 1.0),
+            new ItemDataModel("Ácido (vidro)", """
+                                               Usando uma ação, você pode despejar o 
+                                               conteúdo desse vidro em uma criatura a até 1,5 metro de 
+                                               você, ou arremessar o vidro a até 6 metros de distância, 
+                                               quebrando-o no impacto. Em ambos os casos, você deve 
+                                               realizar um ataque à distância contra uma criatura ou 
+                                               objeto, tratando o ácido como uma arma improvisada. Se 
+                                               acertar, o alvo sofre 2d6 de dano ácido.
+                                               """, EItemType.Miscellaneous, 25, ECurrencyType.Gold, 0.5),
             new ItemDataModel("Água benta (frasco)", """
                                                      Usando uma ação, você pode espalhar o 
                                                      conteúdo desse frasco em uma criatura a até 1,5 metro de 
@@ -611,6 +619,80 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
                                                 testes de habilidade que você fizer para criar ou utilizar 
                                                 venenos.
                                                 """, EItemType.Miscellaneous, 50, ECurrencyType.Gold, 1.0)
+        );
+
+        #endregion
+
+        #region EquipmentPacks
+
+        modelBuilder.Entity<ItemDataModel>().HasData(
+            new ItemDataModel("Pacote de Artista", """
+                                                   Inclui uma mochila, um saco de
+                                                   dormir, duas fantasias, 5 velas, 5 dias de rações, um cantil e um kit
+                                                   de disfarce.
+                                                   """, EItemType.EquipmentPacks, 40, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Assaltante", """
+                                                      Inclui uma mochila, um saco
+                                                      com 1.000 esferas de metal, 3 metros de linha, um sino, 5 velas,
+                                                      um pé de cabra, um martelo, 10 pítons, uma lanterna coberta, 2
+                                                      frascos de óleo, 5 dias de rações, uma caixa de fogo e um cantil. O
+                                                      kit também possui 15 metros de corda de cânhamo amarrada ao
+                                                      lado dele.
+                                                      """, EItemType.EquipmentPacks, 16, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Aventureiro", """
+                                                       Inclui uma mochila, um pé de
+                                                       cabra, um martelo, 10 pítons, 10 tochas, uma caixa de fogo, 10
+                                                       dias de rações e um cantil. O kit também tem 15 metros de corda
+                                                       de cânhamo amarrada ao lado dele.
+                                                       """, EItemType.EquipmentPacks, 12, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Diplomata", """
+                                                     Inclui um baú, 2 caixas para
+                                                     mapas ou pergaminhos, um conjunto de roupas finas, um vidro de
+                                                     tinta, uma caneta tinteiro, uma lâmpada, 2 frascos de óleo, 5
+                                                     folhas de papel, um vidro de perfume, parafina e sabão.
+                                                     """, EItemType.EquipmentPacks, 39, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Estudioso", """
+                                                     Inclui uma mochila, um livro de
+                                                     estudo, um vidro de tinta, uma caneta tinteiro, 10 folhas de
+                                                     pergaminho, um saquinho de areia e uma pequena faca.
+                                                     """, EItemType.EquipmentPacks, 40, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Explorador", """
+                                                      Inclui uma mochila, um saco de
+                                                      dormir, um kit de refeição, uma caixa de fogo, 10 tochas, 10 dias
+                                                      de rações e um cantil. O kit também tem 15 metros de corda de
+                                                      cânhamo amarrada ao lado dele.
+                                                      """, EItemType.EquipmentPacks, 10, ECurrencyType.Gold, 0),
+            new ItemDataModel("Pacote de Sacerdote", """
+                                                     Inclui uma mochila, um
+                                                     cobertor, 10 velas, uma caixa de fogo, uma caixa de esmolas, 2
+                                                     blocos de incenso, um incensário, vestes, 2 dias de rações e um
+                                                     cantil.
+                                                     """, EItemType.EquipmentPacks, 19, ECurrencyType.Gold, 0)
+        );
+
+        #endregion
+
+        #region Food and Drinks
+
+        modelBuilder.Entity<ItemDataModel>().HasData(
+            new ItemDataModel("Banquete (por pessoa)", "", EItemType.FoodAndDrink, 10, ECurrencyType.Gold, 0),
+            new ItemDataModel("Carne (pedaço)", "", EItemType.FoodAndDrink, 3, ECurrencyType.Silver, 0),
+
+            new ItemDataModel("Cerveja (galão)", "", EItemType.FoodAndDrink, 2, ECurrencyType.Silver, 0),
+            new ItemDataModel("Cerveja (caneca)", "", EItemType.FoodAndDrink, 4, ECurrencyType.Copper, 0),
+
+            new ItemDataModel("Pão (pedaço)", "", EItemType.FoodAndDrink, 2, ECurrencyType.Copper, 0),
+            new ItemDataModel("Queijo (pedaço)", "", EItemType.FoodAndDrink, 2, ECurrencyType.Silver, 0),
+
+            new ItemDataModel("Esquálida (refeição diária)", "Consiste em restos mal preparados, muitas vezes estragados ou contaminados. A comida pode causar doenças. Sem qualquer prazer ou nutrição adequada. Consumida em um ambiente sujo e insalubre, com a constante presença de insetos e roedores.", EItemType.FoodAndDrink, 3, ECurrencyType.Copper, 0),
+            new ItemDataModel("Pobre (refeição diária)", "Composta por ingredientes básicos e de qualidade questionável. A refeição é simples, sem variedade, suficiente para manter alguém vivo, mas insatisfatória e possivelmente desagradável. Frequentemente rústica e pouco apetitosas.", EItemType.FoodAndDrink, 6, ECurrencyType.Copper, 0),
+            new ItemDataModel("Modesta (refeição diária)", "Inclui pratos simples e caseiros, preparados com ingredientes frescos, mas comuns. A refeição é nutritiva e satisfatória, servida em um ambiente limpo e acolhedor. Não há luxo, mas proporciona uma experiência agradável.", EItemType.FoodAndDrink, 3, ECurrencyType.Silver, 0),
+            new ItemDataModel("Confortável (refeição diária)", "Preparada com ingredientes de boa qualidade, bem elaborada e saborosa. A refeição é servida em um ambiente confortável e bem cuidado, proporcionando uma experiência prazerosa e nutritiva. Inclui pratos variados e bem apresentados.", EItemType.FoodAndDrink, 5, ECurrencyType.Silver, 0),
+            new ItemDataModel("Rica (refeição diária)", "Composta por pratos sofisticados e requintados, preparados com ingredientes de alta qualidade e muitas vezes exóticos. A refeição é servida em um ambiente elegante e refinado, acompanhada por um excelente serviço. Proporciona uma experiência culinária luxuosa e memorável.", EItemType.FoodAndDrink, 8, ECurrencyType.Silver, 0),
+            new ItemDataModel("Aristocrática (refeição diária)", "Caracterizada por uma experiência gastronômica de excelência, com pratos gourmet elaborados por chefs renomados. Os ingredientes são os melhores disponíveis, muitas vezes raros e caros. Servida em um ambiente opulento e sofisticado, com um serviço impecável. A refeição é uma celebração de sabor e luxo, frequentemente acompanhada de bebidas finas e uma apresentação artística.", EItemType.FoodAndDrink, 2, ECurrencyType.Gold, 0),
+
+            new ItemDataModel("Vinho Comum (jarra)", "", EItemType.FoodAndDrink, 2, ECurrencyType.Silver, 0),
+            new ItemDataModel("Vinho Fino (garrafa)", "", EItemType.FoodAndDrink, 10, ECurrencyType.Gold, 0)
         );
 
         #endregion

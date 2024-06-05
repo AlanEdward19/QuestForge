@@ -6,5 +6,7 @@ public enum EItemType
     Armor,
     Potion,
     Tool,
-    Miscellaneous
+    Miscellaneous,
+    EquipmentPacks,
+    FoodAndDrink,
 }

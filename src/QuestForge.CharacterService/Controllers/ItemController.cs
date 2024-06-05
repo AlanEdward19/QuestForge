@@ -49,6 +49,20 @@ namespace QuestForge.CharacterService.Controllers
 
         #endregion
 
+        #region Food and Drinks
+
+        [HttpPost("FoodDrink")]
+        public async Task<IActionResult> CreateFoodAndDrinks(
+            [FromServices] IHandler<CreateItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] CreateItemCommand command, CancellationToken cancellationToken)
+        {
+            command.SetType(EItemType.FoodAndDrink);
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+
+        #endregion
+
         #region Tools
 
         [HttpPost("Tools")]
