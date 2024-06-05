@@ -2,6 +2,7 @@
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
+using QuestForge.CharacterService.Core.Races.DataModels;
 using QuestForge.CharacterService.Infrastructure.Configurations;
 
 namespace QuestForge.CharacterService.Infrastructure.Data;
@@ -17,11 +18,60 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
             .HasDiscriminator<EItemType>("ItemType")
             .HasValue<WeaponDataModel>(EItemType.Weapon)
             .HasValue<PotionDataModel>(EItemType.Potion)
-            //.HasValue<ItemDataModel>(EItemType.Armor)
+            .HasValue<ArmorDataModel>(EItemType.Armor)
             //.HasValue<ItemDataModel>(EItemType.Tool)
             .HasValue<ItemDataModel>(EItemType.Miscellaneous);
 
         #region Items
+
+        #region Armors
+
+        modelBuilder.Entity<ArmorDataModel>().HasData(
+            new ArmorDataModel(EArmorProficiency.LightArmor, 11, EAbility.Dexterity,
+                0, 0, true, "Acolchoada", "Consiste em camadas de panos acolchoados e batidos.", 5,
+                ECurrencyType.Gold, 4),
+            new ArmorDataModel(EArmorProficiency.LightArmor, 11, EAbility.Dexterity,
+                0, 0, false, "Couro", "São feitos de couro que foi endurecido após ser fervido em óleo. O resto da armadura é feita de materiais mais macios e mais flexíveis.", 10,
+                ECurrencyType.Gold, 5),
+            new ArmorDataModel(EArmorProficiency.LightArmor, 12, EAbility.Dexterity,
+                0, 0, false, "Couro Batido", "Feita de couro resistente, mas flexível, é reforçada com rebites ou cravos.", 45,
+                ECurrencyType.Gold, 6.5),
+
+        new ArmorDataModel(EArmorProficiency.MediumArmor, 12, EAbility.Dexterity,
+                2, 0, false, "Gibão de Peles", "Armadura bruta consistindo de peles grossas. É comumente usada por tribos bárbaras, humanoides malignos e outros povos que não têm acesso às ferramentas e materiais necessários para criar uma armadura melhor.", 10,
+                ECurrencyType.Gold, 6),
+            new ArmorDataModel(EArmorProficiency.MediumArmor, 13, EAbility.Dexterity,
+                2, 0, false, "Camisão de Malha", "Feito de anéis de metal intercalados, um camisão de cota de malha é usado entre as camadas de roupa. Essa armadura oferece proteção modesta para a parte superior do corpo de quem a usa e permite que o som dos anéis de metal, friccionados uns contra os outros, sejam amortecidos pelas camadas exteriores.", 30,
+                ECurrencyType.Gold, 10),
+        new ArmorDataModel(EArmorProficiency.MediumArmor, 14, EAbility.Dexterity,
+                2, 0, true, "Brunea", "Consiste em um casaco e calças (e talvez uma saia separada) de couro coberto com peças sobrepostas de metal, assim como as escamas de peixe. O conjunto inclui manoplas.", 50,
+                ECurrencyType.Gold, 22.5),
+        new ArmorDataModel(EArmorProficiency.MediumArmor, 14, EAbility.Dexterity,
+                2, 0, false, "Peitoral", "Constituída por um peitoral de metal usado com couro flexível em seu interior. Embora ele deixe as pernas e braços do usuário relativamente desprotegidos, essa armadura fornece boa proteção para seus órgãos vitais, deixando quem a usa relativamente sem restrições.", 400,
+                ECurrencyType.Gold, 10),
+        new ArmorDataModel(EArmorProficiency.MediumArmor, 15, EAbility.Dexterity,
+                2, 0, true, "Meia-Armadura", "Composta de placas de metal moldadas que cobrem a maior parte do corpo. Ela não inclui proteção para as pernas além de caneleiras fixadas com tiras de couro.", 750,
+                ECurrencyType.Gold, 20),
+
+        new ArmorDataModel(EArmorProficiency.HeavyArmor, 14, null,
+                0, 0, true, "Cota de anéis", "Feita de couro com pesados anéis presos a ela. Os anéis ajudam a reforçar a armadura contra golpes de espadas e machados. A cota de anéis é inferior à cota de malha e geralmente é vestida apenas por aqueles que não podem pagar por uma armadura melhor.", 30,
+                ECurrencyType.Gold, 20),
+        new ArmorDataModel(EArmorProficiency.HeavyArmor, 16, null,
+                0, 13, true, "Cota de malha", "Feita de anéis de metal entrelaçados, a cota de malha inclui uma camada de tecido acolchoado usada por baixo da malha de metal para evitar atrito e amortecer o impacto dos golpes. O conjunto inclui manoplas.", 75,
+                ECurrencyType.Gold, 27.5),
+        new ArmorDataModel(EArmorProficiency.HeavyArmor, 17, null,
+                0, 15, true, "Cota de malha", "Feita de tiras verticais de metal, rebitadas a um suporte de couro, usadas sobre um preenchimento de pano. Cotas de malha flexíveis protegem as articulações.", 200,
+                ECurrencyType.Gold, 30),
+        new ArmorDataModel(EArmorProficiency.HeavyArmor, 18, null,
+                0, 15, true, "Placas", "Consiste em placas de metal moldadas para cobrir todo o corpo. Inclui luvas, botas de couro pesadas, um capacete com viseira e espessas camadas de enchimento por baixo da armadura. Fivelas e tiras de couro distribuem o peso ao longo do corpo.", 1500,
+                ECurrencyType.Gold, 32.5),
+        
+        new ArmorDataModel(EArmorProficiency.Shield, 0, null,
+                2, 0, true, "Escudo", "Feito de madeira ou metal e é usado com uma mão. Empunhar um escudo aumenta sua Classe de Armadura em 2. Você só pode se beneficiar de um escudo por vez.", 10,
+                ECurrencyType.Gold, 3)
+        );
+
+        #endregion
 
         #region Weapons
 
@@ -569,6 +619,11 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
 
         #region Classes
 
+
+        #endregion
+
+        #region Features
+
         modelBuilder.Entity<FeatureDataModel>().HasData(
             new FeatureDataModel("Visão no Escuro", """
                                                     Acostumado à vida subterrânea, 
@@ -734,12 +789,6 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
                                                        magias é Carisma.
                                                        """)
             );
-
-        #endregion
-
-        #region Features
-
-
 
         #endregion
     }

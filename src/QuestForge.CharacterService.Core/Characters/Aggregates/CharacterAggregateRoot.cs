@@ -1,9 +1,9 @@
 ﻿using System.Text.Json.Serialization;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Characters.Entities;
 using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
-using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 using QuestForge.CharacterService.Core.Races.Entities;

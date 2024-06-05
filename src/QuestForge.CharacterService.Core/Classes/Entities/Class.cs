@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
+using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
-using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Utils.Converters;
 

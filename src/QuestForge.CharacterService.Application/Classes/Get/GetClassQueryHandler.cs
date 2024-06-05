@@ -1,7 +1,7 @@
-﻿using QuestForge.CharacterService.Core.Classes.Entities;
+﻿using QuestForge.CharacterService.Core.Classes.DataModels;
+using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.DataModels;
 
 namespace QuestForge.CharacterService.Application.Classes.Get;
 

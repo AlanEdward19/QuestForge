@@ -1,6 +1,6 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Characters.DataModels;
 
 public class BackpackDataModel : BaseDataModel
 {
@@ -8,7 +8,7 @@ public class BackpackDataModel : BaseDataModel
     public List<PlayerItemDataModel> Items { get; private set; }
 
     public BackpackDataModel() { }
-    
+
     public BackpackDataModel(Guid id, Guid characterId) : base(id)
     {
         CharacterId = characterId;

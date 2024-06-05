@@ -3,7 +3,7 @@ using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.Enums;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Classes.DataModels;
 
 public class ClassDataModel : BaseDataModel
 {

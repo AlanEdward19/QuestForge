@@ -1,4 +1,6 @@
-﻿using QuestForge.CharacterService.Core.Common.Enums;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Common.Enums;
 
 namespace QuestForge.CharacterService.Core.Common.DataModels;
 
@@ -16,5 +18,16 @@ public class WeaponDataModel : ItemDataModel
         Dice = dice;
         DamageType = damageType;
         DiceCount = diceCount;
+    }
+
+    public override void UpdateBasedOnValueObject(ValueObject valueObject)
+    {
+        var parsedValueObject = valueObject as Weapon;
+
+        Dice = parsedValueObject!.Dice;
+        DamageType = parsedValueObject.DamageType;
+        DiceCount = parsedValueObject.DiceCount;
+
+        base.UpdateBasedOnValueObject(valueObject);
     }
 }

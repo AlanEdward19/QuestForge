@@ -10,8 +10,16 @@ using QuestForge.CharacterService.Application.Common.Features.Delete;
 using QuestForge.CharacterService.Application.Common.Features.Get;
 using QuestForge.CharacterService.Application.Common.Features.Update;
 using QuestForge.CharacterService.Application.Common.Models;
+using QuestForge.CharacterService.Application.Items.Armors.Create;
+using QuestForge.CharacterService.Application.Items.Armors.Update;
+using QuestForge.CharacterService.Application.Items.Common.Get;
+using QuestForge.CharacterService.Application.Items.Common.List;
 using QuestForge.CharacterService.Application.Items.Create;
 using QuestForge.CharacterService.Application.Items.Delete;
+using QuestForge.CharacterService.Application.Items.Potions.Create;
+using QuestForge.CharacterService.Application.Items.Potions.Update;
+using QuestForge.CharacterService.Application.Items.Weapons.Create;
+using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Application.Races.Create;
 using QuestForge.CharacterService.Application.Races.Delete;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
@@ -47,8 +55,19 @@ public static class ApplicationModule
             .AddScoped<IHandler<DeleteRaceCommand, DatabaseOperationViewModel>, DeleteRaceCommandHandler>()
             
             .AddScoped<IHandler<CreateItemCommand, DatabaseOperationViewModel>, CreateItemCommandHandler>()
+            .AddScoped<IHandler<GetItemQuery, Item>, GetItemQueryHandler>()
+            .AddScoped<IHandler<ListItemQuery, IEnumerable<Item>>, ListItemQueryHandler>()
             .AddScoped<IHandler<DeleteItemCommand, DatabaseOperationViewModel>, DeleteItemCommandHandler>()
-            
+
+            .AddScoped<IHandler<CreateArmorCommand, DatabaseOperationViewModel>, CreateArmorCommandHandler>()
+            .AddScoped<IHandler<UpdateArmorCommand, DatabaseOperationViewModel>, UpdateArmorCommandHandler>()
+
+            .AddScoped<IHandler<CreatePotionCommand, DatabaseOperationViewModel>, CreatePotionCommandHandler>()
+            .AddScoped<IHandler<UpdatePotionCommand, DatabaseOperationViewModel>, UpdatePotionCommandHandler>()
+
+            .AddScoped<IHandler<CreateWeaponCommand, DatabaseOperationViewModel>, CreateWeaponCommandHandler>()
+            .AddScoped<IHandler<UpdateWeaponCommand, DatabaseOperationViewModel>, UpdateWeaponCommandHandler>()
+
             .AddScoped<IHandler<CreateFeatureCommand, DatabaseOperationViewModel>, CreateFeatureCommandHandler>()
             .AddScoped<IHandler<GetFeatureQuery, Feature>, GetFeatureQueryHandler>()
             .AddScoped<IHandler<UpdateFeatureCommand, DatabaseOperationViewModel>, UpdateFeatureCommandHandler>()

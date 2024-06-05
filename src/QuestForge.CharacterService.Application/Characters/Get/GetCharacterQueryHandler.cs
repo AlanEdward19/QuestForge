@@ -1,8 +1,8 @@
 ﻿using QuestForge.CharacterService.Core.Characters.Aggregates;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Characters.Services;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.DataModels;
 
 namespace QuestForge.CharacterService.Application.Characters.Get;
 

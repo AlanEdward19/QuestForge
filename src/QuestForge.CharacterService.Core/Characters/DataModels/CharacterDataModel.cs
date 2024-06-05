@@ -1,8 +1,10 @@
-﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+﻿using QuestForge.CharacterService.Core.Classes.DataModels;
+using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
+using QuestForge.CharacterService.Core.Races.DataModels;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Characters.DataModels;
 
 public class CharacterDataModel : BaseDataModel
 {

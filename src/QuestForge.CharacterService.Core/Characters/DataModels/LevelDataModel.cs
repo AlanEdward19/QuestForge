@@ -1,6 +1,6 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Characters.DataModels;
 
 public class LevelDataModel : BaseDataModel
 {

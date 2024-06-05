@@ -3,7 +3,7 @@ using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
 using QuestForge.CharacterService.Core.Races.Entities;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Races.DataModels;
 
 public class RaceDataModel : BaseDataModel
 {

@@ -2,7 +2,7 @@
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.Entities;
 
-namespace QuestForge.CharacterService.Core.Common.DataModels;
+namespace QuestForge.CharacterService.Core.Races.DataModels;
 
 public class FeatureDataModel : BaseDataModel
 {

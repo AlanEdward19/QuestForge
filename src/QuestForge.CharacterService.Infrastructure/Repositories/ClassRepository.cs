@@ -3,10 +3,10 @@ using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
 using QuestForge.CharacterService.Application.Classes.Get;
 using QuestForge.CharacterService.Application.Classes.Update;
+using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
-using QuestForge.CharacterService.Core.Common.DataModels;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 

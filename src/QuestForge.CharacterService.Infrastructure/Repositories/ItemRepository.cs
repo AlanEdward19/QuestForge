@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuestForge.CharacterService.Application.Items.Common.Get;
+using QuestForge.CharacterService.Application.Items.Common.List;
 using QuestForge.CharacterService.Application.Items.Create;
 using QuestForge.CharacterService.Application.Items.Delete;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Common.Enums;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 
@@ -13,12 +16,25 @@ public class ItemRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
     
     public Task<ItemDataModel> GetByIdAsync(Query query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedQuery = query as GetItemQuery;
+
+        return dbContext.Items
+            .AsNoTracking()
+            .AsSplitQuery()
+            .FirstAsync(x => x.Id.Equals(parsedQuery!.Id), cancellationToken);
     }
 
-    public Task<IEnumerable<ItemDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
+    public async Task<IEnumerable<ItemDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedQuery = query as ListItemQuery;
+
+        EItemType type = parsedQuery!.Type;
+
+        return await dbContext.Items
+            .AsNoTracking()
+            .AsSplitQuery()
+            .Where(x => x.Type == type)
+            .ToListAsync(cancellationToken);
     }
 
     public async Task AddAsync(Command command, CancellationToken cancellationToken)

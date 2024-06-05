@@ -3,11 +3,13 @@ using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Characters.Entities;
 using QuestForge.CharacterService.Core.Characters.Services;
+using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
-using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Races.DataModels;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 

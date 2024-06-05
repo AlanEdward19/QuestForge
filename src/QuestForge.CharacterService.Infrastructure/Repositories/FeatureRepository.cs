@@ -5,8 +5,8 @@ using QuestForge.CharacterService.Application.Common.Features.Get;
 using QuestForge.CharacterService.Application.Common.Features.Update;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
-using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Races.DataModels;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 

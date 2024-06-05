@@ -1,5 +1,5 @@
 ﻿using System.Text.Json.Serialization;
-using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.Entities;
 
 namespace QuestForge.CharacterService.Core.Characters.Entities;

@@ -2,8 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuestForge.CharacterService.Core.Characters.DataModels;
+using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Races.DataModels;
 using QuestForge.CharacterService.Infrastructure.Repositories;
 
 namespace QuestForge.CharacterService.Infrastructure;
@@ -35,6 +38,9 @@ public static class InfrastructureModule
             .AddScoped<IRepository<CharacterDataModel>, CharacterRepository>()
             .AddScoped<IRepository<ClassDataModel>, ClassRepository>()
             .AddScoped<IRepository<ItemDataModel>, ItemRepository>()
+            .AddScoped<IRepository<PotionDataModel>, PotionRepository>()
+            .AddScoped<IRepository<ArmorDataModel>, ArmorRepository>()
+            .AddScoped<IRepository<WeaponDataModel>, WeaponRepository>()
             .AddScoped<IRepository<RaceDataModel>, RaceRepository>()
             .AddScoped<IRepository<FeatureDataModel>, FeatureRepository>();
 

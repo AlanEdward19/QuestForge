@@ -1,4 +1,6 @@
-﻿using QuestForge.CharacterService.Core.Common.Abstracts.Base;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+using QuestForge.CharacterService.Core.Common.Abstracts.Base;
+using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.Enums;
 
 namespace QuestForge.CharacterService.Core.Common.DataModels;
@@ -22,5 +24,19 @@ public class ItemDataModel : BaseDataModel
         Value = value;
         CurrencyType = currencyType;
         Weight = weight;
+    }
+
+    public override void UpdateBasedOnValueObject(ValueObject valueObject)
+    {
+        var parsedValueObject = valueObject as Item;
+
+        Name = parsedValueObject!.Name;
+        Description = parsedValueObject.Description;
+        Type = parsedValueObject.Type;
+        Value = parsedValueObject.Value;
+        CurrencyType = parsedValueObject.CurrencyType;
+        Weight = parsedValueObject.Weight;
+
+        base.UpdateBasedOnValueObject(valueObject);
     }
 }

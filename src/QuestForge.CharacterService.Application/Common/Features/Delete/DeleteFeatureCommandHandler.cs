@@ -2,7 +2,7 @@
 using QuestForge.CharacterService.Application.Common.Models;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Races.DataModels;
 
 namespace QuestForge.CharacterService.Application.Common.Features.Delete;
 

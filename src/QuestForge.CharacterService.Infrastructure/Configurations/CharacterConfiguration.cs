@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using QuestForge.CharacterService.Core.Common.DataModels;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 
 namespace QuestForge.CharacterService.Infrastructure.Configurations;
 

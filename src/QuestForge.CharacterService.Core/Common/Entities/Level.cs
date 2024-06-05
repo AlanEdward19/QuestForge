@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
-using QuestForge.CharacterService.Core.Common.DataModels;
 
 namespace QuestForge.CharacterService.Core.Common.Entities;
 

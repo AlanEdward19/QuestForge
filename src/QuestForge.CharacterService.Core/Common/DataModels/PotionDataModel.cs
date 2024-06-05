@@ -1,4 +1,6 @@
-﻿using QuestForge.CharacterService.Core.Common.Enums;
+﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Common.Enums;
 
 namespace QuestForge.CharacterService.Core.Common.DataModels;
 
@@ -19,4 +21,16 @@ public class PotionDataModel : ItemDataModel
     }
 
     public PotionDataModel() : base() { }
+
+    public override void UpdateBasedOnValueObject(ValueObject valueObject)
+    {
+        var parsedValueObject = valueObject as Potion;
+
+        Dice = parsedValueObject!.Dice;
+        DiceCount = parsedValueObject.DiceCount;
+        Bonus = parsedValueObject.Bonus;
+        Effect = parsedValueObject.Effect;
+
+        base.UpdateBasedOnValueObject(valueObject);
+    }
 }

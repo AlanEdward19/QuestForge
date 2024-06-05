@@ -17,6 +17,6 @@ public class CreateItemCommandHandler(IRepository<ItemDataModel> repository): IH
         await repository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         await repository.UnitOfWork.CommitAsync(cancellationToken);
 
-        return new("Item created successfully!");
+        return new($"Item of type: '{command.Type}' created successfully!");
     }
 }
