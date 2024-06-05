@@ -5,8 +5,8 @@ using QuestForge.CharacterService.Application.Common.Features.Get;
 using QuestForge.CharacterService.Application.Common.Features.Update;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
-using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Races.DataModels;
+using QuestForge.CharacterService.Core.Races.Entities;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 
@@ -23,7 +23,9 @@ public class FeatureRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) :
 
     public async Task<IEnumerable<FeatureDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return await dbContext.Features
+            .AsNoTracking()
+            .ToListAsync(cancellationToken);
     }
 
     public async Task AddAsync(Command command, CancellationToken cancellationToken)

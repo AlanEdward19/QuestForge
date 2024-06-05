@@ -1,4 +1,5 @@
 ﻿using QuestForge.CharacterService.Core.Classes.Entities;
+using QuestForge.CharacterService.Core.Classes.Enums;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.Enums;

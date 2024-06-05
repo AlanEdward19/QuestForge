@@ -1,6 +1,7 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts;
-using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Entities;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Core.Common.DataModels;
 

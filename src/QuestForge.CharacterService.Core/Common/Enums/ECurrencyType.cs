@@ -5,5 +5,4 @@ public enum ECurrencyType
     Gold,
     Silver,
     Copper,
-    Platinum
 }

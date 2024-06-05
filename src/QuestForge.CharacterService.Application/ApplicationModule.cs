@@ -1,4 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using QuestForge.CharacterService.Application.Backgrounds.Create;
+using QuestForge.CharacterService.Application.Backgrounds.Delete;
+using QuestForge.CharacterService.Application.Backgrounds.Get;
+using QuestForge.CharacterService.Application.Backgrounds.Traits.Create;
+using QuestForge.CharacterService.Application.Backgrounds.Traits.Delete;
+using QuestForge.CharacterService.Application.Backgrounds.Traits.Get;
+using QuestForge.CharacterService.Application.Backgrounds.Traits.Update;
+using QuestForge.CharacterService.Application.Backgrounds.Update;
 using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
@@ -14,18 +22,21 @@ using QuestForge.CharacterService.Application.Items.Armors.Create;
 using QuestForge.CharacterService.Application.Items.Armors.Update;
 using QuestForge.CharacterService.Application.Items.Common.Get;
 using QuestForge.CharacterService.Application.Items.Common.List;
-using QuestForge.CharacterService.Application.Items.Create;
-using QuestForge.CharacterService.Application.Items.Delete;
+using QuestForge.CharacterService.Application.Items.Others.Create;
+using QuestForge.CharacterService.Application.Items.Others.Delete;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
 using QuestForge.CharacterService.Application.Items.Weapons.Create;
 using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Application.Races.Create;
 using QuestForge.CharacterService.Application.Races.Delete;
+using QuestForge.CharacterService.Core.Backgrounds.Aggregates;
+using QuestForge.CharacterService.Core.Backgrounds.Entities;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
-using QuestForge.CharacterService.Core.Classes.Entities;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Items.Entities;
+using QuestForge.CharacterService.Core.Races.Entities;
+using Class = QuestForge.CharacterService.Core.Classes.Entities.Class;
 
 namespace QuestForge.CharacterService.Application;
 
@@ -71,7 +82,19 @@ public static class ApplicationModule
             .AddScoped<IHandler<CreateFeatureCommand, DatabaseOperationViewModel>, CreateFeatureCommandHandler>()
             .AddScoped<IHandler<GetFeatureQuery, Feature>, GetFeatureQueryHandler>()
             .AddScoped<IHandler<UpdateFeatureCommand, DatabaseOperationViewModel>, UpdateFeatureCommandHandler>()
-            .AddScoped<IHandler<DeleteFeatureCommand, DatabaseOperationViewModel>, DeleteFeatureCommandHandler>();
+            .AddScoped<IHandler<DeleteFeatureCommand, DatabaseOperationViewModel>, DeleteFeatureCommandHandler>()
+            
+            .AddScoped<IHandler<CreateTraitCommand, DatabaseOperationViewModel>, CreateTraitCommandHandler>()
+            .AddScoped<IHandler<GetTraitQuery, Trait>, GetTraitQueryHandler>()
+            .AddScoped<IHandler<UpdateTraitCommand, DatabaseOperationViewModel>, UpdateTraitCommandHandler>()
+            .AddScoped<IHandler<DeleteTraitCommand, DatabaseOperationViewModel>, DeleteTraitCommandHandler>()
+
+            .AddScoped<IHandler<CreateBackgroundCommand, DatabaseOperationViewModel>, CreateBackgroundCommandHandler>()
+            .AddScoped<IHandler<GetBackgroundQuery, BackgroundAggregateRoot>, GetBackgroundQueryHandler>()
+            .AddScoped<IHandler<UpdateBackgroundCommand, DatabaseOperationViewModel>, UpdateBackgroundCommandHandler>()
+            .AddScoped<IHandler<DeleteBackgroundCommand, DatabaseOperationViewModel>, DeleteBackgroundCommandHandler>()
+            
+            ;
         
         return services;
     }

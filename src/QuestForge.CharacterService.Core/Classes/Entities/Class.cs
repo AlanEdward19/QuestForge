@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using QuestForge.CharacterService.Core.Classes.DataModels;
+using QuestForge.CharacterService.Core.Classes.Enums;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.Enums;
@@ -9,7 +10,6 @@ namespace QuestForge.CharacterService.Core.Classes.Entities;
 
 public class Class : ValueObject
 {
-    [JsonIgnore]
     public Guid Id { get; private set; }
     public string Name { get; private set; }
     public string Description { get; private set; }

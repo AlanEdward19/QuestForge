@@ -1,7 +1,7 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
-using QuestForge.CharacterService.Core.Races.Entities;
+using QuestForge.CharacterService.Core.Races.Aggregates;
 
 namespace QuestForge.CharacterService.Core.Races.DataModels;
 
@@ -29,7 +29,7 @@ public class RaceDataModel : BaseDataModel
 
     public override void UpdateBasedOnValueObject(ValueObject valueObject)
     {
-        var parsedValueObject = valueObject as Race;
+        var parsedValueObject = valueObject as RaceAggregateRoot;
 
         Name = parsedValueObject!.Name;
         Description = parsedValueObject.Description;

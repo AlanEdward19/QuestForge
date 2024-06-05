@@ -5,15 +5,15 @@ using QuestForge.CharacterService.Application.Items.Armors.Create;
 using QuestForge.CharacterService.Application.Items.Armors.Update;
 using QuestForge.CharacterService.Application.Items.Common.Get;
 using QuestForge.CharacterService.Application.Items.Common.List;
-using QuestForge.CharacterService.Application.Items.Create;
-using QuestForge.CharacterService.Application.Items.Delete;
+using QuestForge.CharacterService.Application.Items.Others.Create;
+using QuestForge.CharacterService.Application.Items.Others.Delete;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
 using QuestForge.CharacterService.Application.Items.Weapons.Create;
 using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.Entities;
-using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Entities;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Controllers
 {

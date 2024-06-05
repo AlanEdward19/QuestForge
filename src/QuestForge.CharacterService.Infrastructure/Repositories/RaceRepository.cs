@@ -5,8 +5,8 @@ using QuestForge.CharacterService.Application.Races.Get;
 using QuestForge.CharacterService.Application.Races.Update;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
-using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
+using QuestForge.CharacterService.Core.Races.Aggregates;
 using QuestForge.CharacterService.Core.Races.DataModels;
 using QuestForge.CharacterService.Core.Races.Entities;
 
@@ -51,7 +51,7 @@ public class RaceRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : IR
         RaceDataModel raceDataModel =
             await dbContext.Races.FirstAsync(x => x.Id.Equals(parsedCommand!.Id), cancellationToken);
 
-        Race race = new(raceDataModel);
+        RaceAggregateRoot race = new(raceDataModel);
 
         // validar caso lista venha vazia
         List<FeatureDataModel> featuresDataModel = await dbContext.Features

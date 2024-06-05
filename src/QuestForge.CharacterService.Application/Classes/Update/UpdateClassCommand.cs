@@ -1,4 +1,5 @@
-﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+﻿using QuestForge.CharacterService.Core.Classes.Enums;
+using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Enums;
 
 namespace QuestForge.CharacterService.Application.Classes.Update;

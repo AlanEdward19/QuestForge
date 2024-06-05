@@ -1,7 +1,9 @@
-﻿using QuestForge.CharacterService.Core.Common.Abstracts;
+﻿using QuestForge.CharacterService.Core.Backgrounds.DataModels;
+using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
-using QuestForge.CharacterService.Core.Common.Entities;
 using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Entities;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Core.Common.DataModels;
 
@@ -13,10 +15,22 @@ public class ItemDataModel : BaseDataModel
     public double Value { get; private set; }
     public ECurrencyType CurrencyType { get; private set; }
     public double Weight { get; private set; }
+    
+    public virtual List<BackgroundDataModel> Backgrounds { get; private set; }
 
     public ItemDataModel() { }
 
     public ItemDataModel(string name, string description, EItemType type, double value, ECurrencyType currencyType, double weight) : base(Guid.NewGuid())
+    {
+        Name = name;
+        Description = description;
+        Type = type;
+        Value = value;
+        CurrencyType = currencyType;
+        Weight = weight;
+    }
+
+    public ItemDataModel(Guid id, string name, string description, EItemType type, double value, ECurrencyType currencyType, double weight) : base(id)
     {
         Name = name;
         Description = description;

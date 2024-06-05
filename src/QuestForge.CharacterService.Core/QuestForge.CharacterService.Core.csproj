@@ -7,11 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Characters\Enums\" />
-    <Folder Include="Classes\Aggregates\" />
-    <Folder Include="Classes\Services\" />
-    <Folder Include="Races\Aggregates\" />
-    <Folder Include="Races\Services\" />
+    <Compile Remove="Classes\Aggregates\**" />
+    <Compile Remove="Classes\Services\**" />
+    <Compile Remove="Races\Services\**" />
+    <EmbeddedResource Remove="Classes\Aggregates\**" />
+    <EmbeddedResource Remove="Classes\Services\**" />
+    <EmbeddedResource Remove="Races\Services\**" />
+    <None Remove="Classes\Aggregates\**" />
+    <None Remove="Classes\Services\**" />
+    <None Remove="Races\Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Backgrounds\Enums\" />
   </ItemGroup>
 
 </Project>

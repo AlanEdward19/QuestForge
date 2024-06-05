@@ -7,17 +7,27 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Items\Update\**" />
+      <EmbeddedResource Remove="Items\Update\**" />
+      <None Remove="Items\Update\**" />
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\QuestForge.CharacterService.Core\QuestForge.CharacterService.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Backgrounds\Create\" />
+      <Folder Include="Backgrounds\Get\" />
+      <Folder Include="Backgrounds\Delete\" />
+      <Folder Include="Backgrounds\Traits\Get\" />
+      <Folder Include="Backgrounds\Traits\Delete\" />
       <Folder Include="Characters\Validators\" />
       <Folder Include="Classes\Validators\" />
       <Folder Include="Common\Features\Get\" />
       <Folder Include="Common\Features\Update\" />
       <Folder Include="Items\Armors\Create\" />
       <Folder Include="Items\Common\List\" />
-      <Folder Include="Items\Update\" />
       <Folder Include="Races\Validators\" />
     </ItemGroup>
 

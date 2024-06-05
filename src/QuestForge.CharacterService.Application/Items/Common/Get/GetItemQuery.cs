@@ -1,5 +1,5 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts;
-using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Application.Items.Common.Get;
 

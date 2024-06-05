@@ -1,10 +1,8 @@
-﻿using QuestForge.CharacterService.Application.Items.Common.Get;
-using QuestForge.CharacterService.Core.Common.Abstracts;
-using QuestForge.CharacterService.Core.Common.Contracts.Database;
+﻿using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
 using QuestForge.CharacterService.Core.Common.DataModels;
-using QuestForge.CharacterService.Core.Common.Entities;
-using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Entities;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Application.Items.Common.List;
 

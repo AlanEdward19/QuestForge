@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuestForge.CharacterService.Application.Items.Common.Get;
-using QuestForge.CharacterService.Application.Items.Delete;
 using QuestForge.CharacterService.Application.Items.Weapons.Create;
 using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.DataModels;
-using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Items.Entities;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 

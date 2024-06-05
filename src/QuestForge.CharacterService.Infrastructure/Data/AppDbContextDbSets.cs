@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuestForge.CharacterService.Core.Backgrounds.DataModels;
 using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.DataModels;
@@ -8,7 +9,10 @@ namespace QuestForge.CharacterService.Infrastructure.Data;
 
 public partial class AppDbContext
 {
+    public DbSet<BackgroundDataModel> Backgrounds { get; set; }
+    public DbSet<TraitDataModel> Traits { get; set; }
     public DbSet<CharacterDataModel> Characters { get; set; }
+    public DbSet<CoinPurseDataModel> CoinPurses { get; set; }
     public DbSet<LevelDataModel> Levels { get; set; }
     public DbSet<BackpackDataModel> Backpacks { get; set; }
     public DbSet<ClassDataModel> Classes { get; set; }

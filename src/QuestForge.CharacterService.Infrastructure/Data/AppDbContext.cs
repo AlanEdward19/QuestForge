@@ -2,6 +2,7 @@
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
+using QuestForge.CharacterService.Core.Items.Enums;
 using QuestForge.CharacterService.Core.Races.DataModels;
 using QuestForge.CharacterService.Infrastructure.Configurations;
 

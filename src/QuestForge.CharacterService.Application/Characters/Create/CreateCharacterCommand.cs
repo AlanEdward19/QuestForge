@@ -10,7 +10,8 @@ public class CreateCharacterCommand(
     string appearanceDescription,
     string backgroundDescription,
     Guid raceId,
-    Guid classId) : Command
+    Guid classId,
+    Guid backgroundId) : Command
 {
     public string Name { get; private set; } = name;
     public double Height { get; private set; } = height;
@@ -20,4 +21,5 @@ public class CreateCharacterCommand(
     public string BackgroundDescription { get; private set; } = backgroundDescription;
     public Guid RaceId { get; private set; } = raceId;
     public Guid ClassId { get; private set; } = classId;
+    public Guid BackgroundId { get; private set; } = backgroundId;
 }

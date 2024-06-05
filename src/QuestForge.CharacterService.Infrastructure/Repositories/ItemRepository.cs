@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using QuestForge.CharacterService.Application.Items.Common.Get;
 using QuestForge.CharacterService.Application.Items.Common.List;
-using QuestForge.CharacterService.Application.Items.Create;
-using QuestForge.CharacterService.Application.Items.Delete;
+using QuestForge.CharacterService.Application.Items.Others.Create;
+using QuestForge.CharacterService.Application.Items.Others.Delete;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.DataModels;
-using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Enums;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
 

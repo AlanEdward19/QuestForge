@@ -8,7 +8,7 @@ using QuestForge.CharacterService.Application.Common.Features.Get;
 using QuestForge.CharacterService.Application.Common.Features.Update;
 using QuestForge.CharacterService.Application.Common.Models;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
-using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Races.Entities;
 
 namespace QuestForge.CharacterService.Controllers
 {

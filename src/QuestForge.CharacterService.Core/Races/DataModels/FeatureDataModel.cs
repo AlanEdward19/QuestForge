@@ -1,6 +1,6 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
-using QuestForge.CharacterService.Core.Common.Entities;
+using QuestForge.CharacterService.Core.Races.Entities;
 
 namespace QuestForge.CharacterService.Core.Races.DataModels;
 

@@ -1,4 +1,5 @@
-﻿using QuestForge.CharacterService.Core.Classes.DataModels;
+﻿using QuestForge.CharacterService.Core.Backgrounds.DataModels;
+using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
@@ -16,10 +17,12 @@ public class CharacterDataModel : BaseDataModel
     public string BackgroundDescription { get; private set; }
     public Guid RaceId { get; private set; }
     public Guid ClassId { get; private set; }
-    public virtual List<CharacterAbilityScoreDataModel> AbilityScores { get; private set; }
     public Guid BackpackId { get; private set; }
     public Guid LevelId { get; private set; }
+    public Guid CoinPurseId { get; private set; }
+    public Guid BackgroundId { get; private set; }
 
+    public virtual List<CharacterAbilityScoreDataModel> AbilityScores { get; private set; }
     [ForeignKey(nameof(RaceId))] public virtual RaceDataModel Race { get; private set; }
 
     [ForeignKey(nameof(ClassId))] public virtual ClassDataModel Class { get; private set; }
@@ -28,11 +31,15 @@ public class CharacterDataModel : BaseDataModel
 
     [ForeignKey(nameof(LevelId))] public virtual LevelDataModel Level { get; private set; }
 
+    [ForeignKey(nameof(CoinPurseId))] public virtual CoinPurseDataModel CoinPurse { get; private set; }
+
+    [ForeignKey(nameof(BackgroundId))] public virtual BackgroundDataModel Background { get; private set; }
+
     public CharacterDataModel() { }
 
     public CharacterDataModel(Guid id, string name, double height, double weight, int age, string appearanceDescription,
         string backgroundDescription, Guid raceId, Guid classId, List<AbilityScoreValueObject> abilityScores,
-        Guid backpackId, Guid levelId) : base(id)
+        Guid backpackId, Guid levelId, Guid coinPurseId, Guid backgroundId) : base(id)
     {
         Name = name;
         Height = height;
@@ -47,6 +54,8 @@ public class CharacterDataModel : BaseDataModel
             .ToList();
         BackpackId = backpackId;
         LevelId = levelId;
+        CoinPurseId = coinPurseId;
+        BackgroundId = backgroundId;
     }
 
     public override void UpdateBasedOnValueObject(ValueObject valueObject)
