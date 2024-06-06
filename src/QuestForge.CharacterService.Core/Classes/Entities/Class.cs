@@ -14,6 +14,9 @@ public class Class : ValueObject
     public string Name { get; private set; }
     public string Description { get; private set; }
     public int HitDie { get; private set; }
+    public int CoinDice { get; private set; }
+    public int CoinDiceAmount { get; private set; }
+    public int CoinDiceMultiplier { get; private set; }
 
     [JsonConverter(typeof(EnumListToStringListConverter<EArmorProficiency>))]
     public List<EArmorProficiency> ArmorProficiencies { get; private set; }
@@ -38,6 +41,9 @@ public class Class : ValueObject
         Name = parsedDataModel.Name;
         Description = parsedDataModel.Description;
         HitDie = parsedDataModel.HitDie;
+        CoinDice = parsedDataModel.CoinDice;
+        CoinDiceAmount = parsedDataModel.CoinDiceAmount;
+        CoinDiceMultiplier = parsedDataModel.CoinDiceMultiplier;
         ArmorProficiencies = parsedDataModel.ArmorProficiencies;
         WeaponProficiencies = parsedDataModel.WeaponProficiencies;
         ToolProficiencies = parsedDataModel.ToolProficiencies;
@@ -91,5 +97,23 @@ public class Class : ValueObject
     {
         if (skillsProficiencies != null && skillsProficiencies.Count != 0 && !SkillsProficiencies.Equals(skillsProficiencies))
             SkillsProficiencies = skillsProficiencies;
+    }
+    
+    public void UpdateCoinDice(int? coinDice)
+    {
+        if (coinDice != null && !CoinDice.Equals(coinDice))
+            CoinDice = coinDice.Value;
+    }
+    
+    public void UpdateCoinDiceAmount(int? coinDiceAmount)
+    {
+        if (coinDiceAmount != null && !CoinDiceAmount.Equals(coinDiceAmount))
+            CoinDiceAmount = coinDiceAmount.Value;
+    }
+    
+    public void UpdateCoinDiceMultiplier(int? coinDiceMultiplier)
+    {
+        if (coinDiceMultiplier != null && !CoinDiceMultiplier.Equals(coinDiceMultiplier))
+            CoinDiceMultiplier = coinDiceMultiplier.Value;
     }
 }

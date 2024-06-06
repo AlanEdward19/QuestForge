@@ -2,6 +2,7 @@
 using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
+using QuestForge.CharacterService.Application.Common.Utils;
 using QuestForge.CharacterService.Core.Backgrounds.DataModels;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
 using QuestForge.CharacterService.Core.Characters.DataModels;
@@ -79,8 +80,15 @@ public class CharacterRepository(IUnitOfWork unitOfWork, AppDbContext dbContext)
                 .Include(x => x.Traits)
                 .FirstAsync(x => x.Id.Equals(parsedCommand!.BackgroundId), cancellationToken);
 
+        #region Coin
+
+        int classCoin = @class.CoinDiceMultiplier * Dice.CalculateRandomDice(@class.CoinDice, @class.CoinDiceAmount);
+        
+        coinPurse.AddCoin(ECurrencyType.Gold, classCoin);
         coinPurse.AddCoin(ECurrencyType.Gold, background.InitialWealth);
 
+        #endregion
+        
         CharacterAggregateRoot aggregateRoot = CharacterCreationService.CreateCharacter(characterId,
             parsedCommand!.Name, parsedCommand.Height, parsedCommand.Weight, parsedCommand.Age, parsedCommand.AppearanceDescription,
             parsedCommand.BackgroundDescription, race, @class, background, coinPurse);

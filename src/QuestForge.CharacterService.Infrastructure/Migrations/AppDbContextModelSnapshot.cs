@@ -320,6 +320,15 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CoinDice")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CoinDiceAmount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CoinDiceMultiplier")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -404,1849 +413,1849 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("65bac53b-a1ac-4113-841a-7c592d50100e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6787),
+                            Id = new Guid("bb7dd3d7-52b3-4235-8b54-d148ada07c6f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(726),
                             CurrencyType = 0,
                             Description = "Instrumento de cálculo, formado por uma moldura com bastões ou arames paralelos, dispostos no sentido vertical, correspondentes cada um a uma posição digital (unidades, dezenas, etc.) e nos quais estão os elementos de contagem (fichas, bolas ou contas) que podem fazer-se deslizar livremente.",
                             Name = "Ábaco",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6787),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(726),
                             Value = 2.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("a810f7ef-f015-4634-93c3-1d7ccc203bdb"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6788),
+                            Id = new Guid("6024a421-7f5c-49f1-8279-e4b724a7f858"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(727),
                             CurrencyType = 0,
                             Description = "Usando uma ação, você pode despejar o \r\nconteúdo desse vidro em uma criatura a até 1,5 metro de \r\nvocê, ou arremessar o vidro a até 6 metros de distância, \r\nquebrando-o no impacto. Em ambos os casos, você deve \r\nrealizar um ataque à distância contra uma criatura ou \r\nobjeto, tratando o ácido como uma arma improvisada. Se \r\nacertar, o alvo sofre 2d6 de dano ácido.",
                             Name = "Ácido (vidro)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6788),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(727),
                             Value = 25.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("4128189a-f441-45c6-8512-6a5bb4dc4732"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6789),
+                            Id = new Guid("f57bed15-1c74-4935-8921-3ee7dccdec1e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(728),
                             CurrencyType = 0,
                             Description = "Usando uma ação, você pode espalhar o \r\nconteúdo desse frasco em uma criatura a até 1,5 metro de \r\nvocê ou arremessar a até 6 metros, quebrando o frasco \r\ncom o impacto. Em ambos os casos, você deve realizar um \r\nataque à distância contra uma criatura alvo, tratando a \r\nágua benta como uma arma improvisada. Se o alvo for um \r\ncorruptor ou morto-vivo, ele sofre 2d6 de dano radiante. ",
                             Name = "Água benta (frasco)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6789),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(728),
                             Value = 25.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("8c93e1d8-522c-4955-a86b-c850e3eefaca"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6791),
+                            Id = new Guid("d8d8e7ed-dd3b-4a50-8896-c80bd95f1448"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(731),
                             CurrencyType = 0,
                             Description = " Essas algemas de metal podem prender \r\numa criatura Pequena ou Média. Escapar das algemas \r\nexige sucesso em um teste de Destreza CD 20. Quebrá-las \r\nexige um teste de Força CD 20 bem sucedido. Cada \r\nconjunto de algemas vem com uma chave. Sem a chave, \r\numa criatura proficiente com ferramentas de ladrão pode \r\nabrir a fechadura das algemas com um sucesso em um \r\nteste de Destreza CD 15. As algemas têm 15 pontos de \r\nvida. ",
                             Name = "Algemas",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6791),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(731),
                             Value = 2.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("c790c1fb-a9ff-41f7-89bd-11ae1dc7c8ea"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6792),
+                            Id = new Guid("a27d6eba-4a4d-456c-bbd4-7042465b4fe5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(733),
                             CurrencyType = 0,
                             Description = "Uma bolsa de pano ou couro que pode \r\narmazenar até 20 munições de funda ou 50 munições de \r\nzarabatana, entre outras coisas. Para armazenar \r\ncomponentes de magia, veja bolsa de componentes, \r\ntambém descrita nessa seção.",
                             Name = "Algibeira",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6792),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(733),
                             Value = 5.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("45efc1e3-1cd4-4abe-a371-25dc0b041dc7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6793),
+                            Id = new Guid("1dd30336-4fa9-4bbe-93bc-a6ba58c8cf48"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(734),
                             CurrencyType = 0,
                             Description = "Uma aljava pode guardar até 20 flechas.",
                             Name = "Aljava",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6793),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(734),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("51cf4936-0cd4-4aa3-90b6-0007adf69c30"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6794),
+                            Id = new Guid("8a42587d-380b-4cf5-93a5-ced37b7cca18"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(735),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ampulheta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6794),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(735),
                             Value = 25.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("cb061eb1-fbb6-4055-98cb-35ff349a5cde"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6798),
+                            Id = new Guid("3a9fd7be-33fc-4058-85c6-bebdbfcaba06"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(736),
                             CurrencyType = 0,
                             Description = "Uma criatura que beber o líquido desse \r\nvidro tem vantagem em testes de resistência contra \r\nvenenos por 1 hora. O antídoto não confere nenhum \r\nbenefício para mortos-vivos ou constructos. ",
                             Name = "Antídoto (vidro)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6798),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(736),
                             Value = 50.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("89d098d3-9fba-4216-8c0e-2a12841c6dbd"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6799),
+                            Id = new Guid("842a12d4-e733-4c63-bbd7-677b820a2c60"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(738),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Apito de advertência",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6799),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(738),
                             Value = 25.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("c7724de3-96d4-4f66-97f0-27049f5a7339"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6800),
+                            Id = new Guid("1f46f433-7e95-496e-a664-051a91e471d3"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(739),
                             CurrencyType = 0,
                             Description = " Você pode usar um aríete portátil \r\npara quebrar portas. Ao fazer isso, você ganha um bônus \r\nde +4 no teste de Força. Outra criatura pode ajudá-lo a \r\nusar o aríete, o que concede vantagem no teste.",
                             Name = "Ariete portátil",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6800),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(739),
                             Value = 4.0,
                             Weight = 17.5
                         },
                         new
                         {
-                            Id = new Guid("cf6bf851-00da-4d1a-9d5a-415a73bc84de"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6801),
+                            Id = new Guid("ca201259-00e2-4265-bcf5-98c8602d0650"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(740),
                             CurrencyType = 0,
                             Description = "Quando você usa sua ação para \r\narmá-la, essa armadilha forma um anel de aço com \r\ndentes serrilhados. Eles se fecham quando uma criatura \r\npisa sobre uma placa de pressão no seu centro. A \r\narmadilha é fixada por uma pesada corrente em um \r\nobjeto fixo e imóvel, como uma árvore ou um cravo \r\nenterrado no chão. Uma criatura que pisar na placa de \r\npressão deve ser bem sucedida em um teste de resistência \r\nde Destreza CD 13 ou sofrerá 1d4 de dano perfurante e \r\npara de se mover. Daí em diante, até que a criatura se \r\nliberte da armadilha, seu movimento é limitado ao \r\ncomprimento da corrente (tipicamente 1 metro de \r\ncomprimento). A criatura presa pode usar sua ação para \r\nfazer um teste de Força CD 13 e se libertar, ou outra \r\ncriatura no alcance pode fazer o teste para libertá-la. \r\nCada fracasso no teste causa 1 de dano perfurante à \r\ncriatura presa.",
                             Name = "Armadilha de caça",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6801),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(740),
                             Value = 5.0,
                             Weight = 12.5
                         },
                         new
                         {
-                            Id = new Guid("7872404a-e13c-4ee0-906c-1a82c17cac10"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6803),
+                            Id = new Guid("4227d5b5-e851-4725-9d92-a0a1e900455e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(743),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Arpéu",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6803),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(743),
                             Value = 2.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("aab500d1-ceb7-4cfd-9e7e-b860183c477d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6804),
+                            Id = new Guid("91691c04-2da5-462b-bdb1-4332ff75e594"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(744),
                             CurrencyType = 0,
                             Description = "Trata-se de uma pequena \r\nbalança, pratos e um sortimento adequado de pesos de até \r\n1 kg. Com ela, você pode medir o peso exato de pequenos \r\nobjetos, como metais preciosos brutos ou bens comerciais, \r\npara ajudar a determinar seu valor.",
                             Name = "Balança de mercador",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6804),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(744),
                             Value = 5.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("c13a548f-cd37-4255-bd1e-0720b1e20ff5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6805),
+                            Id = new Guid("826635ea-2b7d-4e18-8680-f9374d09e262"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(746),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Balde",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6805),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(746),
                             Value = 5.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("f1751a1c-184a-474e-ad71-aed9de0c599d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6807),
+                            Id = new Guid("a6d10504-7a09-4bf3-9519-131b3eebc3bc"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(747),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Barril",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6807),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(747),
                             Value = 2.0,
                             Weight = 35.0
                         },
                         new
                         {
-                            Id = new Guid("96ecea03-599a-4167-b425-7efdc086fde7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6809),
+                            Id = new Guid("ffea7328-a3ee-44de-b2cd-17dcca20beeb"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(748),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Baú",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6809),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(748),
                             Value = 5.0,
                             Weight = 12.5
                         },
                         new
                         {
-                            Id = new Guid("7923ac36-3b4c-47aa-bf41-2d4894c790a4"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6811),
+                            Id = new Guid("ab92bbc8-873e-4e99-b867-541ae5d2ecaa"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(749),
                             CurrencyType = 0,
                             Description = "Trata-se de uma pequena \r\nbolsa de couro à prova d'água que pode ser fixada em um \r\ncinto. Ela possui compartimentos para armazenar todos \r\nos componentes materiais e outros itens especiais que \r\nvocê precisa para lançar suas magias, exceto os \r\ncomponentes que possuem um custo específico (conforme \r\nindicado na descrição da magia).",
                             Name = "Bolsa de componentes",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6811),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(749),
                             Value = 25.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("e00c6a4e-d991-4e27-904c-3fd74eb15d3c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6812),
+                            Id = new Guid("bcdb9439-c3b7-402a-a5ef-7798eddb0fce"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(751),
                             CurrencyType = 1,
                             Description = "Esse pequeno recipiente detém uma \r\npederneira, isqueiro e um pavio (um pano geralmente \r\nseco embebido em óleo) usado para acender uma fogueira. \r\nUsá-lo para acender uma tocha – ou qualquer outra coisa \r\nexposta a um combustível abundante – leva uma ação. \r\nAcender qualquer outro fogo leva 1 minuto.",
                             Name = "Caixa de Fogo",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6812),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(751),
                             Value = 5.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("c383bd80-7f4b-4ecd-baee-ed44167579c3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6813),
+                            Id = new Guid("3d158fb8-0a2d-4a73-accb-85e7e555dd7f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(752),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Caneca",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6813),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(752),
                             Value = 2.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("9382ad48-3fd2-470d-8d03-d33351baa892"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6815),
+                            Id = new Guid("e10d9276-e35d-4bb0-bdc4-0b49ab12859e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(755),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Caneta tinteiro",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6815),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(755),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("e2b034e6-fbf4-40fc-8bd9-e6799a84e59e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6816),
+                            Id = new Guid("4c30df50-991b-454d-beaf-11bc92d12abd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(756),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Cantil",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6816),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(756),
                             Value = 2.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("48de4a6c-67c2-498a-a36a-3531fce40e98"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6817),
+                            Id = new Guid("723fb7dc-594b-4ae1-a667-25fe9f6c2c9a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(757),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Cesto",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6817),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(757),
                             Value = 4.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("2601c8b5-f79d-4a5f-89a0-1d9afe92c425"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6818),
+                            Id = new Guid("cbedcb8e-e4ae-4bf1-af4d-dd96020abd21"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(759),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Cobertor de inverno",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6818),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(759),
                             Value = 5.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("d29a3ead-1dab-42dd-9b19-327f5c2275c3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6821),
+                            Id = new Guid("1a134ac6-5c5f-45e4-a32b-bfabb196a7c9"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(760),
                             CurrencyType = 0,
                             Description = "Tem 2 pontos de vida e pode ser arrebentada com um teste de \r\nForça CD 17 bem sucedido.",
                             Name = "Corda de cânhamo (15 metros)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6821),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(760),
                             Value = 1.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("d1b2c72e-108e-4711-96fc-3e7058149752"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6823),
+                            Id = new Guid("63f7c55d-e653-4c1a-9957-e8a82a5e7bfe"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(761),
                             CurrencyType = 0,
                             Description = "Tem 2 pontos de vida e pode ser arrebentada com um teste de \r\nForça CD 17 bem sucedido.",
                             Name = "Corda de seda (15 metros)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6823),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(761),
                             Value = 10.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("bc4c6664-e75c-4ce1-be35-f576567d72af"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6824),
+                            Id = new Guid("33521c75-f5b5-4756-ad15-e643960bcbf6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(762),
                             CurrencyType = 0,
                             Description = "Uma corrente possui 10 pontos de vida e \r\npode ser arrebentada com um teste de Força CD 20 bem \r\nsucedido.",
                             Name = "Corrente (3 metros)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6824),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(762),
                             Value = 5.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("adddc5e9-8482-4470-8bb2-8c206c6e4054"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6825),
+                            Id = new Guid("fd35ec79-eaa5-4d33-b5b9-4167b85def41"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(827),
                             CurrencyType = 0,
                             Description = "Este kit inclui uma vara \r\nde pesca de madeira, linha de seda, boias de cortiça, \r\nanzóis de aço, chumbadas, iscas e redes de pesca.",
                             Name = "Equipamento de pescaria",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6825),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(827),
                             Value = 1.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("56d32a83-2acb-4f4c-accd-a07260fe912f"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6826),
+                            Id = new Guid("9e16b99b-b271-4111-9d6d-a6c79724b911"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(830),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Escada (3 metros)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6826),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(830),
                             Value = 1.0,
                             Weight = 12.5
                         },
                         new
                         {
-                            Id = new Guid("56e5258b-9aad-4d46-8f05-0af506a90636"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6827),
+                            Id = new Guid("0c3ef2cf-021b-4b0c-9cc8-4e51875fabf1"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(831),
                             CurrencyType = 0,
                             Description = "Usando uma ação, você pode \r\ndespejar essas minúsculas esferas de metal para cobrir a \r\nárea de um quadrado de 3 metros de lado. A criatura que \r\nse mover dentro da área deve ser bem sucedida em um \r\nteste de resistência de Destreza CD 10 para não cair no \r\nchão. Uma criatura que mover pela área usando metade \r\ndo seu deslocamento não precisa fazer o teste de \r\nresistência.",
                             Name = "Esferas (sacola com 1.000)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6827),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(831),
                             Value = 1.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("ad69486f-2a9c-410a-a944-c5411b64eb74"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6829),
+                            Id = new Guid("79fbc618-d69d-4955-8585-ba801252571c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(832),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Espelho de aço",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6829),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(832),
                             Value = 5.0,
                             Weight = 0.25
                         },
                         new
                         {
-                            Id = new Guid("d584521f-ad5c-4e65-8dcb-ea81a3320c40"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6830),
+                            Id = new Guid("4b392654-d30d-4c3e-8d64-1f511aadad60"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(834),
                             CurrencyType = 0,
                             Description = "Usando uma ação, você pode espalhar um \r\núnico saco de estrepes para cobrir a área de um quadrado \r\nde 1,5 metro de lado. Qualquer criatura que entrar na \r\nárea deve ser bem sucedida em um teste de resistência de \r\nDestreza CD 15. Se falhar, para de se mover e sofre 1 de \r\ndano perfurante. Até que a criatura recupere pelo menos \r\n1 ponto de vida, seu deslocamento de caminhada é \r\nreduzido em 3 metros. Uma criatura que se mover pela \r\nárea usando metade do seu deslocamento não precisa \r\nfazer o teste de resistência.",
                             Name = "Estrepes (bolsa com 20)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6830),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(834),
                             Value = 1.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("aaf40360-8f5d-4658-8b6c-7b82159053c0"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6833),
+                            Id = new Guid("964fce09-a552-47c2-8a01-22af2670c8da"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(835),
                             CurrencyType = 0,
                             Description = "A fechadura vem com chave. Sem a \r\nchave, uma criatura proficiente com ferramentas de \r\nladrão pode abrir a fechadura com um sucesso em um \r\nteste de Destreza CD 15. O Mestre pode decidir que \r\nfechaduras melhores estão disponíveis por preços mais \r\nelevados.",
                             Name = "Fechadura",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6833),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(835),
                             Value = 10.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("be135d5e-ff1d-41c6-bfdc-fb212ed8f67d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6866),
+                            Id = new Guid("2ca65934-8d25-44c8-b705-fcc0922608da"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(836),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Bastão",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6866),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(836),
                             Value = 10.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("7446e321-eabc-410e-aea2-9c0fbef6f086"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6867),
+                            Id = new Guid("b299bfdc-146a-4193-b6e0-31f4702292bb"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(837),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Cajado",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6867),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(837),
                             Value = 5.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("89155660-746e-4c0b-aa94-ce8fa142dedf"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6868),
+                            Id = new Guid("ccc0952f-178e-4395-9620-298e1bbe1dc8"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(839),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Cristal",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6868),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(839),
                             Value = 10.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("2eb94078-965b-4bce-a07b-5ff750c4bb96"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6870),
+                            Id = new Guid("56b11705-fcf4-42c7-8497-4bb5743f23fd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(842),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Orbe",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6870),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(842),
                             Value = 20.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("23311eef-86fd-4149-9eb7-b181c4125005"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6871),
+                            Id = new Guid("e01e8965-a06a-4edf-b9e3-c059269b1442"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(843),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Varinha",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6871),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(843),
                             Value = 10.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("2b719b06-5b67-4b85-8a54-39c03ab9fe1b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6872),
+                            Id = new Guid("5b4c7e01-76d1-4a42-b44d-7b70643c585e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(844),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Cajado de madeira",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6872),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(844),
                             Value = 5.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("90060195-4a81-416d-a0e4-1af7a093d156"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6873),
+                            Id = new Guid("10cddd73-5dbc-4611-9007-baf885ad9b2f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(845),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ramo de visco",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6873),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(845),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("86921ba5-78ef-4cd4-858e-a1019f929d91"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6876),
+                            Id = new Guid("37fb4bbd-8e05-4467-b33f-ab5ce2f70548"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(847),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Totem",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6876),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(847),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("658292e8-7fd9-425e-ac2b-dbfc12e8bc02"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6878),
+                            Id = new Guid("69102e54-3f71-40f9-96db-228034d54fb8"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(848),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Varinha de teixo",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6878),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(848),
                             Value = 10.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("5da0dae7-6b54-406d-a135-619b5a1cf6a1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6879),
+                            Id = new Guid("a4eac2d0-128b-4e8c-9b67-1d3e5505f0b3"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(849),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Frasco",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6879),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(849),
                             Value = 2.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("4ab2dbd4-a7d8-4203-986c-1a86a2e50083"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6880),
+                            Id = new Guid("564e990a-855f-43a7-84b4-3b7a2fe76ba1"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(850),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Garrafa de vidro",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6880),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(850),
                             Value = 1.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("f4ac6190-b32a-4383-b4ec-687b66fd9a4c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6881),
+                            Id = new Guid("19f9d616-156d-4129-be55-d5499a48418a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(853),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Giz (1 peça)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6881),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(853),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("7202ec46-ab40-4b7b-93be-565884eb87cf"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6883),
+                            Id = new Guid("3d0ae746-ebad-4d50-93e7-1bf4f7dbe66b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(855),
                             CurrencyType = 0,
                             Description = "Essencial para os magos, um grimório é \r\num volume encadernado em couro com 100 páginas de \r\npergaminhos em branco, adequado para armazenar \r\nmagias.",
                             Name = "Grimório",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6883),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(855),
                             Value = 50.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("4a5973fa-a7c1-4a8a-89d4-2b6b3aac2f41"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6884),
+                            Id = new Guid("96834897-f5bc-42b2-b56d-8401d0b736a0"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(856),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Jarra",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6884),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(856),
                             Value = 4.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("f42cfa45-ede6-45cb-a90d-436b5bb474e6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6885),
+                            Id = new Guid("8b5990ca-bc07-496f-92c0-c3d006e44b58"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(857),
                             CurrencyType = 0,
                             Description = "Um kit de escalada inclui pítons \r\nespeciais, botas com solas pontiagudas, luvas e um cinto. \r\nVocê pode usar o kit de escalada como uma ação para \r\n\"ancorar-se\". Quando faz isso, você não pode cair mais de \r\n7,5 metros a partir do ponto onde se ancorou, e não pode \r\nsubir mais de 7,5 metros de distância desse ponto, sem \r\ndesfazer a âncora.",
                             Name = "Kit de escalada",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6885),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(857),
                             Value = 25.0,
                             Weight = 6.0
                         },
                         new
                         {
-                            Id = new Guid("b6791840-98f3-49d1-8f72-6ccadfb36ff5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6888),
+                            Id = new Guid("42c60629-2c9d-4c58-bd98-17aab51a6099"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(858),
                             CurrencyType = 0,
                             Description = "Esse kit é uma bolsa de \r\ncouro contendo ataduras, pomadas e talas. O kit possui \r\nmaterial suficiente para dez usos. Usando uma ação, você \r\npode gastar um uso do kit para estabilizar uma criatura \r\nque tenha 0 pontos de vida, sem a necessidade de realizar \r\num teste de Sabedoria (Medicina).",
                             Name = "Kit de primeiros-socorros",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6888),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(858),
                             Value = 5.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("1035c0f9-bb83-47fe-9fa6-a379f53dcea3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6889),
+                            Id = new Guid("b0ef2f8d-d0b7-4b91-a1aa-8210de4f59b2"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(860),
                             CurrencyType = 1,
                             Description = "Uma lâmpada lança luz plena em um raio \r\nde 4,5 metros e penumbra por mais 9 metros. Uma vez \r\nacesa, a lâmpada queima por 6 horas usando um frasco de \r\nóleo (500 ml).",
                             Name = "Lâmpada",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6889),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(860),
                             Value = 5.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("9dade301-8693-4e61-9cd6-3f3f690dc279"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6891),
+                            Id = new Guid("b07dccfe-abde-446f-bf0e-e57716e5d7b3"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(861),
                             CurrencyType = 0,
                             Description = "Uma lanterna coberta lança luz \r\nplena em um raio de 9 metros e penumbra por mais 9 \r\nmetros. Uma vez acesa, ela queima por 6 horas usando \r\num frasco de óleo (500 ml). Usando uma ação, você pode \r\nabaixar a cobertura, reduzindo a claridade para \r\npenumbra em um raio de 1,5 metro.",
                             Name = "Lanterna coberta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6891),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(861),
                             Value = 5.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("90becb39-90a9-4870-8ad8-c58bcbee808d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6892),
+                            Id = new Guid("b5cfef6f-fffa-4b10-8403-a5d52e8cdbfe"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(862),
                             CurrencyType = 0,
                             Description = "Uma lanterna furta-fogo \r\nlança luz plena em um cone de 18 metros e penumbra por \r\nmais 18 metros. Uma vez acesa, ela queima por 6 horas \r\nusando um frasco de óleo (500 ml).",
                             Name = "Lanterna furta-fogo",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6892),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(862),
                             Value = 10.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("682598a5-4de3-46aa-89da-fa065d7d2a7e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6893),
+                            Id = new Guid("3563ae03-f85c-4547-85aa-3d6003d7be9c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(865),
                             CurrencyType = 0,
                             Description = "Essa lente permite ver pequenos \r\nobjetos mais de perto. Ela também é útil como um \r\nsubstituto da pederneira e isqueiro para acender fogo. \r\nUsar uma lupa para acender fogo necessita de luz tão \r\nbrilhante como a luz do sol para focar, um pavio e cerca \r\nde 5 minutos. Uma lente de aumento concede vantagem \r\nem qualquer teste de habilidade feito para avaliar ou \r\ninspecionar um item que é pequeno ou muito detalhado.",
                             Name = "Lente de aumento",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6893),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(865),
                             Value = 100.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("9a8b59ea-a551-480e-90b2-052f9fdf13d8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6894),
+                            Id = new Guid("e7cc5467-fa5a-43b0-9fbd-0f10fc765c9a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(867),
                             CurrencyType = 0,
                             Description = "Um livro pode conter poesia, relatos históricos, \r\ninformações relativas a um campo particular de \r\nsabedoria, diagramas e notas sobre engenhocas gnômicas, \r\nou qualquer outra coisa que possa ser representada \r\nusando texto ou imagens.",
                             Name = "Livro",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6894),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(867),
                             Value = 25.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("550b7efd-b8f3-43b4-83c3-00c0b8be5e51"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6896),
+                            Id = new Guid("bf0ab0e6-af5b-4c48-8002-36ab24d279f3"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(868),
                             CurrencyType = 0,
                             Description = "Objetos vistos através de uma luneta são \r\nampliados até o dobro do seu tamanho.",
                             Name = "Luneta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6896),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(868),
                             Value = 1000.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("546652fd-b2a7-44c6-9b5f-965890476051"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6897),
+                            Id = new Guid("612e2b9a-ec0e-450a-84e9-1fb642a9dd27"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(869),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Manto",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6897),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(869),
                             Value = 1.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("eff3b102-3bc0-438f-9300-4110c38fbb03"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6900),
+                            Id = new Guid("1a145e5b-7f26-4893-a28d-06f46d6925bd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(870),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Marreta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6900),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(870),
                             Value = 2.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("96486362-26b0-45e1-9657-4459d186e4c2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6901),
+                            Id = new Guid("11889e9c-ccc5-4b1e-b704-2fdf4b9dc27a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(872),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Martelo",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6901),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(872),
                             Value = 1.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("2521682e-251e-429a-bb7d-13c029cc2d49"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6902),
+                            Id = new Guid("05e23c49-98a9-456a-8106-f263ee8f8396"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(873),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Mochila",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6902),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(873),
                             Value = 2.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("7778cbdc-baba-41d9-ad57-85bf4f0d4b99"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6904),
+                            Id = new Guid("9d835a36-3f60-4320-9dff-0d1cfe2d8843"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(874),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Balas de Funda (20)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6904),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(874),
                             Value = 4.0,
                             Weight = 0.75
                         },
                         new
                         {
-                            Id = new Guid("462ae913-ff34-4108-9b02-309e3dad44ac"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6905),
+                            Id = new Guid("76e5fcdd-f9d5-4529-83f8-69ef3ccbb10f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(877),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Flechas (20)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6905),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(877),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("eeaf03e0-7203-4ef5-a61f-0c3ac0fea5a9"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6906),
+                            Id = new Guid("81d60faa-bbe6-4e91-9ad2-3e9ac43b0749"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(879),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Virotes (20)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6906),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(879),
                             Value = 1.0,
                             Weight = 0.75
                         },
                         new
                         {
-                            Id = new Guid("b09c8ff6-e6a4-42a0-9f7e-2b621b50b3e2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6907),
+                            Id = new Guid("6af2c79d-bd99-47ab-b22d-a94f8d1aa010"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(880),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Zarabatana (50)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6907),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(880),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("973a6728-a61d-48fe-992d-9397ef2639b1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6909),
+                            Id = new Guid("b6218cb0-28ad-41a7-aa0a-5869236112c0"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(881),
                             CurrencyType = 1,
                             Description = "Geralmente vem em um frasco de argila que \r\ncontém 500 ml. Usando uma ação, você pode espirrar o \r\nóleo desse frasco em uma criatura a até 1,5 metro de você\r\nou arremessar a até 6 metros, quebrando-o com o \r\nimpacto. Você deve realizar um ataque à distância contra \r\numa criatura ou objeto, tratando o óleo como uma arma \r\nimprovisada. Com um sucesso, o alvo é coberto de óleo. Se \r\no alvo sofrer qualquer dano flamejante antes do óleo secar\r\n (depois de 1 minuto), a criatura sofre 5 de dano \r\nflamejante adicional pela queima do óleo. Você também \r\npode derramar um frasco de óleo no chão para cobrir uma \r\nárea de um quadrado de 1,5 metro de lado, desde que a \r\nsuperfície esteja nivelada. Se aceso, o óleo queima por 2 \r\nrodadas e causa 5 de dano flamejante a qualquer criatura \r\nque entrar na área ou terminar seu turno dentro da área. \r\nUma criatura pode sofrer esse dano apenas uma vez por \r\nturno.",
                             Name = "Óleo (frasco)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6909),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(881),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("d2651cb9-366a-47f3-a5b2-d847c43ea566"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6912),
+                            Id = new Guid("cc9b855d-5b83-4b1a-af29-bd0d782a0596"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(883),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Pá",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6912),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(883),
                             Value = 2.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("45634ea4-b1ef-4467-a5fe-7dcc053bce32"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6913),
+                            Id = new Guid("d33c277c-61fb-4c7f-8330-73ab561ee6ab"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(884),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Panela de ferro",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6913),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(884),
                             Value = 2.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("7c38b899-54e7-4e71-8498-822b7e49ea7a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6914),
+                            Id = new Guid("e63ebe0a-6680-475c-bdd4-7d467ab4c2da"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(885),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Papel (uma folha)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6914),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(885),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("97310a4d-5ef5-4194-a193-9841e4c66801"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6915),
+                            Id = new Guid("3eb19d43-5ddd-4fd0-a098-f7a3d5fa155b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(886),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Parafina",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6915),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(886),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("0ae7a320-b863-445d-b39a-c438adce6931"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6917),
+                            Id = new Guid("d8e59abb-e8de-4a7e-9160-c547bc3602b1"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(889),
                             CurrencyType = 0,
                             Description = "Usar um pé de cabra concede vantagem \r\nnos testes de Força onde uma alavanca possa ser \r\naplicada.",
                             Name = "Pé de cabra",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6917),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(889),
                             Value = 2.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("0b5fa8dd-9bb5-490c-aec9-52682a26217c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6918),
+                            Id = new Guid("b3c02159-b024-4046-a3d6-90b0aefc9dff"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(890),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Pedra de amolar",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6918),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(890),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("07211498-e7cf-4ac8-90f8-5a476523ed1d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6919),
+                            Id = new Guid("652be304-bec2-4b9a-ae6a-65ab6fddaa17"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(892),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Perfume (frasco)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6919),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(892),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("64e0d920-07ae-44cc-9226-b5531eeb0ba2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6920),
+                            Id = new Guid("b06bba0a-b1eb-44e5-811f-c2752ce05aca"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(893),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Pergaminho (uma folha)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6920),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(893),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("44ed5f78-2e9c-4300-8853-ba8425cce9d1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6923),
+                            Id = new Guid("4872a6cc-49c5-45f5-b343-78811dea3f9f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(894),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Picareta de minerador",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6923),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(894),
                             Value = 2.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("05214520-26fd-4bb9-bdca-bcbad81bd6e0"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6925),
+                            Id = new Guid("85a98f0f-a68d-443d-a1b6-52a8cd7425b4"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(896),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Piton",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6925),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(896),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("2bcf7933-fe41-4b47-a3f9-c1088be95ed5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6926),
+                            Id = new Guid("206b0bc2-f920-43ae-804f-9cb53ddd102c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(897),
                             CurrencyType = 0,
                             Description = "Esse estojo \r\ncilíndrico de couro pode armazenar até 10 folhas de papel \r\nenroladas ou 5 folhas de pergaminhos enroladas.",
                             Name = "Porta mapas ou pergaminhos",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6926),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(897),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("6068dbcc-e2af-4dcb-b4eb-1b7584b5a572"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6927),
+                            Id = new Guid("8ad97280-31c4-41b4-8796-403fd3dfc71f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(898),
                             CurrencyType = 0,
                             Description = "Esse estojo de madeira pode \r\narmazenar até 20 virotes de besta.",
                             Name = "Porta virotes",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6927),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(898),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("e2bc81c0-a3f3-4237-bd9a-20067ef710c6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6928),
+                            Id = new Guid("b20d8842-2ba1-4721-ae17-cc3bf8692c25"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(901),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Pregos de ferro (10)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6928),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(901),
                             Value = 1.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("ac2bf60c-b501-4616-9396-2c224f7245a7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6930),
+                            Id = new Guid("d09804e2-d434-4626-90df-53d0ae6249d2"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(902),
                             CurrencyType = 1,
                             Description = "Consistem em alimentos desidratados adequados para viagens longas, \r\nincluindo carne seca, frutas secas, bolachas e nozes. ",
                             Name = "Rações de viagem (1 dia)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6930),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(902),
                             Value = 5.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("6a7a608f-ab57-433c-b5b1-3b7191f3cbca"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6931),
+                            Id = new Guid("712f34ea-b9fc-4051-8f8f-66f4fe75c3ad"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(904),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Robes",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6931),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(904),
                             Value = 1.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("808a9d37-5657-4d99-bf24-bdaefad81b83"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6932),
+                            Id = new Guid("fc35e66b-5de3-4d16-bb35-f0cc3b10840f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(905),
                             CurrencyType = 0,
                             Description = "Um conjunto de roldanas com um \r\ncabo entre elas e um gancho para fixar aos objetos, a \r\nroldana e polia permitem içar até quatro vezes o peso que \r\nvocê ergueria normalmente.",
                             Name = "Roldana e polia",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6932),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(905),
                             Value = 1.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("d9c45c5a-2270-4371-a19a-441b1585144c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6935),
+                            Id = new Guid("43196469-a194-4547-aeaf-1fbfc0a16c25"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(906),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Roupas comuns",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6935),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(906),
                             Value = 5.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("af821ca8-9e69-49e8-a870-d648f5cbfb77"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6936),
+                            Id = new Guid("b2173d25-bd11-4be1-a010-9f16e9e38810"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(907),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Roupas de viajante",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6936),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(907),
                             Value = 2.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("e033778f-efc3-4cb5-8a72-41cc8b3a888b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6937),
+                            Id = new Guid("d4573b17-156b-4ad0-b14a-24e8c61ca231"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(909),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Roupas de entretenimento",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6937),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(909),
                             Value = 5.0,
                             Weight = 2.0
                         },
                         new
                         {
-                            Id = new Guid("a25f3d88-e569-431f-a48e-9ec1bdf4bd23"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6939),
+                            Id = new Guid("5fb71d1e-da19-4bcf-893f-e080787a6594"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(910),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Roupas finas",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6939),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(910),
                             Value = 15.0,
                             Weight = 3.0
                         },
                         new
                         {
-                            Id = new Guid("9b22c8eb-9d90-43b5-910e-49240762c0ad"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6940),
+                            Id = new Guid("a3757c5e-b811-4f9f-8feb-9910a1f72fba"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(913),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Sabão",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6940),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(913),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("8169077b-5fb2-431d-ac22-01de7d5f2812"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6941),
+                            Id = new Guid("24de9e5c-8681-4b72-bf85-2aa35077e346"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(914),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Saco",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6941),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(914),
                             Value = 1.0,
                             Weight = 0.25
                         },
                         new
                         {
-                            Id = new Guid("35eecdf0-1d11-4a59-bbb1-a531704c0d3d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6943),
+                            Id = new Guid("f63927f8-4580-4566-9b61-f482bc7a8172"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(915),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Saco de dormir",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6943),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(915),
                             Value = 1.0,
                             Weight = 3.5
                         },
                         new
                         {
-                            Id = new Guid("ed909774-9b00-44ae-98ad-a8fc70a4f155"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6944),
+                            Id = new Guid("ed680746-8460-435d-b715-10fff076b05a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(917),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Amuleto",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6944),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(917),
                             Value = 5.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("496bdecc-6f6b-4bca-b2f5-0a18e050f81d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6947),
+                            Id = new Guid("19ae5a8d-cbeb-451a-b9e0-d86da0bfbf84"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(918),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Emblema",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6947),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(918),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("a7d6229f-02a7-408d-bd92-c5ed237ad32e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6948),
+                            Id = new Guid("a52d9595-23e4-479d-934a-14c2f77e069f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(919),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Relicário",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6948),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(919),
                             Value = 5.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("5750fca9-18f1-4622-b623-f2a7ec491394"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6949),
+                            Id = new Guid("ff1cb009-bb8b-4249-8471-d8ed57181e6b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(920),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Sinete",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6949),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(920),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("6a5b67e4-4fb7-44f2-93a7-318d135080bd"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6950),
+                            Id = new Guid("272663e8-c67e-4721-b4a9-a1ee0639ba15"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(922),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Sino",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6950),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(922),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("70e7f735-d6b1-428f-8246-39e283c65dcc"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6952),
+                            Id = new Guid("5e26e0f1-3d11-4695-8775-3233846f1ea9"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(925),
                             CurrencyType = 0,
                             Description = "Um abrigo simples e portátil que acomoda \r\nduas pessoas.",
                             Name = "Tenda para duas pessoas",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6952),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(925),
                             Value = 2.0,
                             Weight = 10.0
                         },
                         new
                         {
-                            Id = new Guid("7e744f89-c0b8-431a-90e4-411cb7fd0177"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6953),
+                            Id = new Guid("8dd53968-9567-47e7-aa00-a7a4e221fa94"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(926),
                             CurrencyType = 2,
                             Description = "A tocha queima por 1 hora, fornecendo luz \r\nplena em um raio de 6 metros e penumbra por mais 6 \r\nmetros. Se você realizar um ataque corpo-a-corpo com \r\numa tocha acesa e acertar, causa 1 de dano flamejante.",
                             Name = "Tocha",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6953),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(926),
                             Value = 1.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("da222b49-88d8-484f-b7ce-9ec13a0f05e5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6954),
+                            Id = new Guid("95259d10-affa-4724-ab10-e5966cae0d82"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(927),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Tinta (frasco de 30ml)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6954),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(927),
                             Value = 10.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("8aaf7525-b91b-454d-a237-e3d3486a3dd2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6955),
+                            Id = new Guid("790bd19e-9a69-417b-97cb-eeb50f0f8469"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(928),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Vara (3 metros)",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6955),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(928),
                             Value = 5.0,
                             Weight = 3.5
                         },
                         new
                         {
-                            Id = new Guid("7904cd18-0190-4061-9dc3-eb74436217a0"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6958),
+                            Id = new Guid("02d0aabe-e342-4cf5-9475-595cf76b519a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(930),
                             CurrencyType = 2,
                             Description = "Por uma hora, a vela emana luz plena em um \r\nraio de 1,5 metro e penumbra por mais 1,5 metro.",
                             Name = "Vela",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6958),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(930),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("ac7c5df7-0bdc-4252-88dc-c4ad6fe67dae"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7084),
+                            Id = new Guid("8a7b75ac-228c-474a-8da1-c398d39cfb3f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1067),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Carpinteiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7084),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1067),
                             Value = 8.0,
                             Weight = 3.0
                         },
                         new
                         {
-                            Id = new Guid("3459ff52-89ff-4a7c-be1a-509f3aacf9e4"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7085),
+                            Id = new Guid("99ea6723-b011-4e8e-9d94-b6d868239dfd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1069),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Cartógrafo",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7085),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1069),
                             Value = 15.0,
                             Weight = 3.0
                         },
                         new
                         {
-                            Id = new Guid("34996d8e-74d1-4de3-bfae-515d8f0c0875"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7086),
+                            Id = new Guid("0314ca6d-11d1-4de8-95a4-4772b964a94f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1070),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Costureiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7086),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1070),
                             Value = 1.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("452266f7-e4c5-4905-90b4-afb1c08595d7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7088),
+                            Id = new Guid("1965da47-e557-4568-bca5-24e1ead8d1ae"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1071),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Coureiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7088),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1071),
                             Value = 5.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("66e35794-d1ee-4e51-8ecb-1df3e601b6bb"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7091),
+                            Id = new Guid("b4e84723-61f1-4337-8777-662be7d73855"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1072),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Entalhador",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7091),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1072),
                             Value = 1.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("3c13eab9-d392-4f31-ab5b-2f9220700cf2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7092),
+                            Id = new Guid("81a8a599-7e27-416f-bd1c-ef21faf591c5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1074),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Ferreiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7092),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1074),
                             Value = 20.0,
                             Weight = 4.0
                         },
                         new
                         {
-                            Id = new Guid("249bf2d6-11c4-4794-9775-20671816b7f5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7093),
+                            Id = new Guid("3a8e89f6-4885-44cb-9a6d-9681d30f78bd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1075),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Funileiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7093),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1075),
                             Value = 50.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("36710b83-e69b-4baf-b3d6-d9938b405de1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7094),
+                            Id = new Guid("68644ebf-231b-4565-be47-2c4cfc1d3145"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1076),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Joalheiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7094),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1076),
                             Value = 25.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("6fa02e05-1c07-4e03-a229-0876aa1df768"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7096),
+                            Id = new Guid("2eded97f-f823-4df8-a808-e3d7cd8d780d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1079),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Oleiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7096),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1079),
                             Value = 10.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("c870f1de-df88-45ec-920d-90f8b96d790d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7097),
+                            Id = new Guid("3037338e-24ee-4871-ab78-9ec4cbe7a049"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1080),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Pedreiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7097),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1080),
                             Value = 10.0,
                             Weight = 4.0
                         },
                         new
                         {
-                            Id = new Guid("bf9bd676-319f-4981-a535-ef05d08cb547"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7098),
+                            Id = new Guid("5e23e665-f963-47aa-9019-9e8e1534bdfd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1082),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Pintor",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7098),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1082),
                             Value = 10.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("06aad50f-24e6-40db-9090-3315dacb5f18"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7099),
+                            Id = new Guid("e1a05d8f-bfb0-4642-a63a-530ddeecfd5e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1083),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Sapateiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7099),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1083),
                             Value = 5.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("4aa16e06-37d9-4039-9bee-dd3f5ab84ab8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7102),
+                            Id = new Guid("71ac72f5-137e-44e7-85b1-01a98ec60351"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1084),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Ferramentas de Vidreiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7102),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1084),
                             Value = 30.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("7992ec96-d1f8-4b59-abf1-048cbd6f2a3d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7104),
+                            Id = new Guid("b058ee93-f567-4911-91b1-15437b068b05"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1086),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Suprimentos de Alquimista",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7104),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1086),
                             Value = 50.0,
                             Weight = 4.0
                         },
                         new
                         {
-                            Id = new Guid("f4d9b99f-ed9c-4e65-bf12-15db7e776f3f"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7105),
+                            Id = new Guid("5c956cbb-7b82-4b9d-a385-9ca77d6d7165"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1087),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Suprimentos de Cervejeiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7105),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1087),
                             Value = 20.0,
                             Weight = 4.5
                         },
                         new
                         {
-                            Id = new Guid("8f5f389e-a26c-4752-9185-276ff59084bf"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7106),
+                            Id = new Guid("b4477c67-8062-43cf-97d7-34c5d7505ec4"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1088),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Suprimentos de Caligrafia",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7106),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1088),
                             Value = 10.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("01283b92-971d-4d37-becb-320b26b06040"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7107),
+                            Id = new Guid("7dcb3e98-95a8-4025-b105-f0d7f7dd3957"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1091),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Utensílios de Cozinheiro",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7107),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1091),
                             Value = 1.0,
                             Weight = 4.0
                         },
                         new
                         {
-                            Id = new Guid("6953debc-04d3-4533-8834-cb919560fa57"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7109),
+                            Id = new Guid("bf30af76-e923-4088-9008-20096b5d48b5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1092),
                             CurrencyType = 0,
                             Description = "Esse conjunto de instrumentos é usado para navegação no mar. \r\nProficiência com as ferramentas de navegador permite \r\ntraçar um curso de navio e seguir cartas de navegação. \r\nAlém disso, essas ferramentas permitem que você \r\nadicione seu bônus de proficiência para qualquer teste de \r\nhabilidade que fizer para não se perder no mar. ",
                             Name = "Ferramentas de navegação",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7109),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1092),
                             Value = 25.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("82c0a469-6e8a-416c-b740-04871f6661a3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7110),
+                            Id = new Guid("10be25d5-62da-41a8-98c5-ff038e0edeb4"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1094),
                             CurrencyType = 0,
                             Description = "Esse conjunto de ferramentas inclui uma pequena pasta, um conjunto de \r\nchaves mestras, um pequeno espelho montado em uma \r\nalça de metal, um conjunto de tesouras de lâminas \r\nestreitas e um par de alicates. Proficiência com essas \r\nferramentas permite adicionar o bônus de proficiência \r\npara quaisquer testes de habilidade que você fizer para \r\ndesarmar armadilhas ou abrir fechaduras.",
                             Name = "Ferramentas de ladrão",
                             Type = 3,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7110),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1094),
                             Value = 25.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("3700c5e8-0535-4ed2-96eb-a7034bf3b39e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7111),
+                            Id = new Guid("50694b7e-d022-4eb5-84ad-f54b8662b4b6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1095),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Alaúde",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7111),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1095),
                             Value = 35.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("19de1679-3454-40c7-95e8-6bc783b5e365"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7114),
+                            Id = new Guid("eb86e9e6-0f82-49c0-a9c7-09b4a9302bf1"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1096),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Flauta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7114),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1096),
                             Value = 2.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("6987d964-2a2e-42f0-b08e-6b0a601b9fa1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7115),
+                            Id = new Guid("46608af7-0b3f-401f-8ed9-16c02404166d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1097),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Flauta de Pã",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7115),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1097),
                             Value = 12.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("5a7ff249-01fb-4ea9-a859-edbf0bf5fefd"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7117),
+                            Id = new Guid("86b87e4b-99fa-4244-9a7c-56d1c4f96a51"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1099),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Gaita de Foles",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7117),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1099),
                             Value = 30.0,
                             Weight = 3.0
                         },
                         new
                         {
-                            Id = new Guid("4ea554fa-6087-4d7a-8341-55f983862e23"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7118),
+                            Id = new Guid("14d3cae2-26aa-4e97-8993-f720598d60f5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1100),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Lira",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7118),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1100),
                             Value = 30.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("96ab6da1-a4c9-4055-8729-c515abcf5067"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7119),
+                            Id = new Guid("0b6aeaf6-9745-464f-834e-6fdfd071383f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1103),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Oboé",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7119),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1103),
                             Value = 2.0,
                             Weight = 0.5
                         },
                         new
                         {
-                            Id = new Guid("c494bb75-4d22-425e-9ae5-54b13b1b760b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7120),
+                            Id = new Guid("ab231bdc-4866-486e-91e4-e2625255b790"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1104),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Tambor",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7120),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1104),
                             Value = 6.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("1b0973fa-485b-4d79-9e73-3c5384315e81"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7122),
+                            Id = new Guid("dd5792e4-d4c1-4733-8a60-ef8f31caba2a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1105),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Trombeta",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7122),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1105),
                             Value = 3.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("10a8d746-a37e-4f75-901a-d2dfccaa6397"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7123),
+                            Id = new Guid("139d1180-60da-4132-bb80-48f39fcdf540"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1106),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Violino",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7123),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1106),
                             Value = 30.0,
                             Weight = 3.0
                         },
                         new
                         {
-                            Id = new Guid("ae1eee60-45a5-4eab-8d97-853c8916a3c9"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7126),
+                            Id = new Guid("983b3d8e-f747-44bc-8323-adb954e7d342"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1108),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Xilofone",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7126),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1108),
                             Value = 25.0,
                             Weight = 5.0
                         },
                         new
                         {
-                            Id = new Guid("af0e8073-877e-4f50-981b-c9d93fad9737"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7127),
+                            Id = new Guid("f5a0c27c-cfbe-4b6b-930f-28a6ade4b1f4"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1109),
                             CurrencyType = 0,
                             Description = "Essa bolsa de cosméticos, tintura de \r\ncabelo e pequenos adereços permite criar disfarces que \r\nmudam sua aparência física. Proficiência com este kit \r\npermite adicionar o bônus de proficiência para quaisquer \r\ntestes de habilidade que você fizer para criar um disfarce \r\nvisual.",
                             Name = "Kit de Disfarce",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7127),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1109),
                             Value = 25.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("140a7fc4-aa71-478a-8f33-117445eabdd5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7128),
+                            Id = new Guid("2a0e3ec6-0f3b-47fe-8dbd-b66f4f92d218"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1110),
                             CurrencyType = 0,
                             Description = "Essa pequena caixa contém uma \r\nvariedade de papéis e pergaminhos, canetas e tintas, \r\nselos e lacres, folha de ouro e prata, e outros suprimentos \r\nnecessários para criar falsificações convincentes de \r\ndocumentos físicos. Proficiência com esse kit permite \r\nadicionar o bônus de proficiência para quaisquer testes de \r\nhabilidade que você fizer para criar uma falsificação de \r\num documento físico.",
                             Name = "Kit de Falsificação",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7128),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1110),
                             Value = 15.0,
                             Weight = 2.5
                         },
                         new
                         {
-                            Id = new Guid("425a2f1b-2e2a-4b26-a4ba-9747e09fa1f5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7129),
+                            Id = new Guid("1fa81d98-c95f-4495-81ef-856fd02e285e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1111),
                             CurrencyType = 0,
                             Description = "Esse kit contém uma variedade \r\nde instrumentos, como alicates, almofariz e pilão, e bolsas \r\ne frascos utilizados pelos herbalistas para criar remédios \r\ne poções. Proficiência com este kit permite adicionar o \r\nbônus de proficiência para quaisquer testes de habilidade \r\nque você fizer para identificar ou aplicar ervas. Além \r\ndisso, a proficiência com esse kit é necessária para criar \r\nantídotos e poções de cura.",
                             Name = "Kit de Herbalismo",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7129),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1111),
                             Value = 5.0,
                             Weight = 1.5
                         },
                         new
                         {
-                            Id = new Guid("80a04ce8-3904-4c26-a38a-b4c777938bd4"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7131),
+                            Id = new Guid("81f91675-d6fb-4b48-9174-683b36fc6bc6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1114),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Baralho de Cartas",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7131),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1114),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("fc931746-d48b-4b58-9c8e-8e24f1ab6110"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7132),
+                            Id = new Guid("17b99969-74e9-422f-a435-b49307da2f24"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1116),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Conjunto de Dados",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7132),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1116),
                             Value = 1.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("454c193e-ec96-4e25-a91d-00f28de5382c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7133),
+                            Id = new Guid("c9e1d130-2c1a-4abb-93ad-5184e4818c92"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1117),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Jogo dos Três Dragões",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7133),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1117),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("7a0f8513-3dc6-4cff-aecf-2da68d6f0042"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7134),
+                            Id = new Guid("35c0a1dd-74f7-4d05-a1e2-6d54da97bbec"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1118),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Xadrez do Dragão",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7134),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1118),
                             Value = 1.0,
                             Weight = 0.25
                         },
                         new
                         {
-                            Id = new Guid("db2db549-45a9-4d12-ba46-a87d1ba9a01d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7137),
+                            Id = new Guid("73ac0fe3-73fc-47de-bb67-b738d2747383"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1119),
                             CurrencyType = 0,
                             Description = "O kit de venenos inclui os frascos, \r\nprodutos químicos e outros equipamentos necessários \r\npara a criação de venenos. Proficiência com esse kit \r\npermite adicionar o bônus de proficiência para quaisquer \r\ntestes de habilidade que você fizer para criar ou utilizar \r\nvenenos.",
                             Name = "Kit de Venenos",
                             Type = 4,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7137),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1119),
                             Value = 50.0,
                             Weight = 1.0
                         },
                         new
                         {
-                            Id = new Guid("4afcb9ea-5a26-474c-941d-72de31352bf3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7169),
+                            Id = new Guid("7ccf07bb-3efb-4e05-bd70-c825b3980f2a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1152),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um saco de\r\ndormir, duas fantasias, 5 velas, 5 dias de rações, um cantil e um kit\r\nde disfarce.",
                             Name = "Pacote de Artista",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7169),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1152),
                             Value = 40.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("d70a9a2b-34c0-40c7-a1cf-12761aeb0ee3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7170),
+                            Id = new Guid("1191710a-2ce0-4da9-8956-703cb07df53f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1154),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um saco\r\ncom 1.000 esferas de metal, 3 metros de linha, um sino, 5 velas,\r\num pé de cabra, um martelo, 10 pítons, uma lanterna coberta, 2\r\nfrascos de óleo, 5 dias de rações, uma caixa de fogo e um cantil. O\r\nkit também possui 15 metros de corda de cânhamo amarrada ao\r\nlado dele.",
                             Name = "Pacote de Assaltante",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7170),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1154),
                             Value = 16.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("5b74e3af-dfb3-406a-b036-395fa79bea98"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7172),
+                            Id = new Guid("99866c8e-4305-48bb-af56-c301f3c01291"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1155),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um pé de\r\ncabra, um martelo, 10 pítons, 10 tochas, uma caixa de fogo, 10\r\ndias de rações e um cantil. O kit também tem 15 metros de corda\r\nde cânhamo amarrada ao lado dele.",
                             Name = "Pacote de Aventureiro",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7172),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1155),
                             Value = 12.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("0efa621f-38a4-4d17-9dc8-b0faa24ae1a8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7173),
+                            Id = new Guid("a6be923f-960d-40e0-ac42-d66f8fe786a6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1158),
                             CurrencyType = 0,
                             Description = "Inclui um baú, 2 caixas para\r\nmapas ou pergaminhos, um conjunto de roupas finas, um vidro de\r\ntinta, uma caneta tinteiro, uma lâmpada, 2 frascos de óleo, 5\r\nfolhas de papel, um vidro de perfume, parafina e sabão.",
                             Name = "Pacote de Diplomata",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7173),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1158),
                             Value = 39.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("1562fd78-710a-4088-9ac4-45211edf85e2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7174),
+                            Id = new Guid("ef58c74b-90a1-4b6b-b1b9-a6bbbfa5b9a9"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1159),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um livro de\r\nestudo, um vidro de tinta, uma caneta tinteiro, 10 folhas de\r\npergaminho, um saquinho de areia e uma pequena faca.",
                             Name = "Pacote de Estudioso",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7174),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1159),
                             Value = 40.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("ec4cded7-cd95-4414-b75e-c48d9d53fedf"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7175),
+                            Id = new Guid("b7a49272-d4b7-403c-86a8-3d2a5e22974e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1206),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um saco de\r\ndormir, um kit de refeição, uma caixa de fogo, 10 tochas, 10 dias\r\nde rações e um cantil. O kit também tem 15 metros de corda de\r\ncânhamo amarrada ao lado dele.",
                             Name = "Pacote de Explorador",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7175),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1206),
                             Value = 10.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("b66a7b55-fe2c-44a3-97fc-53d48a2a6dd3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7177),
+                            Id = new Guid("1c9bd8f0-149b-4caf-9c9e-1cd1f637161c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1207),
                             CurrencyType = 0,
                             Description = "Inclui uma mochila, um\r\ncobertor, 10 velas, uma caixa de fogo, uma caixa de esmolas, 2\r\nblocos de incenso, um incensário, vestes, 2 dias de rações e um\r\ncantil.",
                             Name = "Pacote de Sacerdote",
                             Type = 5,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7177),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1207),
                             Value = 19.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("d91d4ece-caf9-4cec-9690-73bfb59321e0"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7217),
+                            Id = new Guid("858ed7aa-f7d8-481e-9053-fe3f08abdd01"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1225),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Banquete (por pessoa)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7217),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1225),
                             Value = 10.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("dc4b6ee5-ff38-45d8-8ab0-df1e6e336d28"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7219),
+                            Id = new Guid("0ee97289-d7f9-4354-b38d-dfc15429a376"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1226),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Carne (pedaço)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7219),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1226),
                             Value = 3.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("c078b470-1b03-4878-8170-d1bb3e51b3df"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7220),
+                            Id = new Guid("ace5e0fa-b560-4273-83a8-94d2cd5ca05d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1227),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Cerveja (galão)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7220),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1227),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("e687f606-e3e6-45db-a198-b91ff817de85"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7221),
+                            Id = new Guid("9eac08c9-6194-47a1-9a9c-ec6080c879fd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1228),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Cerveja (caneca)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7221),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1228),
                             Value = 4.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("2dbd97c4-f09b-4e9d-9c27-d7b292b46380"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7222),
+                            Id = new Guid("8c28e2b0-42c3-4786-9143-d78c9c687fd6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1232),
                             CurrencyType = 2,
                             Description = "",
                             Name = "Pão (pedaço)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7222),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1232),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("92cb4d9c-16f3-4532-a266-53518610a9e7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7224),
+                            Id = new Guid("7cc23a77-0082-4e74-b04a-ec5521907a72"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1233),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Queijo (pedaço)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7224),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1233),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("4140d8a0-3a11-437c-a486-999870998f9d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7225),
+                            Id = new Guid("e3ff27d4-4fd8-4f6b-ab47-d857c620ec40"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1234),
                             CurrencyType = 2,
                             Description = "Consiste em restos mal preparados, muitas vezes estragados ou contaminados. A comida pode causar doenças. Sem qualquer prazer ou nutrição adequada. Consumida em um ambiente sujo e insalubre, com a constante presença de insetos e roedores.",
                             Name = "Esquálida (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7225),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1234),
                             Value = 3.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("4bc07da8-ccc5-4d1d-b2cb-6452271ecc5d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7226),
+                            Id = new Guid("68ae10fd-acc9-443f-a724-07f4ab00aba5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1235),
                             CurrencyType = 2,
                             Description = "Composta por ingredientes básicos e de qualidade questionável. A refeição é simples, sem variedade, suficiente para manter alguém vivo, mas insatisfatória e possivelmente desagradável. Frequentemente rústica e pouco apetitosas.",
                             Name = "Pobre (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7226),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1235),
                             Value = 6.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("a7962b61-829b-4343-8eea-09e049727fed"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7229),
+                            Id = new Guid("49a0980c-5b47-4e47-b349-f367afaef26c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1237),
                             CurrencyType = 1,
                             Description = "Inclui pratos simples e caseiros, preparados com ingredientes frescos, mas comuns. A refeição é nutritiva e satisfatória, servida em um ambiente limpo e acolhedor. Não há luxo, mas proporciona uma experiência agradável.",
                             Name = "Modesta (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7229),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1237),
                             Value = 3.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("24e3a9cd-3313-408b-a644-bdedf89cd43c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7230),
+                            Id = new Guid("daf4aee2-7d13-461d-b1da-e671e639fc09"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1238),
                             CurrencyType = 1,
                             Description = "Preparada com ingredientes de boa qualidade, bem elaborada e saborosa. A refeição é servida em um ambiente confortável e bem cuidado, proporcionando uma experiência prazerosa e nutritiva. Inclui pratos variados e bem apresentados.",
                             Name = "Confortável (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7230),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1238),
                             Value = 5.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("bc3d3358-ed2b-442d-8aad-1862e3b21921"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7232),
+                            Id = new Guid("28b83711-b892-4c74-9c99-56e6cf842255"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1239),
                             CurrencyType = 1,
                             Description = "Composta por pratos sofisticados e requintados, preparados com ingredientes de alta qualidade e muitas vezes exóticos. A refeição é servida em um ambiente elegante e refinado, acompanhada por um excelente serviço. Proporciona uma experiência culinária luxuosa e memorável.",
                             Name = "Rica (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7232),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1239),
                             Value = 8.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("9c835ca8-c05b-4998-b02e-1df9bb59dcc5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7233),
+                            Id = new Guid("9e7c06c6-6792-47db-a9ba-b94d7a5f237c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1240),
                             CurrencyType = 0,
                             Description = "Caracterizada por uma experiência gastronômica de excelência, com pratos gourmet elaborados por chefs renomados. Os ingredientes são os melhores disponíveis, muitas vezes raros e caros. Servida em um ambiente opulento e sofisticado, com um serviço impecável. A refeição é uma celebração de sabor e luxo, frequentemente acompanhada de bebidas finas e uma apresentação artística.",
                             Name = "Aristocrática (refeição diária)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7233),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1240),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("8aecb552-f251-40cb-aa8f-c7da2c8a2dca"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7234),
+                            Id = new Guid("236a43c2-a0b4-404a-a421-3ae46c43d5a6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1243),
                             CurrencyType = 1,
                             Description = "",
                             Name = "Vinho Comum (jarra)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7234),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1243),
                             Value = 2.0,
                             Weight = 0.0
                         },
                         new
                         {
-                            Id = new Guid("dd2f86bb-ee3b-4b64-8c69-862de08a355d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7235),
+                            Id = new Guid("4516b75e-adef-462c-9a68-29a2258a70cd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1244),
                             CurrencyType = 0,
                             Description = "",
                             Name = "Vinho Fino (garrafa)",
                             Type = 6,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7235),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1244),
                             Value = 10.0,
                             Weight = 0.0
                         });
@@ -2302,187 +2311,187 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b69eaa74-b99d-4709-ac1c-ac3bf99f5cf8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7261),
+                            Id = new Guid("f0838ae3-86de-4dd9-ac9a-b7d56de984b5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1271),
                             Description = "Acostumado à vida subterrânea, \r\nvocê tem uma visão superior no escuro e na penumbra. \r\nVocê enxerga na penumbra a até 18 metros como se fosse \r\nluz plena, e no escuro como se fosse na penumbra. Você \r\nnão pode discernir cores no escuro, apenas tons de cinza.",
                             Name = "Visão no Escuro",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7261)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1271)
                         },
                         new
                         {
-                            Id = new Guid("c9fbc923-3afc-4acf-b110-03947840ce5e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7263),
+                            Id = new Guid("d94be928-b8d9-44bc-9b57-03c0f984d844"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1273),
                             Description = " Você possui vantagem em testes de \r\nresistência contra venenos e resistência contra dano de \r\nveneno.",
                             Name = "Resiliência Anã",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7263)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1273)
                         },
                         new
                         {
-                            Id = new Guid("6b85127e-346f-45c8-aa39-1d4f344ebdc1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7266),
+                            Id = new Guid("3ed50a85-4132-49c2-b2ec-6e353d252e88"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1274),
                             Description = "Sempre que você \r\nrealizar um teste de Inteligência (História) relacionado à \r\norigem de um trabalho em pedra, você é considerado \r\nproficiente na perícia História e adiciona o dobro do seu \r\nbônus de proficiência ao teste, ao invés do seu bônus de \r\nproficiência normal.",
                             Name = "Especialização em Rochas",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7266)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1274)
                         },
                         new
                         {
-                            Id = new Guid("5fe3d2a6-96f3-4602-b689-e09c8cb8b4f6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7267),
+                            Id = new Guid("6e69e6b3-7032-45af-8b17-868edfadbe82"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1275),
                             Description = "Você tem proficiência na perícia \r\nPercepção.",
                             Name = "Sentidos Aguçados",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7267)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1275)
                         },
                         new
                         {
-                            Id = new Guid("9e31e099-41fe-451d-8f7c-d460eda281d4"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7268),
+                            Id = new Guid("5170214d-6933-4f2f-8b11-90befc9fe8f6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1276),
                             Description = "Você tem vantagem nos testes de \r\nresistência para resistir a ser enfeitiçado e magias não \r\npodem colocá-lo para dormir.",
                             Name = "Ancestral Feérico",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7268)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1276)
                         },
                         new
                         {
-                            Id = new Guid("088cb32e-6c9e-4faf-b4bb-4983eb4614e4"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7270),
+                            Id = new Guid("c287294f-83b9-4ec1-b8e4-a374a7ce021d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1277),
                             Description = "Elfos não precisam dormir. Ao invés disso, \r\neles meditam profundamente, permanecendo \r\nsemiconscientes, durante 4 horas por dia. (A palavra em \r\nidioma comum para tal meditação é \"transe\".) Enquanto \r\nmedita, um elfo é capaz de sonhar de certo modo. Esses \r\nsonhos na verdade são exercícios mentais que se tornam \r\nreflexos através de anos de prática. Depois de descansar \r\ndessa forma, você ganha os mesmos benefícios que um \r\nhumano depois de 8 horas de sono. ",
                             Name = "Transe",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7270)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1277)
                         },
                         new
                         {
-                            Id = new Guid("48a7edd4-9795-438b-b702-f185868fdcff"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7271),
+                            Id = new Guid("d11bcf9c-c188-404f-bc99-8e7581eef532"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1281),
                             Description = "Você pode tentar se esconder \r\nmesmo quando você está apenas levemente obscurecido  \r\npor folhagem, chuva forte, neve caindo, névoa ou outro \r\nfenômeno natural.",
                             Name = "Máscara da Natureza",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7271)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1281)
                         },
                         new
                         {
-                            Id = new Guid("5fbaae9a-6a7e-44f3-bbb3-bbcc4b0cf166"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7272),
+                            Id = new Guid("60639f71-edf3-451b-a2f2-c411b2cc1909"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1282),
                             Description = "Você possui \r\ndesvantagem nas jogadas de ataque e testes de Sabedoria \r\n(Percepção) relacionados a visão quando você, o alvo do \r\nseu ataque, ou qualquer coisa que você está tentando \r\nperceber, esteja sob luz solar direta.",
                             Name = "Sensibilidade à Luz Solar",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7272)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1282)
                         },
                         new
                         {
-                            Id = new Guid("2d00735d-2924-4da3-8040-6286e5d48bd3"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7274),
+                            Id = new Guid("3755e1d6-204f-4744-b219-173c41477ba8"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1283),
                             Description = "Você possui o truque globos de luz. \r\nQuando você alcança o 3° nível, você pode conjurar a \r\nmagia fogo das fadas. Quando você alcança o 5° nível, \r\nvocê pode conjurar escuridão. Você precisa terminar um \r\ndescanso longo para poder conjurar as magias desse traço \r\nnovamente. Carisma é sua habilidade chave para \r\nconjurar essas magias.",
                             Name = "Magia Drow",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7274)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1283)
                         },
                         new
                         {
-                            Id = new Guid("cbd00e56-1572-41fe-818e-ed950078d1c7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7275),
+                            Id = new Guid("33895bef-545b-4473-bbc6-7c1a1a6b2456"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1284),
                             Description = "Quando você obtiver um 1 natural em uma \r\njogada de ataque, teste de habilidade ou teste de \r\nresistência, você pode jogar de novo o dado e deve utilizar \r\no novo resultado.",
                             Name = "Sortudo",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7275)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1284)
                         },
                         new
                         {
-                            Id = new Guid("5ea96e23-471b-420d-b61c-d017d775fc67"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7278),
+                            Id = new Guid("79bcac58-ff7b-407f-9d56-e15ff6104d43"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1285),
                             Description = "Você tem vantagem em testes de resistência \r\ncontra ficar amedrontado. ",
                             Name = "Bravura",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7278)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1285)
                         },
                         new
                         {
-                            Id = new Guid("2b4106fc-b0a2-4101-a4b0-f74bb8fb9720"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7279),
+                            Id = new Guid("6971a85f-ee12-4576-9be6-5a0af2245ed6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1287),
                             Description = "Você pode mover-se através do \r\nespaço de qualquer criatura que for de um tamanho maior \r\nque o seu.",
                             Name = "Agilidade Halfling",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7279)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1287)
                         },
                         new
                         {
-                            Id = new Guid("c9481a3a-a4e2-4450-b125-3b629cee77fc"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7280),
+                            Id = new Guid("6894c930-bffd-49d9-bd03-3f27d657d678"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1288),
                             Description = "Você pode usar uma ação para \r\nexalar energia destrutiva. Seu ancestral dracônico \r\ndetermina o tamanho, formado e tipo de dano que você \r\nexpele. \r\nQuando você usa sua arma de sopro, cada criatura na \r\nárea exalada deve realizar um teste de resistência, o tipo \r\ndo teste é determinado pelo seu ancestral dracônico. A CD \r\ndo teste de resistência é 8 + seu modificador de \r\nConstituição + seu bônus de proficiência. Uma criatura \r\nsofre 2d6 de dano num fracasso e metade desse dano num \r\nsucesso. O dano aumenta para 3d6 no 6° nível, 4d6 no 11° \r\nnível e 5d6 no 16° nível. \r\nDepois de usar sua arma de sopro, você não poderá \r\nutilizá-la novamente até completar um descanso curto ou \r\nlongo.",
                             Name = "Arma de Sopro",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7280)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1288)
                         },
                         new
                         {
-                            Id = new Guid("29b9bc29-a691-4d37-bb38-dde1c986acdb"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7281),
+                            Id = new Guid("b43f57ae-9b1a-47d3-86aa-b5eeb0130898"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1289),
                             Description = "Você possui resistência ao tipo \r\nde dano associado ao seu ancestral dracônico.",
                             Name = "Resistência a Dano",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7281)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1289)
                         },
                         new
                         {
-                            Id = new Guid("444df1b0-fdff-480e-817b-0edce6076758"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7283),
+                            Id = new Guid("2ef8ac54-0895-4252-a62a-5d87f284d6e6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1292),
                             Description = "Você possui vantagem em todos \r\nos testes de resistência de Inteligência, Sabedoria e \r\nCarisma contra magia.",
                             Name = "Esperteza Gnômica",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7283)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1292)
                         },
                         new
                         {
-                            Id = new Guid("6099b4c2-2f16-4828-bcc1-18fc17b3f06a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7284),
+                            Id = new Guid("3a81cf64-6377-4280-a82d-ea65c989e617"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1293),
                             Description = "Você conhece o truque ilusão \r\nmenor. Inteligência é a sua habilidade usada para \r\nconjurá-la.",
                             Name = "Ilusionista Nato",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7284)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1293)
                         },
                         new
                         {
-                            Id = new Guid("a018bbfb-3b98-483f-a8cf-654251a4175f"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7285),
+                            Id = new Guid("42bcb600-b03a-40a5-8dc2-10d5decbe869"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1294),
                             Description = "Através de sons e \r\ngestos, você pode comunicar ideias simples para Bestas \r\npequenas ou menores. Gnomos da floresta amam os \r\nanimais e normalmente possuem esquilos, doninhas, \r\ncoelhos, toupeiras, pica-paus e outras criaturas como \r\namados animais de estimação.",
                             Name = "Falar com Bestas Pequenas",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7285)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1294)
                         },
                         new
                         {
-                            Id = new Guid("88850d4d-ae1c-4691-8edc-68c57103ce7a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7286),
+                            Id = new Guid("ffbc5436-cb8c-4aed-a0f6-06c6fa29b517"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1295),
                             Description = "Toda vez que você fizer \r\num teste de Inteligência (História) relacionado a itens \r\nmágicos, objetos alquímicos ou mecanismos tecnológicos, \r\nvocê pode adicionar o dobro do seu bônus de proficiência, \r\nao invés de qualquer bônus de proficiência que você \r\nnormalmente use.",
                             Name = "Conhecimento de Artífice",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7286)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1295)
                         },
                         new
                         {
-                            Id = new Guid("636c31c4-ec8e-4d3d-b648-1bcacf190ed6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7289),
+                            Id = new Guid("9b8bbc04-7759-4107-a8ef-52104587927d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1296),
                             Description = "Você possui proficiência com \r\nferramentas de artesão (ferramentas de engenhoqueiro). \r\nUsando essas ferramentas, você pode gastar 1 hora e 10 \r\npo em materiais para construir um mecanismo Miúdo (CA \r\n5, 1 pv). O mecanismo para de funcionar após 24 horas (a \r\nnão ser que você gaste 1 hora reparando-o para manter o \r\nmecanismo funcionando), ou quando você usa sua ação \r\npara desmantelá-lo; nesse momento, você pode recuperar \r\no material usado para criá-lo. Você pode ter até três\r\n desses mecanismos ativos ao mesmo tempo.",
                             Name = "Engenhoqueiro",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7289)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1296)
                         },
                         new
                         {
-                            Id = new Guid("fdb650d8-7c62-4a61-b65d-f1816032c3b0"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7290),
+                            Id = new Guid("981bc13e-6cd0-4405-beae-8fcdbca0e3a9"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1298),
                             Description = "Quando você é reduzido a \r\n0 pontos de vida mas não é completamente morto, você \r\npode voltar para 1 ponto de vida. Você não pode usar essa \r\ncaracterística novamente até completar um descanso \r\nlongo.",
                             Name = "Resistência Implacável",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7290)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1298)
                         },
                         new
                         {
-                            Id = new Guid("a4b3eab9-4141-48ce-ae6b-d337a746aab9"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7291),
+                            Id = new Guid("67e70cab-bbce-45ee-93a3-b387a3c77c48"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1299),
                             Description = "Quando você atinge um ataque \r\ncrítico com uma arma corpo-a-corpo, você pode rolar um \r\ndos dados de dano da arma mais uma vez e adicioná-lo ao \r\ndano extra causado pelo acerto crítico.",
                             Name = "Ataques Selvagens",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7291)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1299)
                         },
                         new
                         {
-                            Id = new Guid("57edabdc-f228-43a3-ac97-4fdbe92ce3b2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7292),
+                            Id = new Guid("48ee239b-e78d-4eca-8939-0c567b48965c"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1300),
                             Description = "Você possui resistência a dano \r\nde fogo.",
                             Name = "Resistência Infernal",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7292)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1300)
                         },
                         new
                         {
-                            Id = new Guid("0df7e234-e31e-4248-b248-4054904c123e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7294),
+                            Id = new Guid("b32f4bc9-497c-431b-a5e1-9e4e73a8eddd"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1303),
                             Description = "Você conhece o truque \r\ntaumaturgia. Quando você atingir o 3° nível, você poderá \r\nconjurar a magia repreensão infernal como uma magia de \r\n2° nível. Quando você atingir o 5° nível, você também \r\npoderá conjurar a magia escuridão. Você precisa terminar \r\num descanso longo para poder usar as magias desse traço \r\nnovamente. Sua habilidade de conjuração para essas \r\nmagias é Carisma.",
                             Name = "Legado Infernal",
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7294)
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1303)
                         });
                 });
 
@@ -2562,13 +2571,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("82cbbd0d-dc31-40fe-9aa5-7f1de352f5a2"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6452),
+                            Id = new Guid("c1ff32d4-8c11-443b-b926-93d82cf17798"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(350),
                             CurrencyType = 0,
                             Description = "Consiste em camadas de panos acolchoados e batidos.",
                             Name = "Acolchoada",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6452),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(350),
                             Value = 5.0,
                             Weight = 4.0,
                             ArmorClass = 11,
@@ -2580,13 +2589,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0f4cd50-3ebb-4e04-84c6-c1f40718ec2a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6465),
+                            Id = new Guid("cf2724ae-7652-4f36-8bd9-60257d999a39"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(366),
                             CurrencyType = 0,
                             Description = "São feitos de couro que foi endurecido após ser fervido em óleo. O resto da armadura é feita de materiais mais macios e mais flexíveis.",
                             Name = "Couro",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6465),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(366),
                             Value = 10.0,
                             Weight = 5.0,
                             ArmorClass = 11,
@@ -2598,13 +2607,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4855b875-3e5a-4309-bcfa-28447791666f"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6467),
+                            Id = new Guid("cacf2b39-f585-470f-a359-8124e314a8a0"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(367),
                             CurrencyType = 0,
                             Description = "Feita de couro resistente, mas flexível, é reforçada com rebites ou cravos.",
                             Name = "Couro Batido",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6467),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(367),
                             Value = 45.0,
                             Weight = 6.5,
                             ArmorClass = 12,
@@ -2616,13 +2625,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ba342e08-01b1-48e2-b20e-a2f2aead91b7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6468),
+                            Id = new Guid("7b607a90-c172-4e36-a3c8-65364027b8e9"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(369),
                             CurrencyType = 0,
                             Description = "Armadura bruta consistindo de peles grossas. É comumente usada por tribos bárbaras, humanoides malignos e outros povos que não têm acesso às ferramentas e materiais necessários para criar uma armadura melhor.",
                             Name = "Gibão de Peles",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6468),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(369),
                             Value = 10.0,
                             Weight = 6.0,
                             ArmorClass = 12,
@@ -2634,13 +2643,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f784bd8d-1e00-49ef-b6c8-a0e75349432a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6470),
+                            Id = new Guid("0bb18a45-029a-4f2b-8f2e-cceff2775daa"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(388),
                             CurrencyType = 0,
                             Description = "Feito de anéis de metal intercalados, um camisão de cota de malha é usado entre as camadas de roupa. Essa armadura oferece proteção modesta para a parte superior do corpo de quem a usa e permite que o som dos anéis de metal, friccionados uns contra os outros, sejam amortecidos pelas camadas exteriores.",
                             Name = "Camisão de Malha",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6470),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(388),
                             Value = 30.0,
                             Weight = 10.0,
                             ArmorClass = 13,
@@ -2652,13 +2661,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("52d88c2f-8656-4e6a-b1aa-21748f42e96c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6471),
+                            Id = new Guid("d9ee8eb9-1571-4af4-80f9-d290224ae471"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(390),
                             CurrencyType = 0,
                             Description = "Consiste em um casaco e calças (e talvez uma saia separada) de couro coberto com peças sobrepostas de metal, assim como as escamas de peixe. O conjunto inclui manoplas.",
                             Name = "Brunea",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6471),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(390),
                             Value = 50.0,
                             Weight = 22.5,
                             ArmorClass = 14,
@@ -2670,13 +2679,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cd1f1d9e-0d61-47d8-826b-98a382c64f42"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6473),
+                            Id = new Guid("1d632da3-7e26-425b-a662-aa5fed6ff20a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(391),
                             CurrencyType = 0,
                             Description = "Constituída por um peitoral de metal usado com couro flexível em seu interior. Embora ele deixe as pernas e braços do usuário relativamente desprotegidos, essa armadura fornece boa proteção para seus órgãos vitais, deixando quem a usa relativamente sem restrições.",
                             Name = "Peitoral",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6473),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(391),
                             Value = 400.0,
                             Weight = 10.0,
                             ArmorClass = 14,
@@ -2688,13 +2697,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed208a50-b2dd-48cc-b692-ad62b7ca0a8b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6474),
+                            Id = new Guid("b18095bc-a43a-49e7-9c26-09f2502d8aed"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(393),
                             CurrencyType = 0,
                             Description = "Composta de placas de metal moldadas que cobrem a maior parte do corpo. Ela não inclui proteção para as pernas além de caneleiras fixadas com tiras de couro.",
                             Name = "Meia-Armadura",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6474),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(393),
                             Value = 750.0,
                             Weight = 20.0,
                             ArmorClass = 15,
@@ -2706,13 +2715,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("41750b59-ed46-404a-9eb4-0334277af739"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6478),
+                            Id = new Guid("0e328382-7a14-45f8-93a9-3ef5b3cedecb"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(394),
                             CurrencyType = 0,
                             Description = "Feita de couro com pesados anéis presos a ela. Os anéis ajudam a reforçar a armadura contra golpes de espadas e machados. A cota de anéis é inferior à cota de malha e geralmente é vestida apenas por aqueles que não podem pagar por uma armadura melhor.",
                             Name = "Cota de anéis",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6478),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(394),
                             Value = 30.0,
                             Weight = 20.0,
                             ArmorClass = 14,
@@ -2723,13 +2732,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3bc9e388-a9ac-43d6-8a24-3f138adabc96"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6480),
+                            Id = new Guid("838fe88f-4f03-486d-9276-6e186ef21e68"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(396),
                             CurrencyType = 0,
                             Description = "Feita de anéis de metal entrelaçados, a cota de malha inclui uma camada de tecido acolchoado usada por baixo da malha de metal para evitar atrito e amortecer o impacto dos golpes. O conjunto inclui manoplas.",
                             Name = "Cota de malha",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6480),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(396),
                             Value = 75.0,
                             Weight = 27.5,
                             ArmorClass = 16,
@@ -2740,13 +2749,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ea257013-3865-4b5d-a642-b0129f17b55c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6481),
+                            Id = new Guid("2487319c-5aa5-4177-b1ae-739b2e44a6e5"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(397),
                             CurrencyType = 0,
                             Description = "Feita de tiras verticais de metal, rebitadas a um suporte de couro, usadas sobre um preenchimento de pano. Cotas de malha flexíveis protegem as articulações.",
                             Name = "Cota de malha",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6481),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(397),
                             Value = 200.0,
                             Weight = 30.0,
                             ArmorClass = 17,
@@ -2757,13 +2766,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dfdb5ae1-984c-448d-9704-a428050c79c5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6483),
+                            Id = new Guid("b8544e2a-18c7-42ae-b81b-6209f21c2af3"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(399),
                             CurrencyType = 0,
                             Description = "Consiste em placas de metal moldadas para cobrir todo o corpo. Inclui luvas, botas de couro pesadas, um capacete com viseira e espessas camadas de enchimento por baixo da armadura. Fivelas e tiras de couro distribuem o peso ao longo do corpo.",
                             Name = "Placas",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6483),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(399),
                             Value = 1500.0,
                             Weight = 32.5,
                             ArmorClass = 18,
@@ -2774,13 +2783,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("20436136-64da-475e-be07-e5e8be3f1518"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6484),
+                            Id = new Guid("af9a4548-b4f9-44d4-8536-53ba07fa6d34"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(403),
                             CurrencyType = 0,
                             Description = "Feito de madeira ou metal e é usado com uma mão. Empunhar um escudo aumenta sua Classe de Armadura em 2. Você só pode se beneficiar de um escudo por vez.",
                             Name = "Escudo",
                             Type = 1,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6484),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(403),
                             Value = 10.0,
                             Weight = 3.0,
                             ArmorClass = 0,
@@ -2812,13 +2821,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c9453e46-d630-4935-9748-920d78022f56"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7061),
+                            Id = new Guid("6b8309fe-f437-4073-a41b-addca7867600"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1044),
                             CurrencyType = 0,
                             Description = "Um personagem que beber o líquido\r\nvermelho mágico deste frasco recupera 2d4+2 pontos de\r\nvida. Beber ou administrar uma poção exige uma ação.",
                             Name = "Poção de Cura",
                             Type = 2,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7061),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1044),
                             Value = 50.0,
                             Weight = 0.25,
                             Bonus = 2,
@@ -2828,13 +2837,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("627d8214-0a63-4b10-9163-2bbda722d149"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7063),
+                            Id = new Guid("33080874-938d-49e1-94f7-da6a8d3948fc"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1046),
                             CurrencyType = 0,
                             Description = "Você pode usar o veneno contido\r\nnesse vidro para cobrir a lâmina de uma arma cortante ou\r\nperfurante ou até três peças de munição. Aplicar o veneno\r\nleva uma ação. Uma criatura atingida pela arma ou\r\nmunição envenenada deve obter sucesso em um teste de\r\nresistência de Constituição CD 10 ou sofrerá 1d4 de dano\r\nde veneno. Uma vez aplicado, o veneno retém sua\r\npotência durante 1 minuto antes de secar.",
                             Name = "Veneno básico (frasco)",
                             Type = 2,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7063),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1046),
                             Value = 100.0,
                             Weight = 0.0,
                             Bonus = 0,
@@ -2844,13 +2853,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9c382141-fc3b-4b3a-aeef-223aec7fdf44"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7064),
+                            Id = new Guid("c14552bf-f579-4599-8c7e-13c9dcac3723"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1048),
                             CurrencyType = 0,
                             Description = "Esse líquido pegajoso e adesivo\r\ninflama em contado com o ar. Usando uma ação, você\r\npode arremessar esse frasco a até 6 metros de distância,\r\nquebrando-o com o impacto. Você deve realizar um ataque\r\nà distância contra uma criatura ou objeto, tratando o fogo\r\nalquímico como uma arma improvisada. Em um sucesso,\r\no alvo sofre 1d4 de dano de fogo no início de cada um de\r\nseus turnos. Uma criatura pode terminar esse dano\r\nusando sua ação e fazendo um teste de Destreza CD 10\r\npara apagar as chamas.",
                             Name = "Fogo alquímico (frasco)",
                             Type = 2,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(7064),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(1048),
                             Value = 50.0,
                             Weight = 0.5,
                             Bonus = 2,
@@ -2887,13 +2896,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1445a793-c9a8-44f4-a7a0-84071e841273"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6627),
+                            Id = new Guid("d64b4c4b-4e40-4513-9202-9e5e51ffaa36"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(543),
                             CurrencyType = 0,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Adaga",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6627),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(543),
                             Value = 2.0,
                             Weight = 0.5,
                             DamageType = 1,
@@ -2902,13 +2911,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8bf56fe-fdaa-49ad-9282-10471bd88af7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6629),
+                            Id = new Guid("f1bf943e-4d7a-4755-a7b8-65e96dee001b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(545),
                             CurrencyType = 1,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Azagaia",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6629),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(545),
                             Value = 5.0,
                             Weight = 1.0,
                             DamageType = 1,
@@ -2917,13 +2926,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51bd259c-b83d-42a7-83cd-574bda77676d"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6631),
+                            Id = new Guid("972565c7-93fe-4f2b-bd0a-040be0648422"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(546),
                             CurrencyType = 1,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Bordão",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6631),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(546),
                             Value = 2.0,
                             Weight = 2.0,
                             DamageType = 2,
@@ -2932,13 +2941,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("16086556-3bdc-48a2-bb7a-c292e68fb614"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6634),
+                            Id = new Guid("c483f07a-687b-4a4c-8117-afdb2431e5b6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(548),
                             CurrencyType = 1,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Clava Grande",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6634),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(548),
                             Value = 2.0,
                             Weight = 5.0,
                             DamageType = 2,
@@ -2947,13 +2956,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("75d13af3-7c6b-4587-b814-663350f0a7d1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6635),
+                            Id = new Guid("1b49af48-a704-498a-be5b-ba7ee7107e4f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(637),
                             CurrencyType = 0,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Foice Curta",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6635),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(637),
                             Value = 1.0,
                             Weight = 1.0,
                             DamageType = 0,
@@ -2962,13 +2971,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("59a756d6-4c9a-45e5-a0f5-dddf52a3255a"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6637),
+                            Id = new Guid("17fc15b9-6cfb-4b10-b754-8508e2ce2fc6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(639),
                             CurrencyType = 0,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Maça",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6637),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(639),
                             Value = 5.0,
                             Weight = 2.0,
                             DamageType = 2,
@@ -2977,13 +2986,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("12de8c13-28fe-4d73-8628-089411876c9c"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6638),
+                            Id = new Guid("e3ff12f6-1e05-432f-bc00-12f18f75bc0e"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(640),
                             CurrencyType = 0,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Machadinha",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6638),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(640),
                             Value = 5.0,
                             Weight = 1.0,
                             DamageType = 0,
@@ -2992,13 +3001,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9d376923-f777-4b6a-83aa-fa747dfcec37"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6640),
+                            Id = new Guid("b6d4d484-4cc2-44a5-9718-21ba78c32bbc"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(644),
                             CurrencyType = 0,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Martelo Leve",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6640),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(644),
                             Value = 2.0,
                             Weight = 2.0,
                             DamageType = 2,
@@ -3007,13 +3016,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dc1712fe-f17d-4227-b782-0115dc3e6dda"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6641),
+                            Id = new Guid("27a6e664-de52-483d-b2c7-ce0ce33e1f0a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(645),
                             CurrencyType = 1,
                             Description = "Armas Simples Corpo-a-Corpo",
                             Name = "Porrete",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6641),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(645),
                             Value = 1.0,
                             Weight = 1.0,
                             DamageType = 2,
@@ -3022,13 +3031,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eeab0529-4e9c-427a-a0a5-e2179af70dda"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6691),
+                            Id = new Guid("5635f24b-0e4d-4de5-8e23-6ee04b3c6a3b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(647),
                             CurrencyType = 0,
                             Description = "Armas Simples à Distância",
                             Name = "Arco Curto",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6691),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(647),
                             Value = 25.0,
                             Weight = 1.0,
                             DamageType = 1,
@@ -3037,13 +3046,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("96585393-81d7-4756-90b1-2e45788def36"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6693),
+                            Id = new Guid("3f258c68-fac6-4ad5-a404-c3b3e339abce"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(648),
                             CurrencyType = 0,
                             Description = "Armas Simples à Distância",
                             Name = "Besta Leve",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6693),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(648),
                             Value = 25.0,
                             Weight = 2.5,
                             DamageType = 1,
@@ -3052,13 +3061,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58cb68fc-aaf7-49dd-851f-9cb33e52f83b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6697),
+                            Id = new Guid("2cdad192-1a23-49fc-96b2-7d8f2f0c447b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(649),
                             CurrencyType = 2,
                             Description = "Armas Simples à Distância",
                             Name = "Dardo",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6697),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(649),
                             Value = 5.0,
                             Weight = 0.10000000000000001,
                             DamageType = 1,
@@ -3067,13 +3076,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9a366125-3ce5-4c5c-9015-36c6bcff512e"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6699),
+                            Id = new Guid("d2a50cc6-efa4-419b-a1e1-4dd342a912fa"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(651),
                             CurrencyType = 1,
                             Description = "Armas Simples à Distância",
                             Name = "Funda",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6699),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(651),
                             Value = 1.0,
                             Weight = 0.0,
                             DamageType = 2,
@@ -3082,13 +3091,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a4b83e6f-4dae-4c0d-b1b3-c0b80ba79039"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6701),
+                            Id = new Guid("eff86267-210c-47e4-95aa-feb4bb2c730b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(652),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Alabarda",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6701),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(652),
                             Value = 20.0,
                             Weight = 3.0,
                             DamageType = 0,
@@ -3097,13 +3106,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4e75783f-bf65-4865-9313-f0c8a6bde8bd"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6703),
+                            Id = new Guid("8f0c7970-e0f0-48df-9f25-c0255eeb7a07"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(654),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Cimitarra",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6703),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(654),
                             Value = 25.0,
                             Weight = 1.5,
                             DamageType = 0,
@@ -3112,13 +3121,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9b20b970-e3c9-4626-9494-067479647d80"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6704),
+                            Id = new Guid("93f3c4b2-fb66-456a-a09b-2a50ae7d826b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(657),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Chicote",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6704),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(657),
                             Value = 2.0,
                             Weight = 1.5,
                             DamageType = 0,
@@ -3127,13 +3136,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("25aa6ec4-ccc9-4419-a86f-8686829a8f77"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6706),
+                            Id = new Guid("402e7e2b-5d69-46d9-8a83-f41bb5e8768b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(658),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Espada Curta",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6706),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(658),
                             Value = 10.0,
                             Weight = 1.0,
                             DamageType = 0,
@@ -3142,13 +3151,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1f98bda-1bc2-4c9e-8227-e6042a7e677b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6708),
+                            Id = new Guid("62e31de1-8f81-46f7-9a8b-df12f04ec69f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(660),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Espada Grande",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6708),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(660),
                             Value = 50.0,
                             Weight = 3.0,
                             DamageType = 0,
@@ -3157,13 +3166,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("617427cc-d7e0-4d37-98e2-aa3561e28785"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6709),
+                            Id = new Guid("6aa57744-7cce-47b9-bfe9-dea1b690afce"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(661),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Espada Longa",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6709),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(661),
                             Value = 15.0,
                             Weight = 1.5,
                             DamageType = 0,
@@ -3172,13 +3181,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("369b3168-1156-46ce-b207-c4c79324a2f5"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6713),
+                            Id = new Guid("64e9902d-7842-4158-9fb8-9c1726c72f7f"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(663),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Glaive",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6713),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(663),
                             Value = 20.0,
                             Weight = 3.0,
                             DamageType = 0,
@@ -3187,13 +3196,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aec2aad7-2feb-4f5b-a249-5ccbc0846faf"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6715),
+                            Id = new Guid("90f85ece-822e-40b9-970f-aed85b9d0d81"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(664),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Lança de Montaria",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6715),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(664),
                             Value = 10.0,
                             Weight = 3.5,
                             DamageType = 1,
@@ -3202,13 +3211,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d9cfc648-e722-47b3-8ecc-6910b246d9d6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6717),
+                            Id = new Guid("eafcace7-d10b-44a3-a884-10bf7f6d98b4"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(666),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Lança Longa",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6717),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(666),
                             Value = 5.0,
                             Weight = 4.0,
                             DamageType = 1,
@@ -3217,13 +3226,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d7adb39e-a297-46a6-ae7a-8ea691c3babc"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6719),
+                            Id = new Guid("dbe10930-dd8b-45cb-90c8-f5cf4a5cd2c1"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(667),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Maça Estrela",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6719),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(667),
                             Value = 15.0,
                             Weight = 2.0,
                             DamageType = 2,
@@ -3232,13 +3241,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ee7eb6dd-b116-45fb-abb0-79fecda8abe7"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6720),
+                            Id = new Guid("c65b602d-40d2-4e63-bf79-f13fd2fbc4de"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(670),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Machado Grande",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6720),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(670),
                             Value = 30.0,
                             Weight = 3.5,
                             DamageType = 0,
@@ -3247,13 +3256,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c7856b49-3f80-414c-8989-d943a2522efc"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6722),
+                            Id = new Guid("743d52b1-482e-46b9-b5cd-e78fc9a99005"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(671),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Machado de Batalha",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6722),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(671),
                             Value = 10.0,
                             Weight = 2.0,
                             DamageType = 0,
@@ -3262,13 +3271,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a569c13e-9a74-4e6a-a541-6406ea4646b8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6724),
+                            Id = new Guid("d7f8ecf4-7f23-4eb9-b9b3-89464715a59d"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(673),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Malho",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6724),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(673),
                             Value = 10.0,
                             Weight = 5.0,
                             DamageType = 2,
@@ -3277,13 +3286,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("75d0c17d-088b-49b1-929b-418679488f40"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6725),
+                            Id = new Guid("cf6a3392-c44b-4409-93fa-4da2d941560b"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(674),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Mangual",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6725),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(674),
                             Value = 10.0,
                             Weight = 2.0,
                             DamageType = 2,
@@ -3292,13 +3301,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7eeedcc6-9a15-460c-963b-c25e398e26a6"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6729),
+                            Id = new Guid("71d506b5-49dd-4011-b167-fd822f1c8cb6"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(675),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Martelo de Guerra",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6729),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(675),
                             Value = 15.0,
                             Weight = 1.0,
                             DamageType = 2,
@@ -3307,13 +3316,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63c9741d-a63a-4392-ae73-deb0594ee9f1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6731),
+                            Id = new Guid("3d095aed-cff1-4cf5-9024-e9be3bd2d019"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(677),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Picareta de Guerra",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6731),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(677),
                             Value = 5.0,
                             Weight = 1.0,
                             DamageType = 1,
@@ -3322,13 +3331,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ee16d25-a98f-40de-be1f-969708bb89c1"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6732),
+                            Id = new Guid("8f47d776-8929-4cef-a7c9-56faa820b70a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(678),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Rapieira",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6732),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(678),
                             Value = 25.0,
                             Weight = 1.0,
                             DamageType = 1,
@@ -3337,13 +3346,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("93b4d06b-aebb-41fc-abe6-e748deee8029"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6734),
+                            Id = new Guid("f28e12ba-0976-41f6-889f-036db4a209ea"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(680),
                             CurrencyType = 0,
                             Description = "Armas Marciais Corpo-a-Corpo",
                             Name = "Tridente",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6734),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(680),
                             Value = 5.0,
                             Weight = 2.0,
                             DamageType = 1,
@@ -3352,13 +3361,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c3fdb12-7364-472a-bc14-f43fc756716b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6736),
+                            Id = new Guid("c005affa-8c85-4df3-a60d-8df6ca910264"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(683),
                             CurrencyType = 0,
                             Description = "Armas Marciais à Distância",
                             Name = "Arco Longo",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6736),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(683),
                             Value = 50.0,
                             Weight = 1.0,
                             DamageType = 1,
@@ -3367,13 +3376,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2303af49-9c36-4fe3-8fd0-1cd710c8e1ae"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6738),
+                            Id = new Guid("713ce296-bc48-44e3-b27c-650392920954"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(684),
                             CurrencyType = 0,
                             Description = "Armas Marciais à Distância",
                             Name = "Besta de Mão",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6738),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(684),
                             Value = 75.0,
                             Weight = 1.5,
                             DamageType = 1,
@@ -3382,13 +3391,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7768fca7-c826-4872-bc7a-33d2cbfef16b"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6739),
+                            Id = new Guid("923eec84-62e6-4513-99d4-840d043fb024"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(685),
                             CurrencyType = 0,
                             Description = "Armas Marciais à Distância",
                             Name = "Besta Pesada",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6739),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(685),
                             Value = 50.0,
                             Weight = 4.5,
                             DamageType = 1,
@@ -3397,13 +3406,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f81998d5-6e73-41bd-a32c-9d70c4e2d8f8"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6741),
+                            Id = new Guid("8f07076a-0179-4651-b770-9b25525396a0"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(687),
                             CurrencyType = 0,
                             Description = "Armas Marciais à Distância",
                             Name = "Rede",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6741),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(687),
                             Value = 1.0,
                             Weight = 1.5,
                             DamageType = 1,
@@ -3412,13 +3421,13 @@ namespace QuestForge.CharacterService.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed52d0d9-e32f-476f-9b28-019b24c61762"),
-                            CreatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6745),
+                            Id = new Guid("1d72c2b0-d0e4-4bbd-9fd5-c10d50852f4a"),
+                            CreatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(688),
                             CurrencyType = 0,
                             Description = "Armas Marciais à Distância",
                             Name = "Zarabatana",
                             Type = 0,
-                            UpdatedAt = new DateTime(2024, 6, 5, 18, 54, 53, 484, DateTimeKind.Local).AddTicks(6745),
+                            UpdatedAt = new DateTime(2024, 6, 6, 20, 29, 32, 501, DateTimeKind.Local).AddTicks(688),
                             Value = 10.0,
                             Weight = 0.5,
                             DamageType = 1,

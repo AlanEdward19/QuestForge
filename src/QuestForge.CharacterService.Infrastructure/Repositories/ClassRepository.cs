@@ -32,7 +32,9 @@ public class ClassRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : I
         var parsedCommand = command as CreateClassCommand;
 
         ClassDataModel @class = new(parsedCommand!.Name!, parsedCommand!.Description!,
-            parsedCommand.HitDie!, parsedCommand.ArmorProficiencies, parsedCommand.WeaponProficiencies, parsedCommand.ToolProficiencies,
+            parsedCommand.HitDie!, parsedCommand.CoinDice, parsedCommand.CoinDiceAmount,
+            parsedCommand.CoinDiceMultiplier, parsedCommand.ArmorProficiencies, parsedCommand.WeaponProficiencies,
+            parsedCommand.ToolProficiencies,
             parsedCommand.SavingThrows, parsedCommand.SkillsProficiencies);
 
         await dbContext.Classes.AddAsync(@class, cancellationToken);
@@ -55,6 +57,9 @@ public class ClassRepository(IUnitOfWork unitOfWork, AppDbContext dbContext) : I
         @class.UpdateToolProficiencies(parsedCommand.ToolProficiencies);
         @class.UpdateSavingThrows(parsedCommand.SavingThrows);
         @class.UpdateSkillsProficiencies(parsedCommand.SkillsProficiencies);
+        @class.UpdateCoinDice(parsedCommand.CoinDice);
+        @class.UpdateCoinDiceAmount(parsedCommand.CoinDiceAmount);
+        @class.UpdateCoinDiceMultiplier(parsedCommand.CoinDiceMultiplier);
 
         classDataModel.UpdateBasedOnValueObject(@class);
 
