@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using QuestForge.CharacterService.Application.Characters.Items.Create;
-using QuestForge.CharacterService.Application.Characters.Items.Delete;
+using QuestForge.CharacterService.Application.Characters.Items.AddItem;
+using QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
+using QuestForge.CharacterService.Application.Characters.Items.TradeItem;
 using QuestForge.CharacterService.Core.Characters.Aggregates.Backpack;
 using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
@@ -27,7 +28,7 @@ public class CharacterItemRepository(IUnitOfWork unitOfWork, AppDbContext dbCont
 
     public async Task AddAsync(Command command, CancellationToken cancellationToken)
     {
-        var parsedCommand = command as GiveCharacterItemCommand;
+        var parsedCommand = command as AddCharacterItemCommand;
 
         CharacterDataModel characterDataModel =
             await dbContext.Characters
@@ -52,7 +53,16 @@ public class CharacterItemRepository(IUnitOfWork unitOfWork, AppDbContext dbCont
 
     public async Task UpdateAsync(Command command, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var parsedCommand = command as TradeItemCommand;
+        
+        DeleteCharacterItemCommand deleteCharacterItemCommand =
+            new(parsedCommand.FromCharacterId, parsedCommand.ItemId, parsedCommand.Quantity);
+
+        await DeleteAsync(deleteCharacterItemCommand, cancellationToken);
+        
+        AddCharacterItemCommand addCharacterItemCommand =
+            new(parsedCommand.ToCharacterId, parsedCommand.ItemId, parsedCommand.Quantity);
+        await AddAsync(addCharacterItemCommand, cancellationToken);
     }
 
     public async Task DeleteAsync(Command command, CancellationToken cancellationToken)

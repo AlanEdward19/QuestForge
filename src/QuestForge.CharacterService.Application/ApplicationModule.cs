@@ -10,8 +10,9 @@ using QuestForge.CharacterService.Application.Backgrounds.Update;
 using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
-using QuestForge.CharacterService.Application.Characters.Items.Create;
-using QuestForge.CharacterService.Application.Characters.Items.Delete;
+using QuestForge.CharacterService.Application.Characters.Items.AddItem;
+using QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
+using QuestForge.CharacterService.Application.Characters.Items.TradeItem;
 using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
 using QuestForge.CharacterService.Application.Classes.Get;
@@ -67,8 +68,9 @@ public static class ApplicationModule
 
             #region Items
 
-            .AddScoped<IHandler<GiveCharacterItemCommand, DatabaseOperationViewModel>, GiveCharacterItemCommandHandler>()
+            .AddScoped<IHandler<AddCharacterItemCommand, DatabaseOperationViewModel>, AddCharacterItemCommandHandler>()
             .AddScoped<IHandler<DeleteCharacterItemCommand, DatabaseOperationViewModel>, DeleteCharacterItemCommandHandler>()
+            .AddScoped<IHandler<TradeItemCommand, DatabaseOperationViewModel>, TradeItemCommandHandler>()
             
             #endregion
 

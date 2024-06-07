@@ -3,21 +3,21 @@ using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
 
-namespace QuestForge.CharacterService.Application.Characters.Items.Delete;
+namespace QuestForge.CharacterService.Application.Characters.Items.TradeItem;
 
-public class DeleteCharacterItemCommandHandler(IRepository<CharacterItemDataModel> repository)
-    : IHandler<DeleteCharacterItemCommand, DatabaseOperationViewModel>
+public class TradeItemCommandHandler(IRepository<CharacterItemDataModel> repository)
+    : IHandler<TradeItemCommand, DatabaseOperationViewModel>
 {
-    public async Task<DatabaseOperationViewModel> Handle(DeleteCharacterItemCommand command,
+    public async Task<DatabaseOperationViewModel> Handle(TradeItemCommand command,
         CancellationToken cancellationToken)
     {
         await repository.UnitOfWork.StartAsync(cancellationToken);
 
-        await repository.DeleteAsync(command, cancellationToken);
+        await repository.UpdateAsync(command, cancellationToken);
 
         await repository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         await repository.UnitOfWork.CommitAsync(cancellationToken);
 
-        return new($"Item of type: '{command.ItemId}' deleted from character: '{command.CharacterId}' successfully!");
+        return new($"Item: '{command.ItemId}' from character: '{command.FromCharacterId}' was given to character: '{command.ToCharacterId}' successfully!");
     }
 }

@@ -2,8 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
-using QuestForge.CharacterService.Application.Characters.Items.Create;
-using QuestForge.CharacterService.Application.Characters.Items.Delete;
+using QuestForge.CharacterService.Application.Characters.Items.AddItem;
+using QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
+using QuestForge.CharacterService.Application.Characters.Items.TradeItem;
 using QuestForge.CharacterService.Application.Common.Models;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
@@ -45,8 +46,16 @@ namespace QuestForge.CharacterService.Controllers
         }
         
         [HttpPost("giveItem")]
-        public async Task<IActionResult> GiveItem([FromServices] IHandler<GiveCharacterItemCommand, DatabaseOperationViewModel> handler,
-            [FromBody] GiveCharacterItemCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> GiveItem([FromServices] IHandler<AddCharacterItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] AddCharacterItemCommand command, CancellationToken cancellationToken)
+        {
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+        
+        [HttpPut("tradeItem")]
+        public async Task<IActionResult> TradeItem([FromServices] IHandler<TradeItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] TradeItemCommand command, CancellationToken cancellationToken)
         {
             var result = await handler.Handle(command, cancellationToken);
             return Ok(result);

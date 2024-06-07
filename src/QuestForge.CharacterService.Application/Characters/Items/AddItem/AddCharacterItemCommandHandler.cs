@@ -3,12 +3,12 @@ using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
 
-namespace QuestForge.CharacterService.Application.Characters.Items.Create;
+namespace QuestForge.CharacterService.Application.Characters.Items.AddItem;
 
-public class GiveCharacterItemCommandHandler(IRepository<CharacterItemDataModel> repository)
-    : IHandler<GiveCharacterItemCommand, DatabaseOperationViewModel>
+public class AddCharacterItemCommandHandler(IRepository<CharacterItemDataModel> repository)
+    : IHandler<AddCharacterItemCommand, DatabaseOperationViewModel>
 {
-    public async Task<DatabaseOperationViewModel> Handle(GiveCharacterItemCommand command,
+    public async Task<DatabaseOperationViewModel> Handle(AddCharacterItemCommand command,
         CancellationToken cancellationToken)
     {
         await repository.UnitOfWork.StartAsync(cancellationToken);
@@ -18,6 +18,6 @@ public class GiveCharacterItemCommandHandler(IRepository<CharacterItemDataModel>
         await repository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         await repository.UnitOfWork.CommitAsync(cancellationToken);
 
-        return new($"Item of type: '{command.ItemId}' given to character: '{command.CharacterId}' successfully!");
+        return new($"Item: '{command.ItemId}' given to character: '{command.CharacterId}' successfully!");
     }
 }

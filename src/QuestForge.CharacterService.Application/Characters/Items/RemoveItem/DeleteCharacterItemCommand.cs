@@ -1,6 +1,6 @@
 ﻿using QuestForge.CharacterService.Core.Common.Abstracts;
 
-namespace QuestForge.CharacterService.Application.Characters.Items.Delete;
+namespace QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
 
 public class DeleteCharacterItemCommand(Guid characterId, Guid itemId, int quantity) : Command
 {
