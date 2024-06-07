@@ -61,12 +61,14 @@ public class BackgroundRepository(IUnitOfWork unitOfWork, AppDbContext dbContext
 
         if (parsedCommand.ItemIds != null && parsedCommand.ItemIds.Any())
             items = await dbContext.Items
+                .AsNoTracking()
                 .Where(i => parsedCommand.ItemIds.Contains(i.Id))
                 .Select(x => new Item(x))
                 .ToListAsync(cancellationToken);
 
         if (parsedCommand.TraitIds != null && parsedCommand.TraitIds.Any())
             traits = await dbContext.Traits
+                .AsNoTracking()
                 .Where(t => parsedCommand.TraitIds.Contains(t.Id))
                 .Select(x => new Trait(x))
                 .ToListAsync(cancellationToken);

@@ -81,4 +81,9 @@ public class Item : ValueObject
         if (type.HasValue && !Type.Equals(type))
             Type = type.Value;
     }
+    
+    public ItemDataModel BuidDataModel()
+    {
+        return new(Id, Name, Description, Type, Value, CurrencyType, Weight);
+    }
 }

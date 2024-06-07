@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuestForge.CharacterService.Core.Characters.DataModels;
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Common.ValueObjects;
@@ -15,6 +16,12 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
         modelBuilder.ApplyConfiguration(new CharacterConfiguration());
         modelBuilder.ApplyConfiguration(new LevelConfiguration());
 
+        modelBuilder.Entity<CharacterDataModel>()
+            .HasOne(c => c.Backpack)
+            .WithOne(b => b.Character)
+            .HasForeignKey<BackpackDataModel>(b => b.CharacterId)
+            .OnDelete(DeleteBehavior.Cascade);
+        
         modelBuilder.Entity<ItemDataModel>()
             .HasDiscriminator<EItemType>("ItemType")
             .HasValue<WeaponDataModel>(EItemType.Weapon)
@@ -697,11 +704,6 @@ public partial class AppDbContext(DbContextOptions<AppDbContext> options) : DbCo
         );
 
         #endregion
-
-        #endregion
-
-        #region Classes
-
 
         #endregion
 

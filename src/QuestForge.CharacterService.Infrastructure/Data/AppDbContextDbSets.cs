@@ -12,6 +12,7 @@ public partial class AppDbContext
     public DbSet<BackgroundDataModel> Backgrounds { get; set; }
     public DbSet<TraitDataModel> Traits { get; set; }
     public DbSet<CharacterDataModel> Characters { get; set; }
+    public DbSet<CharacterItemDataModel> CharacterItems { get; set; }
     public DbSet<CoinPurseDataModel> CoinPurses { get; set; }
     public DbSet<LevelDataModel> Levels { get; set; }
     public DbSet<BackpackDataModel> Backpacks { get; set; }

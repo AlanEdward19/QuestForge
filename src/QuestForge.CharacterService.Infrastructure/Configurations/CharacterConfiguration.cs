@@ -19,11 +19,6 @@ public class CharacterConfiguration : IEntityTypeConfiguration<CharacterDataMode
             .WithMany()
             .HasForeignKey(c => c.ClassId);
         
-        builder.HasOne(c => c.Backpack)
-            .WithMany()
-            .HasForeignKey(c => c.BackpackId)
-            .OnDelete(DeleteBehavior.Cascade);
-        
         builder.HasOne(c => c.Level)
             .WithMany()
             .HasForeignKey(c => c.LevelId)

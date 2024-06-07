@@ -11,6 +11,7 @@ using QuestForge.CharacterService.Core.Classes.DataModels;
 using QuestForge.CharacterService.Core.Common.Abstracts;
 using QuestForge.CharacterService.Core.Common.Contracts.Database;
 using QuestForge.CharacterService.Core.Common.Enums;
+using QuestForge.CharacterService.Core.Items.Entities;
 using QuestForge.CharacterService.Core.Races.DataModels;
 
 namespace QuestForge.CharacterService.Infrastructure.Repositories;
@@ -93,8 +94,16 @@ public class CharacterRepository(IUnitOfWork unitOfWork, AppDbContext dbContext)
             parsedCommand!.Name, parsedCommand.Height, parsedCommand.Weight, parsedCommand.Age, parsedCommand.AppearanceDescription,
             parsedCommand.BackgroundDescription, race, @class, background, coinPurse);
 
+        foreach (var backgroundItem in background.Items)
+        {
+            Item item = new(backgroundItem);
+            
+            aggregateRoot.Backpack.AddItem(item, 1);
+        }
+        
         CharacterDataModel characterDataModel = aggregateRoot.BuildClassDataModel();
         BackpackDataModel backpackDataModel = aggregateRoot.Backpack.BuildClassDataModel();
+        backpackDataModel.UpdateBasedOnValueObject(aggregateRoot.Backpack);
         LevelDataModel levelDataModel = aggregateRoot.Level.BuildClassDataModel();
         CoinPurseDataModel coinPurseDataModel = coinPurse.BuildClassDataModel();
 

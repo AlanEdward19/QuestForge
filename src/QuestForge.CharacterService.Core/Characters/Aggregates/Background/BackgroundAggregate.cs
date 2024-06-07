@@ -16,7 +16,6 @@ public class BackgroundAggregate : ValueObject
     public string Description { get; private set; }
     [JsonConverter(typeof(EnumListToStringListConverter<ESkillProficiency>))]
     public List<ESkillProficiency> Proficiencies { get; private set; }
-    public List<Item> Items { get; private set; }
     public List<Trait> Traits { get; private set; }
 
     public BackgroundAggregate(BaseDataModel dataModel) : base(dataModel)
@@ -27,9 +26,6 @@ public class BackgroundAggregate : ValueObject
         Name = parsedDataModel!.Name;
         Description = parsedDataModel.Description;
         Proficiencies = parsedDataModel.Proficiencies;
-        Items = parsedDataModel.Items
-            .Select(x => new Item(x))
-            .ToList();
         Traits = parsedDataModel.Traits
             .Select(x => new Trait(x))
             .ToList();

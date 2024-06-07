@@ -20,8 +20,8 @@ public static class CharacterCreationService
         Character character = new(characterData);
         RaceAggregate race = new(characterData.Race);
         Class @class = new(characterData.Class);
-        BackpackAggregate backpack = new(Guid.NewGuid(), character.Id);
-        Level level = new(Guid.NewGuid(), character.Id, 1, 0, 300);
+        BackpackAggregate backpack = new(characterData.Backpack);
+        Level level = new(characterData.Level);
         BackgroundAggregate background = new(characterData.Background);
 
         return new CharacterAggregateRoot(character, race, @class, backpack, level, background);

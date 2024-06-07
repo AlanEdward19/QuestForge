@@ -10,6 +10,8 @@ using QuestForge.CharacterService.Application.Backgrounds.Update;
 using QuestForge.CharacterService.Application.Characters.Create;
 using QuestForge.CharacterService.Application.Characters.Delete;
 using QuestForge.CharacterService.Application.Characters.Get;
+using QuestForge.CharacterService.Application.Characters.Items.Create;
+using QuestForge.CharacterService.Application.Characters.Items.Delete;
 using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
 using QuestForge.CharacterService.Application.Classes.Get;
@@ -48,58 +50,115 @@ public static class ApplicationModule
     {
         services
             .ConfigureHandlers();
-        
-        
+
+
         return services;
     }
 
     private static IServiceCollection ConfigureHandlers(this IServiceCollection services)
     {
         services
+
+            #region Characters
+
             .AddScoped<IHandler<CreateCharacterCommand, DatabaseOperationViewModel>, CreateCharacterCommandHandler>()
             .AddScoped<IHandler<GetCharacterQuery, CharacterAggregateRoot>, GetCharacterQueryHandler>()
             .AddScoped<IHandler<DeleteCharacterCommand, DatabaseOperationViewModel>, DeleteCharacterCommandHandler>()
+
+            #region Items
+
+            .AddScoped<IHandler<GiveCharacterItemCommand, DatabaseOperationViewModel>, GiveCharacterItemCommandHandler>()
+            .AddScoped<IHandler<DeleteCharacterItemCommand, DatabaseOperationViewModel>, DeleteCharacterItemCommandHandler>()
             
+            #endregion
+
+            #endregion
+
+            #region Classes
+
             .AddScoped<IHandler<CreateClassCommand, DatabaseOperationViewModel>, CreateClassCommandHandler>()
             .AddScoped<IHandler<GetClassQuery, Class>, GetClassQueryHandler>()
             .AddScoped<IHandler<DeleteClassCommand, DatabaseOperationViewModel>, DeleteClassCommandHandler>()
-            
+
+            #endregion
+
+            #region Races
+
             .AddScoped<IHandler<CreateRaceCommand, DatabaseOperationViewModel>, CreateRaceCommandHandler>()
             .AddScoped<IHandler<DeleteRaceCommand, DatabaseOperationViewModel>, DeleteRaceCommandHandler>()
-            
+
+            #endregion
+
+            #region Items
+
+            #region Others
+
             .AddScoped<IHandler<CreateItemCommand, DatabaseOperationViewModel>, CreateItemCommandHandler>()
             .AddScoped<IHandler<GetItemQuery, Item>, GetItemQueryHandler>()
             .AddScoped<IHandler<ListItemQuery, IEnumerable<Item>>, ListItemQueryHandler>()
             .AddScoped<IHandler<DeleteItemCommand, DatabaseOperationViewModel>, DeleteItemCommandHandler>()
             .AddScoped<IHandler<UpdateItemCommand, DatabaseOperationViewModel>, UpdateItemCommandHandler>()
 
+            #endregion
+
+            #region Armors
+
             .AddScoped<IHandler<CreateArmorCommand, DatabaseOperationViewModel>, CreateArmorCommandHandler>()
             .AddScoped<IHandler<UpdateArmorCommand, DatabaseOperationViewModel>, UpdateArmorCommandHandler>()
+
+            #endregion
+
+            #region Potions
 
             .AddScoped<IHandler<CreatePotionCommand, DatabaseOperationViewModel>, CreatePotionCommandHandler>()
             .AddScoped<IHandler<UpdatePotionCommand, DatabaseOperationViewModel>, UpdatePotionCommandHandler>()
 
+            #endregion
+
+            #region Weapons
+
             .AddScoped<IHandler<CreateWeaponCommand, DatabaseOperationViewModel>, CreateWeaponCommandHandler>()
             .AddScoped<IHandler<UpdateWeaponCommand, DatabaseOperationViewModel>, UpdateWeaponCommandHandler>()
+
+            #endregion
+
+            #endregion
+
+            #region Features
 
             .AddScoped<IHandler<CreateFeatureCommand, DatabaseOperationViewModel>, CreateFeatureCommandHandler>()
             .AddScoped<IHandler<GetFeatureQuery, Feature>, GetFeatureQueryHandler>()
             .AddScoped<IHandler<UpdateFeatureCommand, DatabaseOperationViewModel>, UpdateFeatureCommandHandler>()
             .AddScoped<IHandler<DeleteFeatureCommand, DatabaseOperationViewModel>, DeleteFeatureCommandHandler>()
-            
+
+            #endregion
+
+            #region Traits
+
             .AddScoped<IHandler<CreateTraitCommand, DatabaseOperationViewModel>, CreateTraitCommandHandler>()
             .AddScoped<IHandler<GetTraitQuery, Trait>, GetTraitQueryHandler>()
             .AddScoped<IHandler<UpdateTraitCommand, DatabaseOperationViewModel>, UpdateTraitCommandHandler>()
             .AddScoped<IHandler<DeleteTraitCommand, DatabaseOperationViewModel>, DeleteTraitCommandHandler>()
 
+            #endregion
+
+            #region Backgrounds
+
             .AddScoped<IHandler<CreateBackgroundCommand, DatabaseOperationViewModel>, CreateBackgroundCommandHandler>()
             .AddScoped<IHandler<GetBackgroundQuery, BackgroundAggregateRoot>, GetBackgroundQueryHandler>()
             .AddScoped<IHandler<UpdateBackgroundCommand, DatabaseOperationViewModel>, UpdateBackgroundCommandHandler>()
             .AddScoped<IHandler<DeleteBackgroundCommand, DatabaseOperationViewModel>, DeleteBackgroundCommandHandler>()
-            
+
+            #endregion
+
+            #region Shops
+
             .AddScoped<IHandler<GenerateShopQuery, IEnumerable<Item>>, GenerateShopQueryHandler>()
+
+            #endregion
+
             ;
-        
+
         return services;
     }
 }

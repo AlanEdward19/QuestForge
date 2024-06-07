@@ -57,12 +57,17 @@ public class BackgroundDataModel : BaseDataModel
         Description = parsedValueObject.Description;
         Proficiencies = parsedValueObject.Proficiencies;
         InitialWealth = parsedValueObject.InitialWealth;
-        Items = parsedValueObject.Items
-            .Select(x => new ItemDataModel(x.Id, x.Name, x.Description, x.Type, x.Value, x.CurrencyType, x.Weight))
-            .ToList();
-        Traits = parsedValueObject.Traits
-            .Select(x => new TraitDataModel(x.Id, Id, x.Type, x.Description))
-            .ToList();
+        Items = new();
+        var newItems = parsedValueObject.Items
+            .Select(x => x.BuidDataModel());
+        
+        Items.AddRange(newItems);
+
+        Traits = new();
+        var newTraits = parsedValueObject.Traits
+            .Select(x => new TraitDataModel(x.Id, Id, x.Type, x.Description));
+        
+        Traits.AddRange(newTraits);
 
         base.UpdateBasedOnValueObject(valueObject);
     }
