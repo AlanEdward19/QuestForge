@@ -1,27 +1,33 @@
 # QuestForge
 
-## Visão Geral
-
-O **QuestForge** é uma plataforma abrangente para jogar RPG de mesa online, utilizando as regras de Dungeons & Dragons 5ª Edição (D&D 5e). A plataforma é composta por múltiplos microserviços, cada um responsável por diferentes aspectos da experiência de jogo. Até agora, temos o `CharacterService`, responsável pela criação, gestão e exportação de personagens.
+**QuestForge** é uma plataforma abrangente para jogar RPG de mesa online, utilizando as regras de Dungeons & Dragons 5ª Edição (D&D 5e). A plataforma é composta por múltiplos microserviços, cada um responsável por diferentes aspectos da experiência de jogo. A principal função do QuestForge é auxiliar mestres de RPG, proporcionando uma interface rica e ferramentas poderosas para a criação e gestão de campanhas.
 
 ## Microserviços
 
 ### CharacterService
 
-- **Criação de Personagens:** Permite a criação de personagens com todas as classes, raças e itens conforme as regras do livro do jogador de D&D 5e.
-- **Gestão de Personagens:** Atualização e gerenciamento contínuo dos personagens, incluindo níveis, experiência, habilidades e itens.
-- **Exportação de Ficha:** Exportação de fichas de personagens em formatos padrão para fácil utilização durante as sessões de jogo.
-- **Armazenamento Persistente:** Utiliza Entity Framework Core para armazenar e gerenciar os dados dos personagens em um banco de dados relacional.
+- **Criação de Personagens**: Permite a criação de personagens com todas as classes, raças e itens conforme as regras do livro do jogador de D&D 5e.
+- **Gestão de Personagens**: Atualização e gerenciamento contínuo dos personagens, incluindo níveis, experiência, habilidades e itens.
+- **Exportação de Ficha**: Exportação de fichas de personagens em formatos padrão para fácil utilização durante as sessões de jogo.
 
-### Estrutura do Projeto
+### NPCService (Planejado)
 
-A plataforma **QuestForge** é estruturada utilizando Domain-Driven Design (DDD) e a arquitetura Onion para garantir uma separação clara das preocupações e alta manutenibilidade.
+- **Interação com NPCs**: Utiliza a tecnologia da OpenAI para permitir conversas interativas e dinâmicas com NPCs criados pelos mestres, proporcionando uma experiência de jogo mais imersiva.
+- **Interação por Texto ou Voz**: NPCs podem interagir com jogadores através de texto ou voz, utilizando tecnologia TTS (Texto para Fala), auxiliando o mestre a não ter que interpretar todos os NPCs.
 
-#### Camadas do CharacterService
+### WorldBuilderService (Planejado)
 
-- **Application:** Contém os comandos e consultas (CQRS) que manipulam as ações de criação, atualização e consulta de personagens.
-- **Core:** Define as entidades de domínio, agregados, enums, serviços e interfaces dos repositórios.
-- **Infrastructure:** Implementa os repositórios, configurações do Entity Framework Core e o contexto do banco de dados.
+- **Criação de Mundos**: Ferramentas para a criação de mundos detalhados onde as campanhas podem acontecer, com a capacidade de definir geografias, climas, ecossistemas e mais.
+- **Gestão de Localizações**: Criação e gerenciamento de localizações dentro dos mundos criados, incluindo cidades, vilarejos, masmorras e outros pontos de interesse onde os personagens podem viver e interagir.
+- **Mapas Dinâmicos**: Criação dinâmica de mapas mundi e das localizações específicas dentro da campanha, facilitando a visualização e a navegação pelos jogadores.
+
+
+## Web Application
+
+- **Interface Interativa**: Uma interface web interativa para criar e gerenciar personagens, NPCs, mundos e localizações.
+- **Participação em Sessões de Jogo**: Ferramentas para facilitar a participação em sessões de jogo, incluindo gerenciamento de iniciativas, rastreamento de estados dos personagens e comunicação com outros jogadores.
+- **Interação com NPCs**: Permite que os jogadores interajam com NPCs criados, seja por texto ou por voz, dentro das localizações especificadas pelo mestre.
+- **Imagens Personalizadas**: Cada personagem criado terá uma imagem gerada dinamicamente, melhorando a imersão visual do jogo.
 
 ## Tecnologias Utilizadas
 
@@ -31,11 +37,4 @@ A plataforma **QuestForge** é estruturada utilizando Domain-Driven Design (DDD)
 - **Domain-Driven Design (DDD)**
 - **Onion Architecture**
 
-## Futuro da Plataforma
-
-A plataforma **QuestForge** está em contínuo desenvolvimento e outros serviços estão planejados, incluindo:
-
-- **GameSessionService:** Gerenciamento de sessões de jogo e controle de turnos.
-- **InventoryService:** Gestão detalhada de inventário e itens mágicos.
-- **CombatService:** Resolução de combates e aplicação de regras de combate.
-- **Web Application:** Interface web interativa para criar e gerenciar personagens, participar de sessões de jogo e acessar fichas de personagens.
+Com esses componentes, o **QuestForge** visa fornecer uma plataforma completa para mestres de D&D 5e, facilitando a criação de histórias envolventes e a gestão de aventuras épicas, enquanto minimiza a carga de trabalho do mestre através da automação e integração de tecnologias avançadas.
