@@ -7,6 +7,7 @@ using QuestForge.CharacterService.Application.Items.Common.Get;
 using QuestForge.CharacterService.Application.Items.Common.List;
 using QuestForge.CharacterService.Application.Items.Others.Create;
 using QuestForge.CharacterService.Application.Items.Others.Delete;
+using QuestForge.CharacterService.Application.Items.Others.Update;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
 using QuestForge.CharacterService.Application.Items.Shop;
@@ -36,10 +37,20 @@ namespace QuestForge.CharacterService.Controllers
             return Ok(await handler.Handle(query, cancellationToken));
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> Delete(
+            [FromServices] IHandler<DeleteItemCommand, DatabaseOperationViewModel> handler,
+            [FromQuery] DeleteItemCommand command, CancellationToken cancellationToken)
+        {
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+
         #region Shop
 
         [HttpPost("shop")]
-        public async Task<IActionResult> GenerateShop([FromServices] IHandler<GenerateShopQuery, IEnumerable<Item>> handler,
+        public async Task<IActionResult> GenerateShop(
+            [FromServices] IHandler<GenerateShopQuery, IEnumerable<Item>> handler,
             [FromBody] GenerateShopQuery query, CancellationToken cancellationToken)
         {
             return Ok(await handler.Handle(query, cancellationToken));
@@ -59,6 +70,17 @@ namespace QuestForge.CharacterService.Controllers
             return Ok(result);
         }
 
+        [HttpPatch("Miscellaneous")]
+        public async Task<IActionResult> PatchMiscellaneous(
+            [FromServices] IHandler<UpdateItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdateItemCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
+        {
+            command.SetId(id);
+            command.SetType(EItemType.Miscellaneous);
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+
         #endregion
 
         #region Food and Drinks
@@ -68,6 +90,17 @@ namespace QuestForge.CharacterService.Controllers
             [FromServices] IHandler<CreateItemCommand, DatabaseOperationViewModel> handler,
             [FromBody] CreateItemCommand command, CancellationToken cancellationToken)
         {
+            command.SetType(EItemType.FoodAndDrink);
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+
+        [HttpPatch("FoodDrink")]
+        public async Task<IActionResult> PatchFoodAndDrinks(
+            [FromServices] IHandler<UpdateItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdateItemCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
+        {
+            command.SetId(id);
             command.SetType(EItemType.FoodAndDrink);
             var result = await handler.Handle(command, cancellationToken);
             return Ok(result);
@@ -87,6 +120,17 @@ namespace QuestForge.CharacterService.Controllers
             return Ok(result);
         }
 
+        [HttpPatch("Tools")]
+        public async Task<IActionResult> PatchTools(
+            [FromServices] IHandler<UpdateItemCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdateItemCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
+        {
+            command.SetId(id);
+            command.SetType(EItemType.Tool);
+            var result = await handler.Handle(command, cancellationToken);
+            return Ok(result);
+        }
+
         #endregion
 
         #region Weapon
@@ -101,9 +145,11 @@ namespace QuestForge.CharacterService.Controllers
         }
 
         [HttpPatch("Weapon")]
-        public async Task<IActionResult> Patch([FromServices] IHandler<UpdateWeaponCommand, DatabaseOperationViewModel> handler,
-            [FromBody] UpdateWeaponCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Patch(
+            [FromServices] IHandler<UpdateWeaponCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdateWeaponCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
         {
+            command.SetId(id);
             var result = await handler.Handle(command, cancellationToken);
             return Ok(result);
         }
@@ -122,9 +168,11 @@ namespace QuestForge.CharacterService.Controllers
         }
 
         [HttpPatch("Armor")]
-        public async Task<IActionResult> Patch([FromServices] IHandler<UpdateArmorCommand, DatabaseOperationViewModel> handler,
-            [FromBody] UpdateArmorCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Patch(
+            [FromServices] IHandler<UpdateArmorCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdateArmorCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
         {
+            command.SetId(id);
             var result = await handler.Handle(command, cancellationToken);
             return Ok(result);
         }
@@ -143,21 +191,15 @@ namespace QuestForge.CharacterService.Controllers
         }
 
         [HttpPatch("Potion")]
-        public async Task<IActionResult> Patch([FromServices] IHandler<UpdatePotionCommand, DatabaseOperationViewModel> handler,
-            [FromBody] UpdatePotionCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Patch(
+            [FromServices] IHandler<UpdatePotionCommand, DatabaseOperationViewModel> handler,
+            [FromBody] UpdatePotionCommand command, [FromQuery] Guid id, CancellationToken cancellationToken)
         {
+            command.SetId(id);
             var result = await handler.Handle(command, cancellationToken);
             return Ok(result);
         }
 
         #endregion
-
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromServices] IHandler<DeleteItemCommand, DatabaseOperationViewModel> handler,
-            [FromQuery] DeleteItemCommand command, CancellationToken cancellationToken)
-        {
-            var result = await handler.Handle(command, cancellationToken);
-            return Ok(result);
-        }
     }
 }

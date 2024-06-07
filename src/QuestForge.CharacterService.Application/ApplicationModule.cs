@@ -24,6 +24,7 @@ using QuestForge.CharacterService.Application.Items.Common.Get;
 using QuestForge.CharacterService.Application.Items.Common.List;
 using QuestForge.CharacterService.Application.Items.Others.Create;
 using QuestForge.CharacterService.Application.Items.Others.Delete;
+using QuestForge.CharacterService.Application.Items.Others.Update;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
 using QuestForge.CharacterService.Application.Items.Shop;
@@ -70,6 +71,7 @@ public static class ApplicationModule
             .AddScoped<IHandler<GetItemQuery, Item>, GetItemQueryHandler>()
             .AddScoped<IHandler<ListItemQuery, IEnumerable<Item>>, ListItemQueryHandler>()
             .AddScoped<IHandler<DeleteItemCommand, DatabaseOperationViewModel>, DeleteItemCommandHandler>()
+            .AddScoped<IHandler<UpdateItemCommand, DatabaseOperationViewModel>, UpdateItemCommandHandler>()
 
             .AddScoped<IHandler<CreateArmorCommand, DatabaseOperationViewModel>, CreateArmorCommandHandler>()
             .AddScoped<IHandler<UpdateArmorCommand, DatabaseOperationViewModel>, UpdateArmorCommandHandler>()
