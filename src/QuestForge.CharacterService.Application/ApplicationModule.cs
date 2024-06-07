@@ -26,6 +26,7 @@ using QuestForge.CharacterService.Application.Items.Others.Create;
 using QuestForge.CharacterService.Application.Items.Others.Delete;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
+using QuestForge.CharacterService.Application.Items.Shop;
 using QuestForge.CharacterService.Application.Items.Weapons.Create;
 using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Application.Races.Create;
@@ -94,6 +95,7 @@ public static class ApplicationModule
             .AddScoped<IHandler<UpdateBackgroundCommand, DatabaseOperationViewModel>, UpdateBackgroundCommandHandler>()
             .AddScoped<IHandler<DeleteBackgroundCommand, DatabaseOperationViewModel>, DeleteBackgroundCommandHandler>()
             
+            .AddScoped<IHandler<GenerateShopQuery, IEnumerable<Item>>, GenerateShopQueryHandler>()
             ;
         
         return services;

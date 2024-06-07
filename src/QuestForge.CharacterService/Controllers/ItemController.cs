@@ -9,6 +9,7 @@ using QuestForge.CharacterService.Application.Items.Others.Create;
 using QuestForge.CharacterService.Application.Items.Others.Delete;
 using QuestForge.CharacterService.Application.Items.Potions.Create;
 using QuestForge.CharacterService.Application.Items.Potions.Update;
+using QuestForge.CharacterService.Application.Items.Shop;
 using QuestForge.CharacterService.Application.Items.Weapons.Create;
 using QuestForge.CharacterService.Application.Items.Weapons.Update;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
@@ -34,6 +35,17 @@ namespace QuestForge.CharacterService.Controllers
         {
             return Ok(await handler.Handle(query, cancellationToken));
         }
+
+        #region Shop
+
+        [HttpPost("shop")]
+        public async Task<IActionResult> GenerateShop([FromServices] IHandler<GenerateShopQuery, IEnumerable<Item>> handler,
+            [FromBody] GenerateShopQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await handler.Handle(query, cancellationToken));
+        }
+
+        #endregion
 
         #region Miscellaneous
 

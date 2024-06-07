@@ -4,6 +4,7 @@ using QuestForge.CharacterService.Core.Common.Abstracts.Base;
 using QuestForge.CharacterService.Core.Common.DataModels;
 using QuestForge.CharacterService.Core.Common.Enums;
 using QuestForge.CharacterService.Core.Items.Enums;
+using QuestForge.CharacterService.Core.Utils.Converters;
 
 namespace QuestForge.CharacterService.Core.Items.Entities;
 
@@ -12,7 +13,9 @@ public class Item : ValueObject
     public Guid Id { get; private set; }
     public string Name { get; private set; }
     public string Description { get; private set; }
+    [JsonConverter(typeof(EnumToStringConverter<EItemType>))]
     public EItemType Type { get; private set; }
+    [JsonConverter(typeof(EnumToStringConverter<ECurrencyType>))]
     public ECurrencyType CurrencyType { get; private set; }
     public double Value { get; private set; }
     public double Weight { get; private set; }
