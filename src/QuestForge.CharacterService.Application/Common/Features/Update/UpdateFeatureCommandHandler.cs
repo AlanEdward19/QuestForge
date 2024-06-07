@@ -14,7 +14,7 @@ public class UpdateFeatureCommandHandler
     {
         await repository.UnitOfWork.StartAsync(cancellationToken);
 
-        await repository.AddAsync(command, cancellationToken);
+        await repository.UpdateAsync(command, cancellationToken);
 
         await repository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
         await repository.UnitOfWork.CommitAsync(cancellationToken);
