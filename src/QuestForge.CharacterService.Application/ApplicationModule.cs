@@ -13,6 +13,7 @@ using QuestForge.CharacterService.Application.Characters.Get;
 using QuestForge.CharacterService.Application.Characters.Items.AddItem;
 using QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
 using QuestForge.CharacterService.Application.Characters.Items.TradeItem;
+using QuestForge.CharacterService.Application.Characters.List;
 using QuestForge.CharacterService.Application.Classes.Create;
 using QuestForge.CharacterService.Application.Classes.Delete;
 using QuestForge.CharacterService.Application.Classes.Get;
@@ -64,6 +65,7 @@ public static class ApplicationModule
 
             .AddScoped<IHandler<CreateCharacterCommand, DatabaseOperationViewModel>, CreateCharacterCommandHandler>()
             .AddScoped<IHandler<GetCharacterQuery, CharacterAggregateRoot>, GetCharacterQueryHandler>()
+            .AddScoped<IHandler<ListCharacterQuery, IEnumerable<CharacterAggregateRoot>>, ListCharacterQueryHandler>()
             .AddScoped<IHandler<DeleteCharacterCommand, DatabaseOperationViewModel>, DeleteCharacterCommandHandler>()
 
             #region Items

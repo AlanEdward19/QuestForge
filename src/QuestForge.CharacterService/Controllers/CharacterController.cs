@@ -5,6 +5,7 @@ using QuestForge.CharacterService.Application.Characters.Get;
 using QuestForge.CharacterService.Application.Characters.Items.AddItem;
 using QuestForge.CharacterService.Application.Characters.Items.RemoveItem;
 using QuestForge.CharacterService.Application.Characters.Items.TradeItem;
+using QuestForge.CharacterService.Application.Characters.List;
 using QuestForge.CharacterService.Application.Common.Models;
 using QuestForge.CharacterService.Core.Characters.Aggregates;
 using QuestForge.CharacterService.Core.Common.Contracts.Services;
@@ -18,6 +19,13 @@ namespace QuestForge.CharacterService.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromServices] IHandler<GetCharacterQuery, CharacterAggregateRoot> handler,
             [FromQuery] GetCharacterQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await handler.Handle(query, cancellationToken));
+        }
+        
+        [HttpGet("list")]
+        public async Task<IActionResult> List([FromServices] IHandler<ListCharacterQuery, IEnumerable<CharacterAggregateRoot>> handler,
+            [FromQuery] ListCharacterQuery query, CancellationToken cancellationToken)
         {
             return Ok(await handler.Handle(query, cancellationToken));
         }

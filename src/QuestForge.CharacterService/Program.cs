@@ -1,4 +1,5 @@
 using QuestForge.CharacterService.Configuration;
+using QuestForge.CharacterService.Configurations;
 using QuestForge.CharacterService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ builder.AddServiceDefaults();
 
 builder.Services
     .ConfigureController()
+    .ConfigureCors()
     .ConfigureIoC(builder.Configuration)
     .ConfigureSwagger()
     .AddHealthChecks();
@@ -23,6 +25,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app
+    .UseCors("CorsPolicy")
     .UpdateMigrations()
     .ConfigureMiddleware()
     .UseHttpsRedirection()

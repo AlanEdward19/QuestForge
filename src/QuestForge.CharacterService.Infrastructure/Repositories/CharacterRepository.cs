@@ -47,9 +47,29 @@ public class CharacterRepository(IUnitOfWork unitOfWork, AppDbContext dbContext)
             .FirstAsync(x => x.Id.Equals(parsedQuery!.Id), cancellationToken);
     }
 
-    public Task<IEnumerable<CharacterDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
+    public async Task<IEnumerable<CharacterDataModel>> GetAllAsync(Query query, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return await dbContext.Characters
+            .AsNoTracking()
+            .AsSplitQuery()
+            .Include(x => x.Backpack)
+            .ThenInclude(x => x.Items)
+            .ThenInclude(x => x.Item)
+            .Include(x => x.Class)
+            .Include(x => x.Race)
+            .ThenInclude(x => x.AbilityScoreIncrease)
+            .ThenInclude(x => x.AbilityScore)
+            .Include(x => x.Race)
+            .ThenInclude(x => x.Features)
+            .Include(x => x.Level)
+            .Include(x => x.AbilityScores)
+            .ThenInclude(x => x.AbilityScore)
+            .Include(x => x.CoinPurse)
+            .Include(x => x.Background)
+            .ThenInclude(x => x.Items)
+            .Include(x => x.Background)
+            .ThenInclude(x => x.Traits)
+            .ToListAsync(cancellationToken);
     }
 
     public async Task AddAsync(Command command, CancellationToken cancellationToken)
